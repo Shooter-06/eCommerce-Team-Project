@@ -8,14 +8,11 @@ eCommerce Team Project
 - [Project goals and deliverables](#Project-goals-and-deliverables)
 - [Deliverables: part1](#deliverables)
 # PROJECT DESCRIPTION:
-- Our server's IP address is:138.197.138.231
-
-This project was created based on the discussion of me and my teammates about what GNU/Linux scenario that we want to develop which consists of hosting a website created in the VPS . Using some samples and examples we got form different open sources. We intend to create more like a web server with RTMP capability built into it that is dedicated to delivering live or on demand video content to the users with computer, smart tv or mobile device.
-
+This project was created based of the discussion of me and my teammates to develop a website that will allow commercial transactions conducted electronically on the internet. The primary goal of our eCommerce site will be to sell goods and service online. This project deals with developing an e-commerce website for Online Sales of different items like clothes, shoes, phones and other electronics. It provides the user with a catalog of different items available for purchase in our store.
 
 ## Timeline: 
 
-The timeline for our project is intended to be completed in less than 3 weeks. So, we will have three different deliverable parts and each one will involve in improving the previous deliverables.
+The timeline for our project is intended to be completed at the end of the semester. So, we will have different deliverable parts depending on our deadlines and each one will involve in improving the previous deliverable.
 
 ## Project goals and deliverables:
 ### Deliverables:
@@ -24,7 +21,6 @@ The timeline for our project is intended to be completed in less than 3 weeks. S
 -->
 ## Major technical issues solutions compared:
  
-
 
 ## Team composition: 
 
