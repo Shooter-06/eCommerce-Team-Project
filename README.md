@@ -16,9 +16,7 @@ The timeline for our project is intended to be completed at the end of the semes
 
 ## Project goals and deliverables:
 ### Deliverables:
---> 
--->
--->
+#### The first deliverable: 
 
 ### Goals: 
 - Add recommended items feature
