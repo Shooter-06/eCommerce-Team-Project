@@ -19,9 +19,14 @@ The timeline for our project is intended to be completed at the end of the semes
 --> 
 -->
 -->
+
+### Goals: 
+- Add recommended items feature
+- Add top trending items/most popular items
+- Technical aspect PHP + AJAXX inclusion
 ## Major technical issues solutions compared:
  
 
 ## Team composition: 
 
-This project will be completed by three team members: Fiacre Byiringiro, Nam Tran, Powell McKain De Andre
+This project will be completed by three team members: 
