@@ -24,4 +24,4 @@ The timeline for our project is intended to be completed at the end of the semes
 
 ## Team composition: 
 
-This project will be completed by three team members: ......... 
+This project will be completed by three team members: 
