@@ -17,7 +17,7 @@ The timeline for our project is intended to be completed at the end of the semes
 ## Project goals and deliverables:
 ### Deliverables:
 #### The first deliverable: 
-The first deliverable will contain a brief explanation of what our web application will be selling which included different items (open store) and if possible, any client will have an option of posting some of his own items that he want to sell. So basically our application will have options for clients to either buy or sell items. 
+The first deliverable will contain a brief explanation of what our web application will be selling which included different items (open store) and if possible, any client will have an option of posting some of his own items that he wants to sell. So basically, our application will have options for clients to either buy or sell items. 
 ### Goals: 
 - Add recommended items feature
 - Add top trending items/most popular items
