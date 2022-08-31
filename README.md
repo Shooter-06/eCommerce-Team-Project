@@ -6,7 +6,7 @@ eCommerce Team Project
 - [Project-description](#PROJECT-DESCRIPTION)
 - [Timeline](#Timeline)
 - [Project goals and deliverables](#Project-goals-and-deliverables)
-- [Goals](### Goals)
+- [Goals](#Goals)
 - [Deliverables: part1](#deliverables)
 # PROJECT DESCRIPTION:
 This project was created based of the discussion of me and my teammates to develop a website that will allow commercial transactions conducted electronically on the internet. The primary goal of our eCommerce site will be to sell goods and service online. This project deals with developing an e-commerce website for Online Sales of different items like clothes, shoes, phones and other electronics. It provides the user with a wife and varied catalog of different items available for purchase in our store.
