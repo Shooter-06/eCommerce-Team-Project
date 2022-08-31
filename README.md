@@ -24,6 +24,8 @@ The timeline for our project is intended to be completed at the end of the semes
 - Add recommended items feature
 - Add top trending items/most popular items
 - Technical aspect PHP + AJAXX inclusion
+- Shopping cart feature (adding/removing items)
+- User friendly website design for ease of use
 ## Major technical issues solutions compared:
  
 
