@@ -11,6 +11,18 @@ eCommerce Team Project
 # PROJECT DESCRIPTION:
 This project was created based of the discussion of me and my teammates to develop a website that will allow commercial transactions conducted electronically on the internet. The primary goal of our eCommerce site will be to sell goods and service online. This project deals with developing an e-commerce website for Online Sales of different items like clothes, shoes, phones and other electronics. It provides the user with a wife and varied catalog of different items available for purchase in our store.
 
+In this project, we will have different features that will be developed to simplify the work every web visitior or users
+ 1.As a seller, I can register, login, and logout (these are not new features - they are given in class).
+ 2. As a seller, I can add and modify products for sale and track sales of these products (3 features).
+ 3. As a seller, I can create and modify my store profile (1 feature).
+ 4. As a seller, I can view product purchases and mark them as shipped while adding tracking information (2 features).
+ 5. As a seller, I can view client service requests on sales and respond (2 features).
+ 6. As a user, I can search the product catalog (1 feature).
+ 7. As a user, I can see product details (1 feature).
+ 8. As a user, I can add/delete/modify quantities for products to my shopping cart (3 features).
+ 9. As a user, checkout my order (1 feature).
+ 10. .... complete this, bringing the total to 8 features per team member.
+
 ## Timeline: 
 
 The timeline for our project is intended to be completed at the end of the semester. So, we will have different deliverable parts depending on our deadlines and each one will involve in improving the previous deliverable.
