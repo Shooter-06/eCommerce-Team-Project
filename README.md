@@ -15,18 +15,18 @@ This project was created based of the discussion of me and my teammates to devel
 # Poreject features
 In this project, i have different features that will be developed to simplify the work every web visitior or users
  -As a seller, you can modify and Delete products for sale, check the inventory(track your production), check the leasted bought items, higly bought items (5 features).
- -As a seller, i have an option of either modifying or deleting my store profile(2 features). 
- -As a seller, I can will get notified for the items bought and i can track their shippmemts(2 features).
- -As a seller, I can view client service requests on sales and respond (2 features)
- -As a user, I can search and see different products with their details(2 features)  .
- -As a user, I can create a profile account for premium items()premieum items wwill be items that are not visible for people with out accounts(1 feature).
- 7. As a seller, I can make some items visible for only clients with account(1 feature).
- 8. As a user, I can add/delete/modify quantities for products to my shopping cart (3 features).
- 9. As a user, checkout my order (1 feature).
- 10.As a user, I am able to perfom the payment method(1 feature). 
- 11.As a user, I am able to delete my account (1 feature).
- 12. As a user, I am able to 
- 11. .... complete this, bringing the total to 8 features per team member.
+ - As a seller, i have an option of either modifying or deleting my store profile(2 features). 
+ - As a seller, I can will get notified for the items bought and i can track their shippmemts(2 features).
+ - As a seller, I can view client service requests on sales and respond (2 features)
+ - As a user, I can search and see different products with their details(2 features)  .
+ - As a user, I can create a profile account for premium items()premieum items wwill be items that are not visible for people with out accounts(1 feature).
+ - As a seller, I can make some items visible for only clients with account(1 feature).
+ - As a user, I can add/delete/modify quantities for products to my shopping cart (3 features).
+ - As a user, checkout my order (1 feature).
+ - As a user, I am able to perfom the payment method(1 feature). 
+ - As a user, I am able to delete my account (1 feature).
+ - As a user, I am able to 
+ - 11. .... complete this, bringing the total to 8 features per team member.
 
 ## Timeline: 
 
