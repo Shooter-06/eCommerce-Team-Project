@@ -54,4 +54,4 @@ The first deliverable will contain a brief explanation of what our web applicati
 
 ## Team composition: 
 
-This project will be completed by three team members: Fiacre Byiringiro, Nam Tran, De Andre
+This project will be completed by three team members: Fiacre Byiringiro, Nam Tran, De Andre Powell McKain
