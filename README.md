@@ -5,6 +5,7 @@ eCommerce Team Project
 # Table of contents:
 - [Project-description](#PROJECT-DESCRIPTION)
 - [Poreject-features](#Poreject-features)
+- [Poreject-features-explanation](#Poreject-features-explanation)
 - [Timeline](#Timeline)
 - [Project goals and deliverables](#Project-goals-and-deliverables)
 - [Goals](#Goals)
