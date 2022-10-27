@@ -34,8 +34,8 @@ In this project, i have different features that will be developed to simplify th
  # Poreject features explanation
 The feautures in our project will be used as the following: 
  
- -As a seller, you can modify and Delete products for sale, check the inventory(track your production), check the leasted bought items, higly bought items (5 features):
  - As a seller, i have an option of either modifying or deleting my store profile(2 features). 
+ - As, seller, you can modify and delete products, check inventory, check the leasted and higly bought items.
  - As a seller, I can will get notified for the items bought and i can track their shippmemts(2 features).
  - As a seller, I can view client service requests on sales and respond (2 features)
  - As a seller, I can make some items visible for only clients with account(1 feature).
