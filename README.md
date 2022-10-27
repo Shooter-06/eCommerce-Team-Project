@@ -34,7 +34,7 @@ In this project, i have different features that will be developed to simplify th
  # Poreject features explanation
 The feautures in our project will be used as the following: 
  
- - As a seller, i have an option of either modifying or deleting my store profile(2 features): <u> you will be able to delete the delete your profile by confirming the password and you can modify (edit) by changing your Bio(name, password, address, email). </u>
+ - As a seller, i have an option of either modifying or deleting my store profile(2 features): ' you will be able to delete the delete your profile by confirming the password and you can modify (edit) by changing your Bio(name, password, address, email).'
  - As, seller, you can modify and delete products, check inventory, check the leasted and higly bought items.
  - As a seller, I can will get notified for the items bought and i can track their shippmemts(2 features).
  - As a seller, I can view client service requests on sales and respond (2 features)
