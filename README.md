@@ -43,12 +43,12 @@ The feautures in our project will be used as the following:
  - As a user, I can search and see different products with their details(2 features): `This feature will allow the buyer to see all the listed items and their details`
  - As a user, I can create a profile account for premium items()premieum items. They will be items that are not visible for people with out accounts(1 feature): `This feature will allow the user to make items visible for only people that has created the account on the page.`
  - As a user, I can add/delete/modify quantities for products to my shopping cart (3 features): `This feature will allow the user to perfom the CRUD oeprations from the cart.`
- - As a user, checkout my order (1 feature).
- - As a user, I can search for items(1 feature).
- - As a user, I am able to perfom the payment method(1 feature). 
- - As a user, I am able to delete my account (1 feature).
- - As a user, I am able to track the sales that i made in the past/ check my history(sales trade analysis)(1 feature).
- - As a user, I will be able to se the products reviews(1 feature).
+ - As a user, checkout my order (1 feature):`This feature will allow the see the all the selected items in the cart.`
+ - As a user, I can search for items(1 feature):`This feature will allow the user to search for different items.`
+ - As a user, I am able to perfom the payment method(1 feature):`This feature will allow the buyer to perfom the payment method for different items.`
+ - As a user, I am able to delete my account (1 feature):`This feature will allow the user or a buyer who has an account to dellete it.`
+ - As a user, I am able to track the sales that i made in the past/ check my history(sales trade analysis)(1 feature):`This feature will allow the user check the history for the previous sales.`
+ - As a user, I will be able to se the products reviews(1 feature):`This feature will allow the user to check his comments/reviews for different items.`
 
 ## Timeline: 
 
