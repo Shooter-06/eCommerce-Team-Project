@@ -41,7 +41,7 @@ The feautures in our project will be used as the following:
  - As a seller, I can make some items visible for only clients with account(1 feature):`This feature will allow the user to edit the permit how many buyers can have access to his products.`
  - As a seller, I am able to set my business open/closing hours(1 feature): `This feature will allow the user to show when he is avalible to trade his products. For ex: A user can publish that he is available from 8AM-10PM`
  - As a user, I can search and see different products with their details(2 features): `This feature will allow the buyer to see all the listed items and their details`
- - As a user, I can create a profile account for premium items()premieum items. They will be items that are not visible for people with out accounts(1 feature): `This feature will allow the user to make items visible for only people that has created the account on the page.`
+ - As a user, I can create a profile account for premium items(). They will be items that are not visible for people with out accounts(1 feature): `This feature will allow the user to make items visible for only people that has created the account on the page.`
  - As a user, I can add/delete/modify quantities for products to my shopping cart (3 features): `This feature will allow the user to perfom the CRUD oeprations from the cart.`
  - As a user, checkout my order (1 feature):`This feature will allow the see the all the selected items in the cart.`
  - As a user, I can search for items(1 feature):`This feature will allow the user to search for different items.`
