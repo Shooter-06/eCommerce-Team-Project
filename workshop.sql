@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2022 at 03:04 AM
+-- Generation Time: Oct 31, 2022 at 03:52 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `cart` (
   `cart_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
-  `price` int(5) NOT NULL,
   `profile_id` int(10) NOT NULL,
+  `price` int(5) NOT NULL,
   `quantity` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -56,7 +56,8 @@ CREATE TABLE `order_item` (
   `order_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
   `profile_id` int(10) NOT NULL,
-  `payment_id` int(10) NOT NULL
+  `payment_id` int(10) NOT NULL,
+  `tracking_no` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -80,10 +81,10 @@ CREATE TABLE `payment` (
 
 CREATE TABLE `product` (
   `product_id` int(10) NOT NULL,
-  `price` int(5) NOT NULL,
-  `description` varchar(75) NOT NULL,
   `profile_id` int(10) NOT NULL,
-  `title` varchar(20) NOT NULL
+  `title` varchar(20) NOT NULL,
+  `description` varchar(75) NOT NULL,
+  `price` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -114,20 +115,6 @@ CREATE TABLE `review` (
   `profile_id` int(10) NOT NULL,
   `review` varchar(75) NOT NULL,
   `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tracking`
---
-
-CREATE TABLE `tracking` (
-  `tracking_id` int(10) NOT NULL,
-  `order_id` int(10) NOT NULL,
-  `product_id` int(10) NOT NULL,
-  `tracking_num` varchar(20) NOT NULL,
-  `seller` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -189,12 +176,6 @@ ALTER TABLE `review`
   ADD PRIMARY KEY (`review_id`);
 
 --
--- Indexes for table `tracking`
---
-ALTER TABLE `tracking`
-  ADD PRIMARY KEY (`tracking_id`);
-
---
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -246,12 +227,6 @@ ALTER TABLE `profile`
 --
 ALTER TABLE `review`
   MODIFY `review_id` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tracking`
---
-ALTER TABLE `tracking`
-  MODIFY `tracking_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
