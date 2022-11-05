@@ -4,148 +4,55 @@ namespace app\controllers;
 
 class profile extends \app\core\Controller{
 	
-	//log users in here
+	#[\app\filters\Login]
+	#[\app\filters\Profile]
 	public function index(){
-		if(isset($_POST['action'])){
 
-			$user = new \app\models\profile();
-			$user = $user->get($_POST['profile_id']);
-
-			if(password_verify($_POST['password'], $user->password_hash)){
-				//correct password provided
-				$_SESSION['user_id'] = $profile->user_id;
-				$_SESSION['first_name'] = $profile->first_name;
-				$_SESSION['last_name'] = $profile->last_name;
-				$_SESSION['address']=$profile->address;
-				$_SESSION['city'] = $profile->city;
-				$_SESSION['post_code']=$profile->post_code;
-
-				//i need to redirect to the methods that will disspaly the profile page
-				//the account should show the page interface for what the user has on the main page
-
-				header('location:/Profile/account');
-			}else{
-				//incorret password provided
-				header('location:/User/index?error=Incorrect username/password combination/ Sign in as a User.!');
-			}
-		}else{
-			$this->view('Profile/index');
-		}
+		$profile = new \app\models\profile();
+		$profile = $profile->get($_SESSION['profile_id']);
+		$this->view('Profile/details', $profile);
 	}
 
-	public function check2fa(){
-		if(!isset($_SESSION['user_id'])) header('location:/User/index');
-		if(isset($_POST['action'])){
-			$currentcode =$_POST['currentcode'];
-			if(\app\core\TokenAuth6238::verify(
-				$_SESSION['secret_key'],$currentcode)){
-				$_SESSION['secret_key']=null;
-				header("location:/User/account");
-			}
-		}else{
-			$this->view('User/check2fa');
-		}
+	public function details($profile_id){
+		$profile = new \app\models\profile();
+		$profile = $profile->get($profile_id);
+		$this->view('Profile/details', $profile);
 	}
-
-	//GOAL #[Attribute] to provide authentication service
-	#[\app\filters\Login]
-	public function account(){
-		if(isset($_POST['action'])){
-			//we submit the password modification form
-			$user = new \app\models\User();
-			$user = $user->get($_SESSION['username']);
-			if(password_verify($_POST['old_password'],$user->password_hash)){
-				//old password matches
-				if($_POST['password'] == $_POST['password_confirm']){
-					//good!
-					$user->password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-					$user->updatePassword();
-					header('location:/User/account?message=Password modified.');
-
-				}else{
-					header('location:/User/account?error=New passwords don\'t match. Password unchanged.');	
-				}
-			}else{
-				header('location:/User/account?error=Wrong password provided. Password unchanged.');
-			}
-
-
-		}else
-			$this->view('Profile/account');
-	}
-
-	public function logout(){
-		session_destroy();
-		header('location:/User/index?message=You\'ve been successfully logged out.');
-	}
-
-	//process of requesting the username and password wanted by the user
-	public function register(){
-		//when we submit the form
-		if(isset($_POST['action'])){
-			//verify that the password and password_confirmation match
-			if($_POST['password'] == $_POST['password_confirmation']){
-				//TODO: validation later
-				//proceed with attempting registration
-
-				$user = new \app\models\User();//TODO
-
-				if($user->get($_POST['username'])){
-					//redirect with an error message
-					header('location:/User/register?error=The username "'.$_POST['username'].'" already exists. Choose another.');
-				}else{
-					$user->username = $_POST['username'];
-					$user->password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-					$user->insert();//maybe this is where we will have some error checking
-
-					header('location:/User/index');
-				}
-			}
-		}else{
-			//show the registration form
-			$this->view('User/register');
-		}
-	}
-	//update password 
-
 
 	#[\app\filters\Login]
-	public function twofasetup(){
+	#[\app\filters\Profile]
+	public function edit(){
+		$profile = new \app\models\profile();
+		$profile = $profile->get($_SESSION['profile_id']);
+
 		if(isset($_POST['action'])){
-			$currentcode = $_POST['currentCode'];
-			if(\app\core\TokenAuth6238::verify(
-			$_SESSION['secretkey'],$currentcode)){
-			//the user has verified their proper 2-factor authentication setup
-			$user = new \App\models\User();
-			$user->user_id = $_SESSION['user_id'];
-			$user->secret_key = $_SESSION['secretkey'];
-			$user->update2fa();
-			header('location:/Somewhere***');
-			}else{
-				header('location:/User/twofasetup?error=token not verified!');//reload
-			}
+			$profile->first_name = $_POST['first_name'];
+			$profile->last_name = $_POST['last_name'];
+			$profile->address = $_POST['address'];
+			$profile->city = $_POST['city'];
+			$profile->postal_code = $_POST['postal_code'];
+
+			$profile->update();
+			header('location:/Profile/index');
 		}else{
-			$secretkey = \app\core\TokenAuth6238::generateRandomClue();
-			$_SESSION['secretkey'] = $secretkey;
-			$url = \App\core\TokenAuth6238::getLocalCodeUrl(
-				$_SESSION['username'],
-				'Example.com',
-				$secretkey,
-				'Awesome Example App');
-			$this->view('User/twofasetup', $url);
+			$this->view('Profile/edit',$profile);
 		}
 	}
 
-	public function makeQRCode(){
-		$data = $_GET['data'];
-		\QRcode::png($data);
+	#[\app\filters\Login]
+	public function create(){
+		if(isset($_POST['action'])){
+			$profile = new \app\models\Profile();
+			$profile->first_name = $_POST['first_name'];
+			$profile->last_name = $_POST['last_name'];
+			$profile->address = $_POST['address'];
+			$profile->city = $_POST['city'];
+			$profile->postal_code = $_POST['postal_code'];
+			$profile->user_id = $_POST['user_id'];
+			$_SESSION['profile_id']=$profile->insert();
+			header('location:/Profile/index');
+		}else{
+			$this->view('Profile/create');
+		}
 	}
-
-
-	public function update2fa(){
-		$SQL = "UPDATE user SET secret_key=:secret_key WHERE user_id=:user_id";
-		$STMT = self::$_connection->prepare($SQL);
-		$STMT->execute(['secret_key'=>$this->secret_key,
-						'user_id'=>$this->user_id]);
-	}
+}

@@ -2,7 +2,6 @@
 namespace app\controllers;
 
 class User extends \app\core\Controller{
-	
 	//log users in here
 	public function index(){
 		if(isset($_POST['action'])){
@@ -40,48 +39,18 @@ class User extends \app\core\Controller{
 		}
 	}
 
-	//GOAL #[Attribute] to provide authentication service
-	#[\app\filters\Login]
-	public function account(){
-		if(isset($_POST['action'])){
-			//we submit the password modification form
-			$user = new \app\models\User();
-			$user = $user->get($_SESSION['username']);
-			if(password_verify($_POST['old_password'],$user->password_hash)){
-				//old password matches
-				if($_POST['password'] == $_POST['password_confirm']){
-					//good!
-					$user->password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-					$user->updatePassword();
-					header('location:/User/account?message=Password modified.');
-
-				}else{
-					header('location:/User/account?error=New passwords don\'t match. Password unchanged.');	
-				}
-			}else{
-				header('location:/User/account?error=Wrong password provided. Password unchanged.');
-			}
-
-
-		}else
-			$this->view('User/account');
-	}
-
 	public function logout(){
 		session_destroy();
 		header('location:/User/index?message=You\'ve been successfully logged out.');
 	}
 
-	//process of requesting the username and password wanted by the user
 	public function register(){
 		//when we submit the form
 		if(isset($_POST['action'])){
 			//verify that the password and password_confirmation match
 			if($_POST['password'] == $_POST['password_confirmation']){
-				//TODO: validation later
-				//proceed with attempting registration
 
-				$user = new \app\models\User();//TODO
+				$user = new \app\models\User();
 
 				if($user->get($_POST['username'])){
 					//redirect with an error message
@@ -90,18 +59,19 @@ class User extends \app\core\Controller{
 					$user->username = $_POST['username'];
 					$user->password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-					$user->insert();//maybe this is where we will have some error checking
+					$_SESSION['user_id'] = $user->insert();
+					$_SESSION['username'] = $_POST['username'];
 
-					header('location:/User/index');
+					header('location:/profile/create?message=Create profile To Have Access to reviews/product functionality');
+				}
+				else{
+					header('location:/User/register?error=Passwords do not match.');
 				}
 			}
 		}else{
-			//show the registration form
 			$this->view('User/register');
 		}
-	}
-	//update password 
-
+	} 
 
 	#[\app\filters\Login]
 	public function twofasetup(){
@@ -134,7 +104,6 @@ class User extends \app\core\Controller{
 		$data = $_GET['data'];
 		\QRcode::png($data);
 	}
-
 
 	public function update2fa(){
 		$SQL = "UPDATE user SET secret_key=:secret_key WHERE user_id=:user_id";
