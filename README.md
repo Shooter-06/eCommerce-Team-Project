@@ -18,6 +18,7 @@ In this project, I have different features that will be developed to simplify th
  -As a seller, you can modify and delete products for sale, check the inventory(track your production), check the least bought items, higly bought items (5 features).
  - As a seller, I have an option of either modifying or deleting my store profile(2 features). 
  - As a seller, I can or will get notified for the items bought and i can track their shippmemts(2 features).
+ - As a seller, I can perfom the CRUD on the reviews and comments on my products(4 features). 
  - As a seller, I can view client service requests on sales and respond (2 features)
  - As a seller, I can make some items visible only for clients with accounts(1 feature).
  - As a seller, I am able to set my business open/closing hours(1 feature).
@@ -37,6 +38,7 @@ The feautures in our project will be used as the following:
  - As a seller, I have an option of either modifying or deleting my store profile(2 features): ` you will be able to delete your profile by confirming your password. You can modify (edit) and change your Bio(name, password, address, email).`
  - As, seller, you can modify and delete products, check inventory, check the least and higly bought items: `once you create the account, you will have the option of modifying, deleting the product. you will have the option of checking your inventory with all items you added and you will have the option of checking the least and higly bought item.`
  - As a seller, I can or will get notified for the items bought and I can track their shippmemts(2 features):`This feature will allow the user to get a notofication once an item is bought.`
+ - As a seller, I can perfom the CRUD on the reviews and comments on my products(4 features): `this will allow the seller to delete CRUD all the comments he wants ex: he can create a new comment, read it delete it and update it so that his products will keep attracting more clients.`
  - As a seller, I can view client service requests on sales and respond (2 features):`This feature will help the seller to see the reviews of the buyers when they need other new items or the same items in different colors or categories`
  - As a seller, I can make some items visible for only clients with account(1 feature):`This feature will allow the user to edit and allow some users(only those users) to have access to his products.`
  - As a seller, I am able to set my business open/closing hours(1 feature): `This feature will allow the user to show when he is avalible to trade his products. For ex: Users can publish that they are available from 8AM-10PM only.`
