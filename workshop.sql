@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2022 at 03:52 PM
+-- Generation Time: Nov 07, 2022 at 06:46 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -20,20 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `workshop`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cart`
---
-
-CREATE TABLE `cart` (
-  `cart_id` int(10) NOT NULL,
-  `product_id` int(10) NOT NULL,
-  `profile_id` int(10) NOT NULL,
-  `price` int(5) NOT NULL,
-  `quantity` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE DATABASE IF NOT EXISTS `workshop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `workshop`;
 
 -- --------------------------------------------------------
 
@@ -41,6 +29,7 @@ CREATE TABLE `cart` (
 -- Table structure for table `inventory`
 --
 
+DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE `inventory` (
   `inventory_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL
@@ -52,11 +41,14 @@ CREATE TABLE `inventory` (
 -- Table structure for table `order_item`
 --
 
+DROP TABLE IF EXISTS `order_item`;
 CREATE TABLE `order_item` (
   `order_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
   `profile_id` int(10) NOT NULL,
   `payment_id` int(10) NOT NULL,
+  `price` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
   `tracking_no` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -66,11 +58,10 @@ CREATE TABLE `order_item` (
 -- Table structure for table `payment`
 --
 
+DROP TABLE IF EXISTS `payment`;
 CREATE TABLE `payment` (
   `payment_id` int(10) NOT NULL,
-  `order_id` int(10) NOT NULL,
-  `amount` int(7) NOT NULL,
-  `seller` varchar(75) NOT NULL
+  `amount` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -79,6 +70,7 @@ CREATE TABLE `payment` (
 -- Table structure for table `product`
 --
 
+DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
   `product_id` int(10) NOT NULL,
   `profile_id` int(10) NOT NULL,
@@ -93,6 +85,7 @@ CREATE TABLE `product` (
 -- Table structure for table `profile`
 --
 
+DROP TABLE IF EXISTS `profile`;
 CREATE TABLE `profile` (
   `profile_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
@@ -109,6 +102,7 @@ CREATE TABLE `profile` (
 -- Table structure for table `review`
 --
 
+DROP TABLE IF EXISTS `review`;
 CREATE TABLE `review` (
   `review_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
@@ -123,6 +117,7 @@ CREATE TABLE `review` (
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `user_id` int(10) NOT NULL,
   `username` varchar(20) NOT NULL,
@@ -132,12 +127,6 @@ CREATE TABLE `user` (
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `cart`
---
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`cart_id`);
 
 --
 -- Indexes for table `inventory`
@@ -173,7 +162,9 @@ ALTER TABLE `profile`
 -- Indexes for table `review`
 --
 ALTER TABLE `review`
-  ADD PRIMARY KEY (`review_id`);
+  ADD PRIMARY KEY (`review_id`),
+  ADD KEY `review_to_product` (`product_id`),
+  ADD KEY `review_to_profile` (`profile_id`);
 
 --
 -- Indexes for table `user`
@@ -185,12 +176,6 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `cart`
---
-ALTER TABLE `cart`
-  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `inventory`
@@ -233,6 +218,17 @@ ALTER TABLE `review`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `review`
+--
+ALTER TABLE `review`
+  ADD CONSTRAINT `review_to_product` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`),
+  ADD CONSTRAINT `review_to_profile` FOREIGN KEY (`profile_id`) REFERENCES `profile` (`profile_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
