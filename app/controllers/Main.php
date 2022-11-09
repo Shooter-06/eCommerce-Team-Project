@@ -3,7 +3,6 @@ namespace app\controllers;
 
 class Main extends \app\core\Controller{
 	public function index(){
-
 		$products->new \app\models\Product();
 		$products->$product->getAll();
 		$this->view('Main/index', $products);
