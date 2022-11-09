@@ -1,4 +1,4 @@
-<?php $this->view('header', 'Workshop'); ?>
+<?php $this->view('header', 'TeamProject'); ?>
 
 <h1>New product Inputs</h1>
 <form action='' method='post' enctype='multipart/form-data'>
@@ -24,17 +24,11 @@
 			<label>The Price of the product:<input type="text" name="name" /></label><br>
 
 		</div>
-		<div class="rating">
-			
-		<input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-  	<input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-  	<input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-  	<input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-  	<input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-
+		<div>
+			<?php $this->view('rating'); ?>
 		</div>
 		
-	<input type="submit" name="action" value="Publish" class='btn btn-primary' />
+	<input type="submit" name="action" value="product_post" class='btn btn-primary' />
 </form>
 
 <a href='Product/index'>Cancel</a>

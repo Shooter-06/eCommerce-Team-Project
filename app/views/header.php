@@ -26,5 +26,6 @@
 			<a href="/User/logout"><i style="font-size: 2rem;" class='bi-door-open' title='Log out'></i></a>
 <?php	}
 		?>
-		<a href='/Product/create'><i style="font-size: 2rem;" class='bi-plus-square' title='New Product'></i></a>
+
+		<a href='/Product/create'><i style="font-size: 2rem;" class='bi-plus-square' title='Add Product'></i></a>
 		<a href='/Profile/index'><i style="font-size: 2rem;" class='bi-file-earmark-person' title='My Profile'></i></a>		

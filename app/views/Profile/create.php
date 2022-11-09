@@ -26,7 +26,7 @@
     	width: 100%;
 		}
 
-		.username_form{
+		.firstname_form{
     	font-family: "Times New Roman", Times, serif;
 			position: absolute;
 			text-align: center;
@@ -34,7 +34,7 @@
     	width: 100%;
     	}
 
-	    #username{
+	    #first_name{
 	    	font-family: "Times New Roman", Times, serif;
 				position: absolute;
 				margin-top: 10px;
@@ -42,7 +42,72 @@
 	    	width: 400px;
 	    }
 
-	    .password_form{
+	    .lastname__form{
+	    	font-family: "Times New Roman", Times, serif;
+				position: absolute;
+				text-align: center;
+				top: 45%;
+	    	width: 100%;
+	    }
+
+	    #last_name{
+	    	font-family: "Times New Roman", Times, serif;
+				position: absolute;
+				margin-top: 10px;
+				margin-left: 36%;
+	    	width: 400px;
+	    }
+
+	    .address_form{
+	    	font-family: "Times New Roman", Times, serif;
+				position: absolute;
+				text-align: center;
+				top: 60%;
+	    	width: 100%;
+	    }
+
+	    #address{
+	    	font-family: "Times New Roman", Times, serif;
+			  position: absolute;
+			  margin-top: 10px;
+			  margin-left: 36%;
+	    	width: 400px;
+	  	}
+
+		
+
+	  	.city_form{
+	    	font-family: "Times New Roman", Times, serif;
+				position: absolute;
+				text-align: center;
+				top: 60%;
+	    	width: 100%;
+	    }
+
+	    #city{
+	    	font-family: "Times New Roman", Times, serif;
+			  position: absolute;
+			  margin-top: 10px;
+			  margin-left: 36%;
+	    	width: 400px;
+	  	}
+	  	.pCode_form{
+	    	font-family: "Times New Roman", Times, serif;
+				position: absolute;
+				text-align: center;
+				top: 60%;
+	    	width: 100%;
+	    }
+
+	    #postal_code{
+	    	font-family: "Times New Roman", Times, serif;
+			  position: absolute;
+			  margin-top: 10px;
+			  margin-left: 36%;
+	    	width: 400px;
+	  	}
+
+	  	.password_form{
 	    	font-family: "Times New Roman", Times, serif;
 				position: absolute;
 				text-align: center;
@@ -135,10 +200,33 @@
 
 	<form action='' method='post'>
 
-		<div class="username_form">
-			<label for="username">Username: </label>
-    	<input type="text" class="form-control" id="username" name='username' placeholder="Enter the username">
+		<div class="firstname_form">
+			<label for="Fname">First Name: </label>
+    	<input type="text" class="form-control" id="first_name" name='first_name' placeholder="Enter the first name">
 		</div>
+
+		<div class="lastname_form">
+			<label for="Lname">Last Name: </label>
+    	<input type="text" class="form-control" id="last_name" name='last_name' placeholder="Enter the last name">
+		</div>
+
+		<div class="address_form">
+			<label for="address">Address : </label>
+    	<input type="text" class="form-control" id="address" name='address' placeholder="Enter the address">
+		</div>
+
+		<div class="city_form">
+			<label for="city">City: </label>
+    	<input type="text" class="form-control" id="city" name='city' placeholder="Enter your username">
+		</div>
+
+		<div class="pCode_form">
+			<label for="postal_code">Postal_code: </label>
+    	<input type="text" class="form-control" id="postal_code" name='postal_code' placeholder="Enter your postal code">
+
+    	<? if(isset($user_id))?>
+		</div>
+
 
 		<div class="password_form">
 			<label for="password">Password: </label>
@@ -150,6 +238,7 @@
     	<input type="text" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
 		</div><br>
 
+
 		<br>
 
 		<button type="submit" name='action' value='Register' class="btn btn-primary">Sign up
@@ -157,7 +246,7 @@
 		<br>
 	</form>
 
-	<a href="/User/index" class= "backBtn">BACK</a>
+	<a href="/Product/index" class= "backBtn">BACK</a>
 
 	<footer>
 		
