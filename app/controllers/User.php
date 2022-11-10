@@ -41,7 +41,7 @@ class User extends \app\core\Controller{
 					$_SESSION['user_id'] = $user->insert();
 					$_SESSION['username'] = $_POST['username'];
 
-					header('location:/profile/create?message=Create profile To Have Access to reviews/product functionality');
+					header('location:/Product/index?message=these are items on our website to be sold!');
 				}
 				else{
 					header('location:/User/register?error=Passwords do not match.');

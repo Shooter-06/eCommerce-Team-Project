@@ -6,5 +6,3 @@ class cart extends \app\core\Controller{
 		$SQL = "SELECT * FROM cart";
 		$STMT=self::$_connection->prepare($SQL);
 }
-
-//

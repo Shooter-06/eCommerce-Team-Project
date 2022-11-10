@@ -8,3 +8,5 @@ give an option for the user to navigate through products
 --> give an option to logout  
 
 <?php $this->view('/User/index'); ?>
+
+

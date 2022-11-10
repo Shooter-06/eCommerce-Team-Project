@@ -1,8 +1,7 @@
 <?php
 namespace app\controlllers;
 
-#[\app\filters\Login]
-#[\app\filters\Profile]
+#[\app\filters\MainUser]
 class review extends app\core\Controller{
 	public function index(){
 		$review = new \app\models\Review();
