@@ -4,8 +4,8 @@ namespace app\controllers;
 
 class profile extends \app\core\Controller{
 	
-	#[\app\filters\Login]
-	#[\app\filters\Profile]
+	//#[\app\filters\Login]
+	//#[\app\filters\Profile]
 	public function index(){
 
 		$profile = new \app\models\profile();

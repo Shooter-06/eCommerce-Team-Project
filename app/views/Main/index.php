@@ -9,10 +9,11 @@
 <p>This is the index of the Main controller.</p>
 
 <ul>
-<li><a href='/Main/index2'>index 2</a></li>
-<li><a href='/Main/foods'>foods</a></li>
-</ul>
+<li><a href='/Product/index'>List of all products</a></li>
+<li><a href='/User/index'>End session </a></li>
+<li><a href='/Main/index'>Create a profile</a></li>
 
+</ul>
 
 </body>
 </html>

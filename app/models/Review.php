@@ -36,7 +36,7 @@ class Review extends app\core\Model{
 		$STMT->execute(['review_id'=>$this->review_id]);
 	}
 
-	public function getProfile(){
+	public function getProfile($profile_id){
 		$SQL = "SELECT * FROM profile WHERE profile_id=:profile_id";
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['profile_id'=>$this->profile_id]);
@@ -44,11 +44,11 @@ class Review extends app\core\Model{
 		return $STMT->fetch();
 	}
 
-	public function getProducts(){
+	public function getProducts($product_id){
 		$SQL = "SELECT * FROM product WHERE product_id=:product_id";
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['product_id'=>$this->product_id]);
-		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Profile');
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Product');
 		return $STMT->fetch();
 	}
 }
