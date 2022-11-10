@@ -160,7 +160,7 @@
 	<a href="/User/index" class= "backBtn">BACK</a>
 
 	<footer>
-		
+		<?php $this->view('footer', 'Workshop'); ?>
 	</footer>
 </body>
 </html>

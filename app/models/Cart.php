@@ -3,12 +3,12 @@ namespace app\models;
 
 class Cart extends app\core\Model{
 
-	/*public function getALL(){
+	public function getALL(){
 		$SQL = "SELECT * FROM cart"
 		$STMT=self::$_connection->prepare($SQL);
 		$STMT->execute();
 		return $STMT->fetchAll();
-	}*/
+	}
 	
 	public function remove(){
 		if(!empty($_SESSION["cart_item"])){

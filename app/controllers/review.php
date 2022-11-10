@@ -30,9 +30,8 @@ class review extends app\core\Controller{
 		$review=$review->getProduct($product_id);
 		$review_id=$review->review_id;	
 
-		if(isset($_POST['action'])){
+		if(isset($_POST['action']) && $review->profile_id == $_SESSION['profile_id']){
 			$review->review =$_POST['review'];
-			$review->review=$_POST['review'];
 			$review->date=$_POST['date'];
 			$review_id = $review->update();
 		}	
@@ -47,7 +46,7 @@ class review extends app\core\Controller{
 		if($review->product_id == $_SESSION['product_id']){
 			$review->delete();
 		}
-		header("location:/Review/details");	
+		header("location:/Review/details/$product_id");	
 	}
 
 }
