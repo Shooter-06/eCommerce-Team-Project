@@ -5,7 +5,9 @@ namespace app\controlllers;
 #[\app\filters\Profile]
 class review extends app\core\Controller{
 	public function index(){
-				
+		$review = new \app\models\Review();
+		$reviews = $review->getAll();
+		$this->view('Review/details', $review);			
 	}
 
 	public function add($product_id){
@@ -39,13 +41,12 @@ class review extends app\core\Controller{
 
 	public function delete($review_id){
 		$review=new \app\models\Review();
-		$review=$review->get($product_id);
+		$review=$product_id->getProducts();  //get($product_id);
 		$review_id=$review->review_id;	
 
 		if($review->product_id == $_SESSION['product_id']){
-			$comment->delete();
+			$review->delete();
 		}
-
 		header("location:/Review/details");	
 	}
 
