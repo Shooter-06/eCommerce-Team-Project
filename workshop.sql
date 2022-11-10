@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2022 at 06:46 PM
+-- Generation Time: Nov 10, 2022 at 03:24 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `workshop`
 --
-CREATE DATABASE IF NOT EXISTS `workshop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `workshop`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `workshop`;
 -- Table structure for table `inventory`
 --
 
-DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE `inventory` (
   `inventory_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL
@@ -41,7 +38,6 @@ CREATE TABLE `inventory` (
 -- Table structure for table `order_item`
 --
 
-DROP TABLE IF EXISTS `order_item`;
 CREATE TABLE `order_item` (
   `order_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
@@ -58,9 +54,9 @@ CREATE TABLE `order_item` (
 -- Table structure for table `payment`
 --
 
-DROP TABLE IF EXISTS `payment`;
 CREATE TABLE `payment` (
   `payment_id` int(10) NOT NULL,
+  `product_id` int(10) NOT NULL,
   `amount` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -70,7 +66,6 @@ CREATE TABLE `payment` (
 -- Table structure for table `product`
 --
 
-DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
   `product_id` int(10) NOT NULL,
   `profile_id` int(10) NOT NULL,
@@ -85,7 +80,6 @@ CREATE TABLE `product` (
 -- Table structure for table `profile`
 --
 
-DROP TABLE IF EXISTS `profile`;
 CREATE TABLE `profile` (
   `profile_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
@@ -102,7 +96,6 @@ CREATE TABLE `profile` (
 -- Table structure for table `review`
 --
 
-DROP TABLE IF EXISTS `review`;
 CREATE TABLE `review` (
   `review_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
@@ -117,7 +110,6 @@ CREATE TABLE `review` (
 -- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `user_id` int(10) NOT NULL,
   `username` varchar(20) NOT NULL,
