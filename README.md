@@ -24,7 +24,7 @@ In this project, I have different features that will be developed to simplify th
 - I can login and logout from my profile(2 features).
 
 ## As a User:
- - I can login, register, delete and logout from mu user account(4 features).
+ - I can login, register, delete and logout from my user account(4 features).
  - I can search for products without creating a profile (1 feature).
  - I can comment on a product (1 features).
  - I can rate a product (1 feature). 
