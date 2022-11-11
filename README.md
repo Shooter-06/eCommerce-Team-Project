@@ -20,7 +20,7 @@ In this project, I have different features that will be developed to simplify th
 - I can create, delete, update and view my product (4 features).
 - I can check the inventory(the main page with all the products) (1 feature).
 - I can create, update, delete and view my profile(4 features). 
-- I can create, update, delete and view on the reviews/comments on my products(4 features). 
+- I can create, update, delete and view on the reviews/comments on my product(4 features). 
 - I can login and logout from my profile(2 features).
 
 ## As a User:
