@@ -36,7 +36,7 @@ In this project, I have different features that will be developed to simplify th
 The feautures in our project will be used as the following: 
 
 ## As a seller:
-- I can create, delete, update and view my product (4 features):`All sellers with thier profiles created will have an option of creating, deleting, updating and view each one of thier product. The getProduct function with allow to get one product at the time do that any seller can perfom the CRUD operations.`
+- I can create, delete, update and view my product (4 features):`All sellers with thier profiles created will have an option of creating, deleting, updating and view each one of thier product. The getProduct function with allow to get one product at the time so that the seller can perfom the CRUD operations.`
 - I can check the inventory(the main page with all the products) (1 feature):`The seller will have an option of getting the list off all the products that he has.`
 - I can create, update, delete and view my profile(4 features):`After creating an account a user, if you want to become a seller, you may create your profile. This will allow you to update, delete and view your profile.`
 - I can create, update, delete and view on the reviews/comments on my products(4 features): `As a seller, you will have the permission of CRUD your reviews which will be views by the users as details or description of your product.`
