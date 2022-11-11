@@ -45,10 +45,10 @@ The feautures in our project will be used as the following:
 ## As a User:
  - I can login, register, delete and logout from my user account (3 features):`Each user will have the option of registering, editing, delete and logging out in his user account.`
  - I can search for products without creating a profile (1 feature): `This feature will allow me to search for the product name`
- - I can comment on a product (3 features):`This feature will allow me to make a comment on any product i see on the page`
+ - I can comment on a product (1 features):`This feature will allow me to make a comment on any product I see on the page`
  - I can rate a product (1 feature): `This feature will allow me to rate a profuct from 1-5 depending on my satisfaction.`
- - I can add some products in the cart (1 feature):`I can products in the cart that i want to buy`.
- - I can get the to total price and the quantity of items in the cart (2 feature):`I can get the total price in the products and the amount of the products i have in my cart`
+ - I can add some products in the cart (1 feature):`I can products in the cart that I want to buy`.
+ - I can get the to total price and the quantity of items in the cart (2 feature):`I can get the total price in the products and the amount of the products I have in my cart`
  - 
 
 ## Timeline: 
