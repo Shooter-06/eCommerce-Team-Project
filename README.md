@@ -21,12 +21,12 @@ In this project, I have different features that will be developed to simplify th
 - I can check the inventory(the main page with all the products) (1 feature).
 - I can create, update, delete and view my profile(4 features). 
 - I can create, update, delete and view on the reviews/comments on my products(4 features). 
--
+- I can login and logout from my profile(2 features).
 
 ## As a User:
  - I can login, register, delete and logout from mu user account(4 features).
  - I can search for products without creating a profile (1 feature).
- - I can comment on a product (3 features).
+ - I can comment on a product (1 features).
  - I can rate a product (1 feature). 
  - I can add some products in the cart (1 feature)
  - I can get the to total price and the quantity of items in the cart (2 feature).
@@ -34,24 +34,22 @@ In this project, I have different features that will be developed to simplify th
  
  # Project features explanation
 The feautures in our project will be used as the following: 
- 
- - As a seller, I have an option of either modifying or deleting my store profile(2 features): ` you will be able to delete your profile by confirming your password. You can modify (edit) and change your Bio(name, password, address, email).`
- - As, seller, you can modify and delete products, check inventory, check the least and higly bought items: `once you create the account, you will have the option of modifying, deleting the product. you will have the option of checking your inventory with all items you added and you will have the option of checking the least and higly bought item.`
- - As a seller, I can or will get notified for the items bought and I can track their shippmemts(2 features):`This feature will allow the user to get a notofication once an item is bought.`
- - As a seller, I can perfom the CRUD on the reviews and comments on my products(4 features): `This will allow the seller to delete CRUD all the comments he wants ex: he can create a new comment, read it delete it and update it so that his products will keep attracting more clients.`
- - As a seller, I can view client service requests on sales and respond (2 features):`This feature will help the seller to see the reviews of the buyers when they need other new items or the same items in different colors or categories`
- - As a seller, I can make some items visible for only clients with account(1 feature):`This feature will allow the user to edit and allow some users(only those users) to have access to his products.`
- - As a seller, I am able to set my business open/closing hours(1 feature): `This feature will allow the user to show when he is avalible to trade his products. For ex: Users can publish that they are available from 8AM-10PM only.`
- - As a user, I can search and see different products with their details(2 features): `This feature will allow the buyer to see all the listed items and their details`
- - As a user, I can create a profile account for premium items(). They will be items that are not visible for people without accounts(1 feature): `This feature will allow the user to make items visible for only people that has created the account on the page.`
- - As a user, I can add/delete/modify quantities for products to my shopping cart (3 features): `This feature will allow the user to perfom the CRUD oeprations from the cart.`
- - As a user, I can checkout my order (1 feature):`This feature will allow the user to see all the items in the cart.`
- - As a user, I can search for items(1 feature):`This feature will allow the user to search for different items.`
- - As a user, I am able to perfom the payment method(1 feature):`This feature will allow the buyer to perfom the payment method for different items.`
- - As a user, I am able to delete my account (1 feature):`This feature will allow the user who has an account to dellete it.`
- - As a user, I am able to track the sales that i made in the past(1 feature):`This feature will allow the user to check the history for his previous sales.`
- - As a seller,I can check my history(sales trade analysis)(1 feature):`This feature will allow the seller to check the history for the previous sales.`
- - As a user, I will be able to se the products reviews(1 feature):`This feature will allow the user to check his comments/reviews for different items.`
+
+## As a seller:
+- I can create, delete, update and view my product (4 features):`All sellers with thier profiles created will have an option of creating, deleting, updating and view thier each one of thier product: the getProduct function with allow to get one product at the time do that any seller can perfom the CRUD operations.`
+- I can check the inventory(the main page with all the products) (1 feature):`The seller will have an option of getting the list off all the products that he has.`
+- I can create, update, delete and view my profile(4 features):`After creating an account a user, if you want to become a seller, you may create your profile. This will allow you to update, delete and view your profile.`
+- I can create, update, delete and view on the reviews/comments on my products(4 features): `As a seller, you will have the permission of CRUD your reviews which will be views by the users as details or description of your product.`
+-I can login and logout from my profile(2 features):`This feature will allow you to login and logout in your profile in case you want to continue a user only.`
+
+## As a User:
+ - I can login, register, delete and logout from my user account (3 features):`Each user will have the option of registering, editing, delete and logging out in his user account.`
+ - I can search for products without creating a profile (1 feature): `This feature will allow me to search for the product name`
+ - I can comment on a product (3 features):`This feature will allow me to make a comment on any product i see on the page`
+ - I can rate a product (1 feature): `This feature will allow me to rate a profuct from 1-5 depending on my satisfaction.`
+ - I can add some products in the cart (1 feature):`I can products in the cart that i want to buy`.
+ - I can get the to total price and the quantity of items in the cart (2 feature):`I can get the total price in the products and the amount of the products i have in my cart`
+ - 
 
 ## Timeline: 
 
