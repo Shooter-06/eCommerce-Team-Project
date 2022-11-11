@@ -1,5 +1,3 @@
-<!-- rating footer -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
