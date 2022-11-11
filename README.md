@@ -40,7 +40,7 @@ The feautures in our project will be used as the following:
 - I can check the inventory(the main page with all the products) (1 feature):`The seller will have an option of getting the list off all the products that he has.`
 - I can create, update, delete and view my profile(4 features):`After creating an account a user, if you want to become a seller, you may create your profile. This will allow you to update, delete and view your profile.`
 - I can create, update, delete and view on the reviews/comments on my products(4 features): `As a seller, you will have the permission of CRUD your reviews which on the users will be the details and description of your product.`
-- I can login and logout from my profile(2 features):`This feature will allow you to login and logout in your profile in case you want to continue a user only.`
+- I can login and logout from my profile(2 features):`This feature will allow you to login and logout in your profile in case you want to continue as a user only.`
 
 ## As a User:
  - I can login, register, delete and logout from my user account (3 features):`Each user will have the option of registering, editing, delete and logging out in his user account.`
