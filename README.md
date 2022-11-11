@@ -14,7 +14,9 @@ eCommerce Team Project
 This project was created based of the discussion of me and my teammates to develop a web application that will allow commercial transactions conducted electronically on the internet. The primary goal of our eCommerce website will be to sell goods and service online. This project deals with developing an e-commerce website for Online Sales of different items like clothes, shoes, phones and other electronics. It provides the user with a wife and varied catalog of different items available for purchase in our store.
 
 # Project features
-In this project, I have different features that will be developed to simplify the work every Web Visitor or users
+In this project, I have different features that will be developed to simplify the work every Web Visitor or users:
+##As a seller:
+- As a seller, . 
  -As a seller, you can modify and delete products for sale, check the inventory(track your production), check the least bought items, higly bought items (5 features).
  - As a seller, I have an option of either modifying or deleting my store profile(2 features). 
  - As a seller, I can or will get notified for the items bought and i can track their shippmemts(2 features).
