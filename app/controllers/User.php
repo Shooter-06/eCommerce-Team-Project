@@ -2,7 +2,7 @@
 namespace app\controllers;
 
 class User extends \app\core\Controller{
-	//log users in here
+	
 	public function index(){
 		if(isset($_POST['action'])){
 			//select the user record as per the request

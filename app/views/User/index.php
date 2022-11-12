@@ -140,7 +140,8 @@
 	</p>
 
 	<footer>
-		
+		<?php $this->view('footer'); ?>
 	</footer>
 </body>
+
 </html>

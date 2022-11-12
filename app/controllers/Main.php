@@ -9,7 +9,6 @@ class Main extends app\core\Controller{
 	}
 
 	public function search(){
-		
 		$productsFind = new \app\models\Product();
 		$productsFind = $productsFind->search($_GET['searching']);
 		$this->view('Main/index', $productsFind);

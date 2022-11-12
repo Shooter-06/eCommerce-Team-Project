@@ -1,4 +1,4 @@
-<?php $this->view('header', 'TeamProject'); ?>
+<?php $this->view('header', 'Workshop'); ?>
 
 <h1>New product Inputs</h1>
 <form action='' method='post' enctype='multipart/form-data'>
