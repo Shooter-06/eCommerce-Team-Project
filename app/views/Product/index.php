@@ -1,9 +1,17 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 2841d93594caaf8bdf09f398f3fab59dbcf09155
 <body>
 	<style>
+		.info{
+			margin: 0 auto 20px auto;
+		    padding: 5px 10px 5px 15px;
+		    display: flex;
+		    width: 75%;
+		    background-color: rgb(122, 122, 212);
+		    color: white;
+		    font-size: 17px;
+		    justify-content: center;
+		}
+
 		h3{
 			align-items: center;
 			justify-content: center;
@@ -12,8 +20,10 @@
 			font-family: 'Times New Roman', Times, serif;
 		}	
 	</style>
-
-	<h3>Our stock Inventory</h3>
+	<div class="info">
+		<h3>Our stock Inventory</h3>
+	</div>
+	
 	<div class="product_index">
 
 		<?php

@@ -2,6 +2,7 @@
 <head>
 	<title><?= $data ?></title>
 	<link rel="stylesheet" href="rating.css">
+	<link rel="shortcut icon" type="image/png" href="Images/favicon-32x32.png">
 
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
@@ -29,6 +30,16 @@
 		    padding: 2px;
 		}
 
+		html{
+    		background-color: peachpuff;
+    		font-family:Arial, Helvetica, sans-serif;
+		}
+
+		body{
+		    background-color: rgb(250, 222, 198);
+		}
+
+
 	</style>
 	<div class='container'>
 		<div class='logo'>
@@ -44,13 +55,9 @@
 
 		<?php
 		if(!isset($_SESSION['user_id'])){?>
-<<<<<<< HEAD
 			<a href="/User/index"><i style="font-size: 2rem;" class='bi bi-file-person-fill' title="Log in"></i></a>
-<?php	}else{ ?>
-=======
-			<a href="/User/index"><i style="font-size: 2rem;" class='bi-door-closed' title="Log in"></i></a>
+
 		<?php	}else{ ?>
->>>>>>> 2841d93594caaf8bdf09f398f3fab59dbcf09155
 			<a href="/User/logout"><i style="font-size: 2rem;" class='bi-door-open' title='Log out'></i></a>
 		<?php	}
 		?>
