@@ -16,12 +16,12 @@
 	<h3>Our stock Inventory</h3>
 	<div class="product_index">
 
-		<?
+		<?php
 		foreach($value as $products){
 			$products= $this->getAll();
 		}?>
 
-		<a href="/Profile/index/<?=$profile->profile_id ?>">
+		<a href="/Profile/index/<?=$profile->profile_id ?>"></a>
 		<?php 
 			if(isset($_SESSION['profile_id']) && $_SESSION['profile_id'] == $data->profile_id){
 
@@ -40,8 +40,12 @@
 
 
 	<a href="/Product/create" class= "backBtn">Add a new Product</a>
-	<a href="/User/index" class= "backBtn">Logout</a>
+	<br>
 	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
+	<br>
+	<a href="/User/index" class= "backBtn">Logout</a>
+	<br>
+
 
 </body>
 <footer>
