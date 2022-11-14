@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2841d93594caaf8bdf09f398f3fab59dbcf09155
 <body>
 	<style>
 		h3{
@@ -12,9 +15,13 @@
 
 	<h3>Our stock Inventory</h3>
 	<div class="product_index">
-		<?php $products= $data->getAll();?>		
-		<a href="/Profile/index/<?=$profile->profile_id ?>">
 
+		<?
+		foreach($value as $products){
+			$products= $this->getAll();
+		}?>
+
+		<a href="/Profile/index/<?=$profile->profile_id ?>">
 		<?php 
 			if(isset($_SESSION['profile_id']) && $_SESSION['profile_id'] == $data->profile_id){
 
@@ -22,6 +29,7 @@
 		}
 	?>	
 
+	<p>Say something about the products</p>
 	<form action='/Review/add/<?=$data->review_id?>' method="post">
 	<div class="review">
 		<input class='form-control' type="text" name="review" placeholder="Say something" />

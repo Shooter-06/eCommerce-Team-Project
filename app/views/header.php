@@ -44,10 +44,15 @@
 
 		<?php
 		if(!isset($_SESSION['user_id'])){?>
+<<<<<<< HEAD
 			<a href="/User/index"><i style="font-size: 2rem;" class='bi bi-file-person-fill' title="Log in"></i></a>
 <?php	}else{ ?>
+=======
+			<a href="/User/index"><i style="font-size: 2rem;" class='bi-door-closed' title="Log in"></i></a>
+		<?php	}else{ ?>
+>>>>>>> 2841d93594caaf8bdf09f398f3fab59dbcf09155
 			<a href="/User/logout"><i style="font-size: 2rem;" class='bi-door-open' title='Log out'></i></a>
-<?php	}
+		<?php	}
 		?>
 
 		<a href='/Product/create'><i style="font-size: 2rem;" class='bi bi-broadcast' title='Add Product'></i></a>

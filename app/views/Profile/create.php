@@ -246,18 +246,11 @@
 		<br>
 	</form>
 
-	<script>
-		picture.onchange = evt => {
-		  const [file] = picture.files
-		  if (file) {
-		    pic_preview.src = URL.createObjectURL(file)
-		  }
-		}
-	</script>
 	<a href="/Product/index" class= "backBtn">BACK</a>
 
-
+	<footer>
 		<?php $this->view('footer'); ?>
-
+	</footer>
+		
 </body>
 </html>
