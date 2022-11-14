@@ -30,16 +30,16 @@
 	</style>
 	<div class='container'>
 		<div class='logo'>
-		<a href='/Main/index'><img src="/images/workshop.png" style="max-height: 250px;" style="max-width: 250px;" /></a></div>
+			<a href='/Main/index'><img src="/images/workshop.png" style="max-height: 250px;" style="max-width: 250px;" /></a>
+		</div>
 
 		<div class="input-group">
 		<form action="/Main/search" method="get" style='display:inline-block'>					
 			    <input type="search" name='search_term' class="form-control" placeholder="Enter search term" />
-			  <button type="submit" class="btn btn-primary" value="Search"><i class="bi-search"></i></button>
-			
-			
+			  <button type="submit" class="btn btn-primary" value="Search"><i class="bi-search"></i></button>	
 		</form>
-		</div>
+		
+
 		<?php
 		if(!isset($_SESSION['user_id'])){?>
 			<a href="/User/index"><i style="font-size: 2rem;" class='bi-door-closed' title="Log in"></i></a>
@@ -50,3 +50,5 @@
 
 		<a href='/Product/create'><i style="font-size: 2rem;" class='bi-plus-square' title='Add Product'></i></a>
 		<a href='/Profile/index'><i style="font-size: 2rem;" class='bi-file-earmark-person' title='My Profile'></i></a>		
+		</div>
+	</div>
