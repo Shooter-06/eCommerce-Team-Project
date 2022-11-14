@@ -3,9 +3,7 @@
 <p>Welcome to our invenotry.</p>
 
 <?php
-foreach ($data as $products) {
-	$this->view('Product/index', $products);
-}
+	$this->view('Product/index');
 ?>
 
 <?php $this->view('footer'); ?>

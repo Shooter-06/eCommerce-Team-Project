@@ -1,63 +1,33 @@
-<!-- <?php $this->view('header', 'Workshop'); ?>
+<?php $this->view('header', 'Workshop'); ?>
 
-<p>Welcome to our invenotry.</p>
+<body>
+	<p>Our stock Inventory.</p>
+	<div class="product_index">
+		<?php $products= $data->getAll();?>		
+		<a href="/Profile/index/<?=$profile->profile_id ?>">
 
-<?php $this->view('Product/details'); ?> <!-- this will help the user to navigate through the products. -->
+		<?php 
+			if(isset($_SESSION['profile_id']) && $_SESSION['profile_id'] == $data->profile_id){
 
-<?php $this->view('/Product/create'); ?> <!-- create a profile after seeing the inventory -->
+			$products= $data->getReviews();
+		}
+	?>	
 
-<?php $this->view('/User/index'); ?> <!-- logout out -->
+	<form action='/Review/add/<?=$data->review_id?>' method="post">
+	<div class="review">
+		<input class='form-control' type="text" name="review" placeholder="Say something" />
+	<button type="submit" name='action' class='btn btn-primary'><i class='bi-send'></i></button>
+	</div></form>
+
+	</div>
 
 
+	<a href="/Product/create" class= "backBtn">Add a new Product</a>
+	<a href="/User/index" class= "backBtn">Logout</a>
+	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
 
-	<h1>Welcome to the Product inventory.</h1>
-
-	<form action='' method='post'>
-		<div class="username_form">
-			<label for="username">Username: </label>
-    	<input type="text" class="form-control" id="username" name='username' placeholder="Enter the username">
-		</div>
-
-		<div class="password_form">
-			<label for="password">Password: </label>
-    	<input type="text" class="form-control" id="password" name='password' placeholder="Enter the password">
-		</div>
-		<br>
-
-		<button type="submit" name='action' value='Register' class="btn btn-primary">Login</button>
-		<br>
-	</form>
-	<p> If you wish to register 
-		<a href="/User/index">REGISTER HERE !!</a> 
-	</p>
-
-	<footer>
-		<?php $this->view('footer'); ?>
-	</footer>
 </body>
-
-
-
-///////////////////////
-
-
-
-<?php $this->view('header', 'Instasham'); ?>
-
-<h1>Welcome to the Product inventory.</h1>
-
-<!-- <a 'href=app/Product <?=$data->product_id?>'> Back </a> -->
-
-
-
-<?php
-	$product=$data->getAll();
-	foreach ($product as $productsInfo) {
-	$this->view('Product/index',$$products);
-}
-
-?>
-
-<a href='/#Product<?=$data->product_id?>'>Back</a>
-
-<?php $this->view('footer'); ?> -->
+<footer>
+	<?php $this->view('footer'); ?>
+</footer>
+</html>

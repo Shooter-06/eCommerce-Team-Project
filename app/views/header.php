@@ -13,23 +13,27 @@
 
 
 <body>
+	
 	<style>
-.container {
-   /* width: 300px;
-    margin: auto;*/
-}
+		.container {
+		   /* width: 300px;
+		    margin: auto;*/
+		}
 
-.logo {
-    float: left;
-}
+		.logo {
+		    float: left;
+		}
+	.input-group {
+	    float: right;
+	}
 
-.input-group {
-    float: right;
-}
+	.search_term{
+		float: ;
+	}
+	.input-group {
+		float: right;
+	}
 
-search_term{
-	float: ;
-}
 	</style>
 	<div class='container'>
 		<div class='logo'>
