@@ -1,4 +1,4 @@
-<?php $this->view('header', 'Workshop'); ?>
+<!-- <?php $this->view('header', 'Workshop'); ?>
 
 <p>Welcome to our invenotry.</p>
 
@@ -60,4 +60,4 @@
 
 <a href='/#Product<?=$data->product_id?>'>Back</a>
 
-<?php $this->view('footer'); ?>
+<?php $this->view('footer'); ?> -->
