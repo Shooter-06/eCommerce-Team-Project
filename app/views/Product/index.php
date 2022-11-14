@@ -1,8 +1,7 @@
-
 <body>
 	<style>
 		.info{
-			margin: 0 auto 20px auto;
+			margin: 300px
 		    padding: 5px 10px 5px 15px;
 		    display: flex;
 		    width: 75%;
@@ -24,7 +23,7 @@
 		<h3>Our stock Inventory</h3>
 	</div>
 	
-	<div class="product_index">
+	<!-- <div class="product_index">
 
 		<?php
 		foreach($value as $products){
@@ -37,7 +36,7 @@
 
 			$products= $data->getReviews();
 		}
-	?>	
+	?>	 -->
 
 	<p>Say something about the products</p>
 	<form action='/Review/add/<?=$data->review_id?>' method="post">
