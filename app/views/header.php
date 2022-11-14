@@ -26,6 +26,10 @@
 .input-group {
     float: right;
 }
+
+search_term{
+	float: ;
+}
 	</style>
 	<div class='container'>
 		<div class='logo'>
