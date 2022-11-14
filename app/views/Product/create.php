@@ -23,6 +23,8 @@
 			<label>The Description of the product:<input type="text" name="name" /></label><br>
 			<label>The Price of the product:<input type="text" name="name" /></label><br>
 
+			<label class="image_product">Picture:</label><img id='pic_preview' src='/images/<?=$data->picture ?>' style="max-width:100px;max-height:100px" />
+
 		</div>
 		<div>
 			<?php $this->view('rating'); ?>

@@ -1,9 +1,13 @@
 <body>
 	<p>Our stock Inventory.</p>
 	<div class="product_index">
-		<?php $products= $data->getAll();?>		
-		<a href="/Profile/index/<?=$profile->profile_id ?>">
 
+		<?
+		foreach($value as $products){
+			$products= $this->getAll();
+		}?>
+
+		<a href="/Profile/index/<?=$profile->profile_id ?>">
 		<?php 
 			if(isset($_SESSION['profile_id']) && $_SESSION['profile_id'] == $data->profile_id){
 
