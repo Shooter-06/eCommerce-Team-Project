@@ -1,5 +1,3 @@
-<?php $this->view('header', 'Workshop'); ?>
-
 <body>
 	<p>Our stock Inventory.</p>
 	<div class="product_index">
@@ -13,6 +11,7 @@
 		}
 	?>	
 
+	<p>Say something about the products</p>
 	<form action='/Review/add/<?=$data->review_id?>' method="post">
 	<div class="review">
 		<input class='form-control' type="text" name="review" placeholder="Say something" />
