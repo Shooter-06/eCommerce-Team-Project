@@ -1,7 +1,16 @@
-<?php $this->view('header', 'Workshop'); ?>
 
 <body>
-	<p>Our stock Inventory.</p>
+	<style>
+		h3{
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			margin-right: 300px;
+			font-family: 'Times New Roman', Times, serif;
+		}	
+	</style>
+
+	<h3>Our stock Inventory</h3>
 	<div class="product_index">
 		<?php $products= $data->getAll();?>		
 		<a href="/Profile/index/<?=$profile->profile_id ?>">

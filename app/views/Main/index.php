@@ -1,6 +1,7 @@
-<?php $this->view('header', 'Workshop'); ?>
+<?php $this->view('header', 'Workshop'); ?><h1><center><big>Welcome to our inventory</big></center></h1>
 
-<p>Welcome to our invenotry.</p>
+
+
 
 <?php
 	$this->view('Product/index');

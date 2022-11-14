@@ -13,26 +13,21 @@
 
 
 <body>
-	
+	<h1><center><big></big></center></h1>
 	<style>
-		.container {
-		   /* width: 300px;
-		    margin: auto;*/
-		}
 
 		.logo {
 		    float: left;
 		}
-	.input-group {
-	    float: right;
-	}
 
-	.search_term{
-		float: ;
-	}
-	.input-group {
-		float: right;
-	}
+		.input-group {
+		    float: right;
+		    align-items: center;
+		    justify-content: center;
+		    flex-wrap: wrap;
+		    margin: 10px;
+		    padding: 2px;
+		}
 
 	</style>
 	<div class='container'>
@@ -49,13 +44,13 @@
 
 		<?php
 		if(!isset($_SESSION['user_id'])){?>
-			<a href="/User/index"><i style="font-size: 2rem;" class='bi-door-closed' title="Log in"></i></a>
+			<a href="/User/index"><i style="font-size: 2rem;" class='bi bi-file-person-fill' title="Log in"></i></a>
 <?php	}else{ ?>
 			<a href="/User/logout"><i style="font-size: 2rem;" class='bi-door-open' title='Log out'></i></a>
 <?php	}
 		?>
 
-		<a href='/Product/create'><i style="font-size: 2rem;" class='bi-plus-square' title='Add Product'></i></a>
-		<a href='/Profile/index'><i style="font-size: 2rem;" class='bi-file-earmark-person' title='My Profile'></i></a>		
+		<a href='/Product/create'><i style="font-size: 2rem;" class='bi bi-broadcast' title='Add Product'></i></a>
+		<a href='/Profile/index'><i style="font-size: 2rem;" class='bi bi-info' title='My Profile'></i></a>		
 		</div>
 	</div>
