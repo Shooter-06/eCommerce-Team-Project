@@ -1,7 +1,7 @@
 <?php
 namespace app\models;
 
-class Product extends app\core\Model{
+class Product extends \app\core\Model{
 	public function search($searching){
 		$SQL ="SELECT * FROM Product WHERE description LIKE :searching";
 		$STMT = self::$_connection->prepare($SQL);
@@ -40,7 +40,7 @@ class Product extends app\core\Model{
 	}
 
 	public function get($product_id){
-		$SQl ="SELECT * FROM product WHERE product_id=:product_id";
+		$SQL ="SELECT * FROM product WHERE product_id=:product_id";
 		$STMT= self::$_connection->prepare($SQL);
 		$STMT->execute(['product_id'=>$product_id]);
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Product');
@@ -48,7 +48,7 @@ class Product extends app\core\Model{
 	}
 
 	public function getAll(){
-		$SQl ="SELECT * FROM product";
+		$SQL ="SELECT * FROM product";
 		$STMT= self::$_connection->prepare($SQL);
 		$STMT->execute();
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Product');

@@ -1,7 +1,7 @@
 <?php
 namespace app\models;
 
-class Cart extends app\core\Model{
+class Cart extends \app\core\Model{
 
 	public function getALL(){
 		$SQL = "SELECT * FROM cart"

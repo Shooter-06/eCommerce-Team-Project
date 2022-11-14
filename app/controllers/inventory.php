@@ -2,7 +2,7 @@
 namespace app\controllers;
 
 #[\app\filters\MainUser]
-class Inventory extends app\core\Controller{
+class Inventory extends \app\core\Controller{
 	public function index(){
 		$products =new \app\models\inventory();
 		$product=$products->getAll();

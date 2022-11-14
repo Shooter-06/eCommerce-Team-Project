@@ -2,7 +2,7 @@
 namespace app\models;
 
 
-class Review extends app\core\Model{
+class Review extends \app\core\Model{
 	public function get($review_id){
 		$SQL = "SELECT * FROM review WHERE review_id=:review_id";
 		$STMT = self::$_connection->prepare($SQL);
