@@ -50,9 +50,9 @@
 		<?php
 		if(!isset($_SESSION['user_id'])){?>
 			<a href="/User/index"><i style="font-size: 2rem;" class='bi-door-closed' title="Log in"></i></a>
-<?php	}else{ ?>
+		<?php	}else{ ?>
 			<a href="/User/logout"><i style="font-size: 2rem;" class='bi-door-open' title='Log out'></i></a>
-<?php	}
+		<?php	}
 		?>
 
 		<a href='/Product/create'><i style="font-size: 2rem;" class='bi-plus-square' title='Add Product'></i></a>
