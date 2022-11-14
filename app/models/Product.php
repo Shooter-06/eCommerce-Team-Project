@@ -12,7 +12,7 @@ class Product extends \app\core\Model{
 
 	public function addToCart(){
 		if(!empty($_SESSION["quantity"])){
-			$SQL ="SELECT * FROM Product WHERE product_id=:product_id/*, profile_id=:profile_id, title=:title, description=:description, price=:price*/";
+			$SQL ="SELECT * FROM Product WHERE product_id=:product_id/*, profile_id=:profile_id, title=:title, description=:description, price=:price*/ ";
 			$itemsArray= array($SQL[0]["key"] => array('profile_id'=>$SQL[0]["profile_id"], 'title'=>$SQL[0]["title"], 'description'=>$SQL[0]["description"], 'price'=>$SQL[0]["price"], 'quantity'=>$_POST["quantity"]));
 
 			if(!empty($_SESSION["cart_item"])){

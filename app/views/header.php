@@ -13,20 +13,22 @@
 
 
 <body>
+
 	<style>
-.container {
-   /* width: 300px;
-    margin: auto;*/
-}
+		.container {
+		   /* width: 300px;
+		    margin: auto;*/
+		}
 
-.logo {
-    float: left;
-}
+		.logo {
+		    float: left;
+		}
 
-.input-group {
-    float: right;
-}
+		.input-group {
+		    float: right;
+		}
 	</style>
+	
 	<div class='container'>
 		<div class='logo'>
 		<a href='/Main/index'><img src="/images/workshop.png" style="max-height: 250px;" style="max-width: 250px;" /></a></div>
@@ -38,7 +40,7 @@
 			
 			
 		</form>
-		</div>
+		
 		<?php
 		if(!isset($_SESSION['user_id'])){?>
 			<a href="/User/index"><i style="font-size: 2rem;" class='bi-door-closed' title="Log in"></i></a>
