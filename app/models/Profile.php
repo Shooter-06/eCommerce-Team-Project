@@ -64,7 +64,12 @@ class Profile extends \app\core\Model {
 	}
 
 	public function __toString(){
-		return "$this->first_name $this->last_name $this->address $this-> city $this->postal_code $this->user_id";
+		return "$this->first_name,
+				$this->last_name,
+				$this->address,
+				$this-> city,
+				$this->postal_code,
+				$this->user_id";
 	}
 
 } 

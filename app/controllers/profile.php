@@ -43,16 +43,21 @@ class profile extends \app\core\Controller{
 	public function create(){
 		if(isset($_POST['action'])){
 			$profile = new \app\models\Profile();
-			$profile->first_name = $_POST['first_name'];
-			$profile->last_name = $_POST['last_name'];
-			$profile->address = $_POST['address'];
-			$profile->city = $_POST['city'];
-			$profile->postal_code = $_POST['postal_code'];
-			$profile->user_id = $_POST['user_id'];
+			$profile->first_name = $_SESSION['first_name'];
+			$profile->last_name = $_SESSION['last_name'];
+			$profile->address = $_SESSION['address'];
+			$profile->city = $_SESSION['city'];
+			$profile->postal_code = $_SESSION['postal_code'];
+			$profile->user_id = $_SESSION['user_id'];
 			$_SESSION['profile_id']=$profile->insert();
 			header('location:/Profile/index');
 		}else{
 			$this->view('Profile/create');
 		}
+	}
+
+	public function logout(){
+		session_destroy();
+		header('location:/Profile/index?message=You\'ve been successfully logged out.');
 	}
 }

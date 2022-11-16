@@ -19,9 +19,9 @@ class product extends \app\core\Controller{
 			
 			$product->product_id = $_POST['product_id'];
 			$product->profile_id = $_SESSION['profile_id'];
-			$product->title = $_POST['title'];
+			$product->title = $_SESSION['title'];
 			$product->description = $_SESSION['description'];
-			$product->price = $_POST['price'];
+			$product->price = $_SESSION['price'];
 
 			
 			$filename = $this->saveFile($_FILES['picture']);

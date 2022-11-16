@@ -11,7 +11,9 @@ class Product extends \app\core\Model{
 	}
 
 	public function __toString(){
-		return "$this->profile_id $this->title $this->description $this->price";
+		return "$this->profile_id,
+				$this->title $this->description,
+				$this->price";
 	}
 
 	public function get($product_id){

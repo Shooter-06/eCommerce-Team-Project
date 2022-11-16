@@ -9,8 +9,4 @@ class Cart extends \app\core\Model{
 		$STMT->execute();
 		return $STMT->fetchAll();
 	}
-
-	public function emptyCart(){
-		unset($_SESSION["cart_item"]);
-	}
 }

@@ -2,11 +2,6 @@
 namespace app\controllers;
 
 class cart extends \app\core\Controller{
-	public function getALL(){
-		$SQL = "SELECT * FROM cart";
-		$STMT=self::$_connection->prepare($SQL);
-	}
-
 
 	public function remove(){
 		if(!empty($_SESSION["cart_item"])){
@@ -42,5 +37,9 @@ class cart extends \app\core\Controller{
 									'price' => $_GET['price']);
 			$_SESSION['shooping_cart'][0] =$products;
 		}
+	}
+
+	public function emptyCart(){
+		unset($_SESSION["cart_item"]);
 	}
 }
