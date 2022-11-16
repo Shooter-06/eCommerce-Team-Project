@@ -9,8 +9,8 @@ class product extends \app\core\Controller{
 	}	
 
 
-	//#[\app\filters\Login]
-	//#[\app\filters\Profile]
+	#[\app\filters\Login]
+	#[\app\filters\Profile]
 	public function create(){
 
 		if(isset($_POST['action'])){
@@ -39,4 +39,16 @@ class product extends \app\core\Controller{
 	}
 
 
+	#[\app\filters\Login]
+ 	public function addToCart(){
+		if(isset($_POST['action'])){
+			
+			$cartItem= new \app\models\Cart();
+			$cartItems->cartItem = $_POST['quantity'];
+			$cartItems->insert();
+
+			header("location:/Product/create?Create a new category with your items to sale");
+			$this->view('Category/add');
+		}
+	}
 }
