@@ -51,4 +51,10 @@ class Review extends \app\core\Model{
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Product');
 		return $STMT->fetch();
 	}
+
+	public function delete(){
+		$SQL = "DELETE FROM review WHERE review_id=:review_id";
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['review_id'=>$this->review_id]);
+	}
 }

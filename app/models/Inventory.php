@@ -10,4 +10,10 @@ class Inventory extends \app\core\Model{
 
 		return $STMT->fetchAll();
 	}
+
+	public function delete(){
+		$SQL = "DELETE FROM category WHERE category_id=:category_id";
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['category_id'=>$this->category_id]);
+	}
 }

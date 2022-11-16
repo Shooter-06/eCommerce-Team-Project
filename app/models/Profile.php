@@ -58,7 +58,9 @@ class Profile extends \app\core\Model {
 	}
 
 	public function delete(){
-		
+		$SQL = "DELETE FROM profile WHERE profile_id=:profile_id";
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['profile_id'=>$this->profile_id]);
 	}
 
 	public function __toString(){
