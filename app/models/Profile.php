@@ -1,4 +1,4 @@
-not<?php 
+<?php 
 
 namespace app\models;
 
@@ -25,7 +25,7 @@ class Profile extends \app\core\Model {
 		$SQL= "SELECT * FROM review WHERE profile_id=:profile_id, review=:review ORDER BY date DESC";
 
 		$STMT = self::$_connection->prepare($SQL);
-		$STMT->execute(['profile_id'=>$profile_id, 'review'=$review]);
+		$STMT->execute(['profile_id'=>$profile_id, 'review'=>$review]);
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Profile');
 
 		return $STMT->fetchAll();
@@ -42,7 +42,7 @@ class Profile extends \app\core\Model {
 						'postal_code'=>$this->postal_code,
 						'user_id'=>$this->user_id]);
 
-		return self::$_connection->lastInsertedId();
+		return self::$_connection->lastInsertId();
 	}
 
 	public function update(){

@@ -118,13 +118,15 @@
 	?>
 
 
-	<h1>Welcome to the Workshop Login Page:</h1>
+	<h>Welcome to the Workshop Login Page:</h>
 
 	<form action='' method='post'>
 		<div class="username_form">
 			<label for="username">Username: </label>
     	<input type="text" class="form-control" id="username" name='username' placeholder="Enter the username">
 		</div>
+		
+		<br>
 
 		<div class="password_form">
 			<label for="password">Password: </label>
@@ -135,11 +137,12 @@
 		<button type="submit" name='action' value='Register' class="btn btn-primary">Login</button>
 		<br>
 	</form>
-	<p> If you wish to register 
-		<a href="/User/index">REGISTER HERE !!</a> 
-	</p>
 
+	<br>
+
+	<a href="/User/index">REGISTER HERE !!</a> 
 	<footer>
+		
 		<?php $this->view('footer'); ?>
 	</footer>
 </body>
