@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="C:\xampp\htdocs\app\css\header.css">
+	<link rel="stylesheet" href="app\CSS\site.css">
 </head>
 
 
@@ -38,6 +39,7 @@
 		body{
 		    background-color: rgb(250, 222, 198);
 		}
+		
 
 
 	</style>
@@ -63,6 +65,8 @@
 		?>
 
 		<a href='/Product/create'><i style="font-size: 2rem;" class='bi bi-broadcast' title='Add Product'></i></a>
-		<a href='/Profile/index'><i style="font-size: 2rem;" class='bi bi-info' title='My Profile'></i></a>		
+		<a href='/Profile/index'><i style="font-size: 2rem;" class='bi bi-info' title='My Profile'></i></a>
+		<a href='/Cart/addToCart'><i style="font-size: 2rem;" class='bi bi-cart-fill' title='Check Your Cart'></i></a>		
+
 		</div>
 	</div>

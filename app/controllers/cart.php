@@ -42,4 +42,12 @@ class cart extends \app\core\Controller{
 	public function emptyCart(){
 		unset($_SESSION["cart_item"]);
 	}
+	
+	public function index(){
+		if(empty($_SESSION["cart_item"])){
+			echo "No products are found in the cart";
+			header('location:/Product/index');
+		}
+	}
+
 }

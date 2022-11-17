@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +11,19 @@
 </head>
 <body>
 
-	<?php echo'hello'?>
-<br>
-<a href="/Product/create" class= "backBtn">Add a new Product</a>
+	<?php $this->view('header', 'Workshop'); ?><h1><center><big>Welcome to our inventory</big></center></h1>
+
+
+
+	<?php
+		$this->view('Product/index');
+	?>
+
+	<?php $this->view('footer'); ?>
+
+
+	<br>
+	<a href="/Product/create" class= "backBtn">Add a new Product</a>
 	<br>
 	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
 	<br>

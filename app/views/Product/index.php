@@ -18,6 +18,7 @@
 			margin-right: 300px;
 			font-family: 'Times New Roman', Times, serif;
 		}	
+		.items-det
 	</style>
 	<div class="info">
 		<h3>Our stock Inventory</h3>
@@ -37,6 +38,20 @@
 			$products= $data->getReviews();
 		}
 	?>	 -->
+
+
+
+	<div class="items">
+		<div class="item-Listed">
+			<img src="/Images/kyrie.jpg" alt="img" id="card-img">
+			<p id="item-name">Kyrie 6 Low</p>
+		</div>
+		<div>
+			<i class="fa fa-shopping-cart" id= add-to-cart></i>
+			<h id="item-price">Price: $165</h>
+		</div>
+			
+		</div>
 
 	<p>Say something about the products</p>
 	<form action='/Review/add/<?=$data->review_id?>' method="post">

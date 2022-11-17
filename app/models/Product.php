@@ -11,8 +11,8 @@ class Product extends \app\core\Model{
 	}
 
 	public function __toString(){
-		return "$this->profile_id,
-				$this->title $this->description,
+		return "$this->profile_id
+				$this->title $this->description
 				$this->price";
 	}
 
@@ -39,6 +39,7 @@ class Product extends \app\core\Model{
 						'title'=>$this->title,
 						'description'=>$this->description,
 						'price'=>$this->price]);
+		//return $STMT->execute();
 		return self::$_connection->lastInsertId();
 	}
 

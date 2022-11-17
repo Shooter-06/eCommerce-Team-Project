@@ -8,9 +8,6 @@ class product extends \app\core\Controller{
 		$this->view('Product/details', $products);
 	}	
 
-
-	#[\app\filters\Login]
-	#[\app\filters\Profile]
 	public function create(){
 
 		if(isset($_POST['action'])){
@@ -19,15 +16,16 @@ class product extends \app\core\Controller{
 			
 			$product->product_id = $_POST['product_id'];
 			$product->profile_id = $_SESSION['profile_id'];
-			$product->title = $_SESSION['title'];
-			$product->description = $_SESSION['description'];
-			$product->price = $_SESSION['price'];
+			$product->title = $_POST['title'];
+			$product->description = $_POST['description'];
+			$product->price = $_POST['price'];
 
 			
 			$filename = $this->saveFile($_FILES['picture']);
 			if($filename){
 				$product->picture = $filename;
 				$product->insert();
+				
 				header('location:/Profile/index/');
 			}else{
 				header('location:/product/create/');
