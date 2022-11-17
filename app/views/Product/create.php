@@ -1,6 +1,22 @@
 
 <?php $this->view('header', 'Workshop'); ?>
 
+<!-- <style type="text/css">
+	.button {
+	  background-color: #4CAF50; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 20px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	}
+
+</style> -->
+
 <h1>New product Info</h1>
 <form action='' method='post' enctype='multipart/form-data'>
 	<div class="form-group">
@@ -24,7 +40,7 @@
 			<label>The Description of the product:<input type="text" name="name" /></label><br>
 			<label>The Price of the product:<input type="text" name="name" /></label><br>
 
-			<label class="image_product">Picture:</label><img id='pic_preview' src='/images/<?=$data->picture ?>' style="max-width:100px;max-height:100px" />
+			<label class="image_product">Product</label><img id='pic_preview' src='/images/<?=$data->picture ?>' style="max-width:100px;max-height:100px" />
 
 		</div>
 		<br><br><br>
@@ -39,6 +55,8 @@
 				<input type="submit" name="action" class='btn btn-primary' value="Add" />	
 		</button>  -->
 			<br>
+
+
 		<button id="add_to_product" type="submit" name='action' value='Add' class="btn btn-primary">Add the new product </button>
 </form>
 
