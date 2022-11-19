@@ -1,27 +1,16 @@
 <body>
 	<style>
 		.info{
-			margin: 300px
-		    padding: 5px 10px 5px 15px;
 		    display: flex;
-		    width: 75%;
+		    width: 100%;
 		    background-color: rgb(122, 122, 212);
 		    color: white;
-		    font-size: 17px;
+		    font-size: 18px;
 		    justify-content: center;
 		}
-
-		h3{
-			align-items: center;
-			justify-content: center;
-			display: flex;
-			margin-right: 300px;
-			font-family: 'Times New Roman', Times, serif;
-		}	
-		.items-det
 	</style>
 	<div class="info">
-		<h3>Our stock Inventory</h3>
+		<h5>Our stock Inventory</h5>
 	</div>
 	
 	<!-- <div class="product_index">
