@@ -13,6 +13,8 @@ class User extends \app\core\Controller{
 				//correct password provided
 				$_SESSION['username'] = $user->username;
 				$_SESSION['user_id'] = $user->user_id;
+
+
 				header('location:/Product/index');
 			}else{
 				//incorret password provided
@@ -35,6 +37,9 @@ class User extends \app\core\Controller{
 
 					$_SESSION['user_id'] = $user->insert();
 					$_SESSION['username'] = $_POST['username'];
+
+
+					// $_SESSION['profile_id']=$profile_id->get();
 
 					header('location:/Product/index');
 				}

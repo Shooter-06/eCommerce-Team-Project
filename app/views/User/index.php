@@ -35,62 +35,86 @@
 		}
 
 		.username_form{
-    	font-family: "Times New Roman", Times, serif;
+    		font-family: "Times New Roman", Times, serif;
+			position: absolute;
+			text-align: center;
+			top: 10%;
+    		width: 100%;
+    	}
+    	.password_form{
+    		font-family: "Times New Roman", Times, serif;
 			position: absolute;
 			text-align: center;
 			top: 30%;
-    	width: 100%;
-    }
+    		width: 50%;
+    	}
 
     #username{
     	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			margin-top: 10px;
-			margin-left: 36%;
-    	width: 400px;
-    }
-
-    .form-group2{
-    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 45%;
-    	width: 100%;
+		position: center;
+		margin-top: 10px;
+		margin-left: 36%;
+    	width: 250px;
     }
 
     #password{
     	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			margin-top: 10px;
-			margin-left: 36%;
-    	width: 400px;
+		position: center;
+		margin-top: 10px;
+		margin-left: 36%;
+    	width: 250px;
     }
 
-    .form-group3{
+    /*.username_form{
+    	font-family: "Times New Roman", Times, serif;
+			position: absolute;
+			text-align: center;
+			top: 10%;
+    	width: 100%;*/
+    }
+
+    #password{
+    	font-family: "Times New Roman", Times, serif;
+		position: center;
+		margin-top: 30px;
+		margin-left: 50%;
+    	width: 250px;
+    }
+
+    /*.form-group3{
     	font-family: "Times New Roman", Times, serif;
 			position: absolute;
 			text-align: center;
 			top: 60%;
     	width: 100%;
-    }
+    }*/
 
-    #passwordConf{
+    /*#passwordConf{
     	font-family: "Times New Roman", Times, serif;
 		  position: absolute;
 		  margin-top: 10px;
 		  margin-left: 36%;
-    	width: 400px;
-  	}
+    	width: 250px;
+  	}*/
 
     button{
     	font-family: "Times New Roman", Times, serif;
 			position: absolute;
-			text-align: center;
-			margin-top: 500px;
+			text-align: absolute;
+			margin-top: 350px;
 			margin-left: 40%;
     	width: 300px;
     }
-   	
+
+   	.register_form{
+   		font-family: "Times New Roman", Times, serif;
+		position: absolute;
+		text-align: absolute;
+		margin-top: 400px;
+		margin-left: 40%;
+    	width: 300px;
+   	}
+
    	a:hover{
     	text-decoration: none;
     }
@@ -118,7 +142,7 @@
 	?>
 
 
-	<h>Welcome to the Workshop Login Page:</h>
+	<h><CENTER>Welcome to the Workshop Login Page:</CENTER></h>
 
 	<form action='' method='post'>
 		<div class="username_form">
@@ -130,17 +154,19 @@
 
 		<div class="password_form">
 			<label for="password">Password: </label>
-    	<input type="text" class="form-control" id="password" name='password' placeholder="Enter the password">
+    	<input type="password" class="form-control" id="password" name='password' placeholder="Enter the password">
 		</div>
 		<br>
 
 		<button type="submit" name='action' value='Register' class="btn btn-primary">Login</button>
 		<br>
-	</form>
 
-	<br>
+		<div class="register_form">
+			<a href="/User/register">REGISTER HERE !!</a>
+		</div>
 
-	<a href="/User/index">REGISTER HERE !!</a> 
+	</form>	
+	
 	<footer>
 		
 		<?php $this->view('footer'); ?>

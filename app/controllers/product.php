@@ -14,12 +14,13 @@ class product extends \app\core\Controller{
 			//make a new object
 			$product = new \app\models\Product();
 			
-			$product->product_id = $_POST['product_id'];
-			$product->profile_id = $_SESSION['profile_id'];
+			// $product->product_id = $_POST['product_id'];
+			// $product->profile_id = $_SESSION['profile_id'];
 			$product->title = $_POST['title'];
 			$product->description = $_POST['description'];
 			$product->price = $_POST['price'];
 
+			$product->profile_id=$_SESSION['profile_id'];
 			
 			$filename = $this->saveFile($_FILES['picture']);
 			if($filename){

@@ -72,7 +72,12 @@
 
 
 </body>
+
 <footer>
-	<?php $this->view('footer'); ?>
+	<p>this project was developed by:</p>
+	<?=$this->view('footer');?>
 </footer>
+<!-- <footer>
+	<?php $this->view('footer'); ?>
+</footer> -->
 </html>

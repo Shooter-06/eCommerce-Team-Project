@@ -24,6 +24,14 @@ class Product extends \app\core\Model{
 		return $STMT->fetch();
 	}
 
+	public function getProfile($profile_id){
+		$SQL ="SELECT * FROM profile WHERE profile_id=:profile_id";
+		$STMT= self::$_connection->prepare($SQL);
+		$STMT->execute(['profile_id'=>$profile_id]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Profile');
+		return $STMT->fetch();
+	}
+
 	public function getAll(){
 		$SQL ="SELECT * FROM product";
 		$STMT= self::$_connection->prepare($SQL);

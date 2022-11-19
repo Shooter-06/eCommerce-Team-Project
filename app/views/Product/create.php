@@ -26,27 +26,18 @@
 
 	<div class="products-inputs">
 				
-			<label>The Product id:<input type="text" name="name" /></label><br>
-			<label>Profile_id:
 
-				<select name="profile_id">
-				<?php
-					foreach ($data['profileIds'] as $profile) {
-						echo "<option value='$profile->profile_id'>$profile->profile_id</option>";
-					}
-				?>
-
-			<label>The Title of the product:<input type="text" name="name" /></label><br>
-			<label>The Description of the product:<input type="text" name="name" /></label><br>
-			<label>The Price of the product:<input type="text" name="name" /></label><br>
+			<label>The Title of the product:<input type="text" name="title" /></label><br>
+			<label>The Description of the product:<input type="text" name="description" /></label><br>
+			<label>The Price of the product:<input type="text" name="price" /></label><br>
 
 			<label class="image_product">Product</label><img id='pic_preview' src='/images/<?=$data->picture ?>' style="max-width:100px;max-height:100px" />
 
 		</div>
 		<br><br><br>
+		<!-- <br><br><br>
 		<br><br><br>
-		<br><br><br>
-		<br><br><br>
+		<br><br><br> -->
 		<div>
 			<?php $this->view('rating'); ?>
 		</div>
@@ -57,7 +48,7 @@
 			<br>
 
 
-		<button id="add_to_product" type="submit" name='action' value='Add' class="btn btn-primary">Add the new product </button>
+		<button id="add_to_product" type="submit" name='action' value='Register' class="btn btn-primary">Add the new product </button>
 </form>
 
 <a href='/Product/index'>Cancel</a>

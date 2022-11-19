@@ -235,7 +235,7 @@
 
 		<div class="passwordConf_form">
 			<label for="passwordConf">Password Confirmation: </label>
-    	<input type="text" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
+    	<input type="password" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
 		</div><br>
 
 

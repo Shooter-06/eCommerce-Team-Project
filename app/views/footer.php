@@ -13,10 +13,11 @@
 }
 </style>
 </head>
-<body>
-<div class="footer">
-  <p>De-Andre, Fiacre And Num Project</p>
-</div>
 
-</body>
+
+<footer>
+  <div class="footer">
+      <p>De-Andre, Fiacre And Num Project</p>
+  </div>
+</footer>
 </html> 

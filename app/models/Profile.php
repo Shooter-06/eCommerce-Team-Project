@@ -21,6 +21,17 @@ class Profile extends \app\core\Model {
 		return $STMT->fetchAll();
 	}
 
+
+	public function getUser($user_id){
+		$SQL= "SELECT * FROM user WHERE user_id=:user_id";
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['user_id'=>$user_id]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\User');
+
+		return $STMT->fetchAll();
+	}
+
+
 	public function getReviews(){
 		$SQL= "SELECT * FROM review WHERE profile_id=:profile_id, review=:review ORDER BY date DESC";
 

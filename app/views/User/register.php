@@ -78,7 +78,7 @@
 	    	font-family: "Times New Roman", Times, serif;
 				position: absolute;
 				text-align: center;
-				margin-top: 500px;
+				margin-top: 650px;
 				margin-left: 40%;
 	    	width: 300px;
 	    }
@@ -142,12 +142,12 @@
 
 		<div class="password_form">
 			<label for="password">Password: </label>
-    	<input type="text" class="form-control" id="password" name='password' placeholder="Enter the password">
+    	<input type="password" class="form-control" id="password" name='password' placeholder="Enter the password">
 		</div>
 
 		<div class="passwordConf_form">
 			<label for="passwordConf">Password Confirmation: </label>
-    	<input type="text" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
+    	<input type="password" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
 		</div><br>
 
 		<br>
