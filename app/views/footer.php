@@ -4,6 +4,8 @@
 <style>
 .footer {
    position: fixed;
+   display: flex;
+   justify-content: center;
    left: 0;
    bottom: 0;
    width: 100%;
@@ -17,7 +19,7 @@
 
 <footer>
   <div class="footer">
-      <p>De-Andre, Fiacre And Num Project</p>
+      <p>De-Andre, Fiacre And Nam Project</p>
   </div>
 </footer>
 </html> 
