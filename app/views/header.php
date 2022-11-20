@@ -60,7 +60,7 @@
  
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-	  <a href="/Main/index"><img src="/Images/workshop.png" alt="" style="max-width: 100px;" style="max-height: 100px;"></a>
+	  <a href="/Main/index"><img src="/Images/Work.png" alt="" style="max-width: 150px;" style="max-height: 150px;"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -83,32 +83,4 @@
 	    </ul>
 	  </div>
 	</nav>
-
-	<!-- <div class='container'>
-		<div class='logo'>
-			<a href=''><img src="/images/workshop.png" style="max-height: 250px;" style="max-width: 250px;" /></a>
-		</div>
-
-		<div class="input-group">
-		<form action="/Main/search" method="get" style='display:inline-block'>					
-			    <input type="search" name='search_term' class="form-control" placeholder="Enter search term" />
-			  <button type="submit" class="btn btn-primary" value="Search"><i class="bi-search"></i></button>	
-		</form>
-		
-
-		<?php
-		if(!isset($_SESSION['user_id'])){?>
-			<a href="/User/index"><i style="font-size: 2rem;" class='bi bi-file-person-fill' title="Log in"></i></a>
-
-		<?php	}else{ ?>
-			<a href="/User/logout"><i style="font-size: 2rem;" class='bi-door-open' title='Log out'></i></a>
-		<?php	}
-		?>
-
-		<a href='/Product/create'><i style="font-size: 2rem;" class='bi bi-broadcast' title='Add Product'></i></a>
-		<a href='/Profile/index'><i style="font-size: 2rem;" class='bi bi-info' title='My Profile'></i></a>
-		<a href='/Cart/addToCart'><i style="font-size: 2rem;" class='bi bi-cart-fill' title='Check Your Cart'></i></a>		
-
-		</div>
-	</div> -->
 </body>
