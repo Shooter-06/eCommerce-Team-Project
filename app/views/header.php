@@ -2,6 +2,7 @@
 <head>
 	<title><?= $data ?></title>
 	<link rel="stylesheet" href="rating.css">
+	<link rel="stylesheet" type="text/css" href="CSS/header.css">
 	<link rel="shortcut icon" type="image/png" href="Images/favicon-32x32.png">
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -19,33 +20,43 @@
 
 
 <body>
-	<!-- <style>
-
-		.logo {
-		    float: left;
+	<style>
+		.navbar{
+			font-size: 16px;
 		}
 
-		.input-group {
-		    float: right;
-		    align-items: center;
-		    justify-content: center;
-		    flex-wrap: wrap;
-		    margin: 10px;
-		    padding: 2px;
+		.navbar-dark .navbar-nav .nav-link {
+			padding: 0 20px;
+			color: white;
+			transition: 0.3s ease;
 		}
 
-		html{
-    		background-color: peachpuff;
-    		font-family:Arial, Helvetica, sans-serif;
+		.navbar-dark .navbar-nav .nav-link:hover,
+		.navbar i:hover,
+		.navbar-dark .navbar-nav .nav-link.active,
+		.navbar i.active{
+			color: yellow;
 		}
+
+		.navbar i{
+			font-size: 1.2rem;
+			padding: 0 7px;
+			cursor: pointer;
+/*			font-weight: 500;*/
+			transition: 0.3s ease;
+		}
+
+
+
+
+
 
 		body{
-		    background-color: rgb(250, 222, 198);
+			background-color: peachpuff;
+			font-family: Courier New, monospace;
 		}
-		
 
-
-	</style>
+	</style>	
  
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
@@ -70,10 +81,6 @@
 	        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
 	      </li>
 	    </ul>
-	    <!-- <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	    </form> -->
 	  </div>
 	</nav>
 
