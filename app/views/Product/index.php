@@ -8,6 +8,34 @@
 		    font-size: 18px;
 		    justify-content: center;
 		}
+
+		#home{
+			background-image: url("/Images/workshop.png");
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: top center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+		.product{
+			cursor: pointer;
+			margin-bottom: 2rem;
+		}
+
+		.product:hover img{
+			opacity: 0.7;
+		}
+
+		.product img{
+			transition: 0.3s all;
+		}
+
+
+
 	</style>
 	<div class="info">
 		<h5>Our stock Inventory</h5>
@@ -29,7 +57,27 @@
 	?>	 -->
 
 
-
+	<!-- <section id="home">
+		<div class=""></div>
+	</section> -->
+	<section id="featured">
+		<div class="row mx-auto container-fluid">
+			<div class="product text-center col-lg-3 col-md-4 col-12">
+				<img class="img-fluid mb-3" src="/Images/kyrie.jpg">
+				<h5 class="proName">Kyrie 6 Low</h5>
+				<h4 class="proPrice">$164.99</h4>
+				<button class="btnpurchase">Buy Now</button>
+			</div>
+		</div>
+		<div class="row mx-auto container-fluid">
+			<div class="product text-center col-lg-3 col-md-4 col-12">
+				<img class="img-fluid mb-3" src="/Images/dunno.jpg">
+				<h5 class="proName">Something Dunks Low</h5>
+				<h4 class="proPrice">$49.99</h4>
+				<button class="btnpurchase">Buy Now</button>
+			</div>
+		</div>
+	</section>
 	<div class="items">
 		<div class="item-Listed">
 			<img src="/Images/kyrie.jpg" alt="img" id="card-img">
@@ -41,7 +89,7 @@
 		</div>
 			
 		</div>
-
+	
 	<p>Say something about the products</p>
 	<form action='/Review/add/<?=$data->review_id?>' method="post">
 	<div class="review">
