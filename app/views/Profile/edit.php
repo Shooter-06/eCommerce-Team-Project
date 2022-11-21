@@ -224,7 +224,7 @@
 			<label for="postal_code">Postal_code: </label>
     	<input type="text" class="form-control" id="postal_code" name='postal_code' placeholder="Enter your postal code">
 
-    	<? if(isset($user_id))?>
+    	
 		</div>
 
 
@@ -244,9 +244,9 @@
 		<button type="submit" name='action' value='Modify' class="btn btn-primary">Save
 		</button>
 		<br>
+		<a href="Profile/index" class= "backBtn">BACK</a>
+		<br>
 	</form>
-
-	<a href="/Product/index" class= "backBtn">BACK</a>
 
 	<footer>
 		<?php $this->view('footer'); ?>

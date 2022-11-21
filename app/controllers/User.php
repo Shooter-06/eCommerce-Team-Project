@@ -13,7 +13,8 @@ class User extends \app\core\Controller{
 				//correct password provided
 				$_SESSION['username'] = $user->username;
 				$_SESSION['user_id'] = $user->user_id;
-
+				$profile = new \app\models\Profile();
+				$profile=$profile->getProfileByUser($user->user_id);
 
 				header('location:/Product/index');
 			}else{

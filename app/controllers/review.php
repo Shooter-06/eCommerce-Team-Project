@@ -6,7 +6,7 @@ class review extends \app\core\Controller{
 	public function index(){
 		$review = new \app\models\Review();
 		$reviews = $review->getAll();
-		$this->view('Review/details', $review);			
+		$this->view('Review/index', $review);			
 	}
 
 	public function add($product_id){

@@ -173,6 +173,57 @@
 				top:1px;	
 	   	}
 
+
+	   	
+	   	.LoginBtn{
+	    	box-shadow: 3px 4px 0px 0px #8a2a21;
+	    	background:linear-gradient(to bottom, #00FF00 5%, #f24437 100%);
+				background-color:#00FF00;
+				border-radius:18px;
+				border:1px solid #d02718;
+				display:inline-block;
+				cursor:pointer;
+				color:#ffffff;
+				font-family:Arial;
+				font-size:17px;
+				padding:7px 25px;
+				text-decoration:none;
+				text-shadow:0px 1px 0px #810e05;
+	   	}
+	   	.LoginBtn:hover{
+	   		background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+				background-color:#f24437;
+	   	}
+	   	.LoginBtn:active{
+	   		position:relative;
+				top:1px;	
+	   	}
+
+
+	   	.SignBtn{
+	    	box-shadow: 3px 4px 0px 0px #0000FFF;
+	    	background:linear-gradient(to bottom, #0000FF 5%, #f24437 100%);
+				background-color:#0000FF;
+				border-radius:18px;
+				border:1px solid #0000FF;
+				display:inline-block;
+				cursor:pointer;
+				color:#0000FF;
+				font-family:Arial;
+				font-size:17px;
+				padding:7px 25px;
+				text-decoration:none;
+				text-shadow:0px 1px 0px #0000FF;
+	   	}
+	   	.SignBtn:hover{
+	   		background:linear-gradient(to bottom, #0000FF 5%, #0000FF 100%);
+				background-color:#0000FF;
+	   	}
+	   	.SignBtn:active{
+	   		position:relative;
+				top:1px;	
+	   	}
+
 	</style>
 
 </head>
@@ -242,12 +293,13 @@
 
 		<br>
 
-		<button type="submit" name='action' value='Register' class="btn btn-primary">Sign up
+		<button type="submit" name='action' value='Register' class="SignBtn">Sign up
 		</button>
 		<br>
 	</form>
 
 	<a href="/Product/index" class= "backBtn">BACK</a>
+	<a href="/Profile/details" class= "LoginBtn">Login</a>
 
 	<!-- <footer>
 		<?php $this->view('footer'); ?>

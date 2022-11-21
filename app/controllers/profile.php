@@ -7,10 +7,10 @@ class profile extends \app\core\Controller{
 	#[\app\filters\Login]
 	#[\app\filters\Profile]
 	public function index(){
-
 		$profile = new \app\models\profile();
 		$profile = $profile->get($_SESSION['profile_id']);
-		$this->view('Profile/details', $profile);
+		$this->view('Profile/index', $profile);
+
 	}
 
 	public function details($profile_id){
@@ -36,7 +36,7 @@ class profile extends \app\core\Controller{
 			$profile->update();
 			header('location:/Profile/index');
 		}else{
-			$this->view('Profile/edit',$profile);
+			$this->view('Profile/create',$profile);
 		}
 	}
 
