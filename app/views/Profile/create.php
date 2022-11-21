@@ -19,134 +19,135 @@
 		}
 		h1{
 			font-size: 30px;
-    	font-family: "Times New Roman", Times, serif;
+    		font-family: "Times New Roman", Times, serif;
 			position: absolute;
 			text-align: center;
 			top: 20%;
-    	width: 100%;
+    		width: 100%;
 		}
 
 		.firstname_form{
-    	font-family: "Times New Roman", Times, serif;
+    		font-family: "Times New Roman", Times, serif;
 			position: absolute;
 			text-align: center;
 			top: 30%;
-    	width: 100%;
+    		width: 100%;
     	}
 
 	    #first_name{
 	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				margin-top: 10px;
-				margin-left: 36%;
-	    	width: 400px;
+			position: absolute;
+			margin-top: 30px;
+			
+	    	width: 200px;
 	    }
 
-	    .lastname__form{
+	    .lastname_form{
 	    	font-family: "Times New Roman", Times, serif;
 				position: absolute;
 				text-align: center;
-				top: 45%;
+				top: 40%;
 	    	width: 100%;
 	    }
 
 	    #last_name{
 	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				margin-top: 10px;
-				margin-left: 36%;
-	    	width: 400px;
+			position: absolute;
+			margin-top: 40px;
+	    	width: 200px;
 	    }
 
 	    .address_form{
 	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				top: 60%;
+			position: absolute;
+			text-align: center;
+			top: 50%;
 	    	width: 100%;
 	    }
 
 	    #address{
 	    	font-family: "Times New Roman", Times, serif;
-			  position: absolute;
-			  margin-top: 10px;
-			  margin-left: 36%;
-	    	width: 400px;
+			position: absolute;
+			margin-top: 50px;
+	    	width: 200px;
 	  	}
-
-		
 
 	  	.city_form{
 	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				top: 60%;
+			position: absolute;
+			text-align: center;
+			top: 60%;
 	    	width: 100%;
 	    }
 
 	    #city{
 	    	font-family: "Times New Roman", Times, serif;
-			  position: absolute;
-			  margin-top: 10px;
-			  margin-left: 36%;
-	    	width: 400px;
+			position: absolute;
+			margin-top: 60px;
+	    	width: 200px;
 	  	}
+
 	  	.pCode_form{
 	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				top: 60%;
+			position: absolute;
+			text-align: center;
+			top: 70%;
 	    	width: 100%;
 	    }
 
 	    #postal_code{
 	    	font-family: "Times New Roman", Times, serif;
 			  position: absolute;
-			  margin-top: 10px;
-			  margin-left: 36%;
-	    	width: 400px;
+			  margin-top: 70px;
+	    	width: 200px;
 	  	}
 
 	  	.password_form{
 	    	font-family: "Times New Roman", Times, serif;
 				position: absolute;
 				text-align: center;
-				top: 45%;
+				top: 80%;
 	    	width: 100%;
 	    }
 
 	    #password{
 	    	font-family: "Times New Roman", Times, serif;
 				position: absolute;
-				margin-top: 10px;
-				margin-left: 36%;
-	    	width: 400px;
+				margin-top: 80px;
+	    	width: 200px;
 	    }
 
 	    .passwordConf_form{
 	    	font-family: "Times New Roman", Times, serif;
 				position: absolute;
 				text-align: center;
-				top: 60%;
+				top: 90%;
 	    	width: 100%;
 	    }
 
 	    #passwordConf{
 	    	font-family: "Times New Roman", Times, serif;
 			  position: absolute;
-			  margin-top: 10px;
-			  margin-left: 36%;
-	    	width: 400px;
+			  margin-top: 90px;
+	    	width: 200px;
 	  	}
 
 	    button{
 	    	font-family: "Times New Roman", Times, serif;
 				position: absolute;
 				text-align: center;
-				margin-top: 500px;
-				margin-left: 40%;
-	    	width: 300px;
+				margin-top: 120px;
+				color: blue;
 	    }
+	    .button:hover{
+	   		background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+				background-color:#f24437;
+	   	}
+	   	.button:active{
+	   		position:relative;
+				top:1px;	
+	   	}
+
 
 	    .backBtn{
 	    	box-shadow: 3px 4px 0px 0px #8a2a21;
@@ -202,27 +203,27 @@
 
 		<div class="firstname_form">
 			<label for="Fname">First Name: </label>
-    	<input type="text" class="form-control" id="first_name" name='first_name' placeholder="Enter the first name">
+    	<input type="text" id="first_name" name='first_name' placeholder="Enter the first name">
 		</div>
 
 		<div class="lastname_form">
 			<label for="Lname">Last Name: </label>
-    	<input type="text" class="form-control" id="last_name" name='last_name' placeholder="Enter the last name">
+    	<input type="text" id="last_name" name='last_name' placeholder="Enter the last name">
 		</div>
 
 		<div class="address_form">
 			<label for="address">Address : </label>
-    	<input type="text" class="form-control" id="address" name='address' placeholder="Enter the address">
+    	<input type="text" id="address" name='address' placeholder="Enter the address">
 		</div>
 
 		<div class="city_form">
 			<label for="city">City: </label>
-    	<input type="text" class="form-control" id="city" name='city' placeholder="Enter your username">
+    	<input type="text" id="city" name='city' placeholder="Enter your city">
 		</div>
 
 		<div class="pCode_form">
 			<label for="postal_code">Postal_code: </label>
-    	<input type="text" class="form-control" id="postal_code" name='postal_code' placeholder="Enter your postal code">
+    	<input type="text" id="postal_code" name='postal_code' placeholder="Enter your postal code">
 
     	<? if(isset($user_id))?>
 		</div>
@@ -230,12 +231,12 @@
 
 		<div class="password_form">
 			<label for="password">Password: </label>
-    	<input type="password" class="form-control" id="password" name='password' placeholder="Enter the password">
+    	<input type="password" id="password" name='password' placeholder="Enter the password">
 		</div>
 
 		<div class="passwordConf_form">
 			<label for="passwordConf">Password Confirmation: </label>
-    	<input type="password" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
+    	<input type="password" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
 		</div><br>
 
 

@@ -2,7 +2,4 @@
 
 <?php
 	$this->view('Product/index');
-	
 ?>
-
-<!-- <?php $this->view('footer'); ?> -->
