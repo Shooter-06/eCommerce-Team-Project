@@ -209,8 +209,8 @@
 	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
 	<br>
 	<a href="/User/index" class= "backBtn">Logout</a>
-	<br>
-
+	<!-- <br>
+		<a href="/Inventory/index" class= "backBtn">The Inventory Page</a> -->
 
 </body>
 

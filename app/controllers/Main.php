@@ -13,4 +13,9 @@ class Main extends \app\core\Controller{
 		$productsFind = $productsFind->search($_GET['searching']);
 		$this->view('Main/index', $productsFind);
 	}
+
+	public function test(){
+		echo "These";
+		$this->view('Cart/productsCart');
+	}
 }

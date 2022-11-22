@@ -8,4 +8,10 @@ foreach ($data as $products) {
 }
 ?>
 
+<?php
+foreach ($data as $products) {
+	$this->view('Product/index', $products);
+}
+?>
+
 <?php $this->view('footer'); ?>
