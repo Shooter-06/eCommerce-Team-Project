@@ -78,7 +78,7 @@
 			</div>
 		</div>
 	</section>
-	<div class="items">
+	<!-- <div class="items">
 		<div class="item-Listed">
 			<img src="/Images/kyrie.jpg" alt="img" id="card-img">
 			<p id="item-name">Kyrie 6 Low</p>
@@ -88,17 +88,17 @@
 			<h id="item-price">Price: $165</h>
 		</div>
 			
-		</div>
+		</div> -->
 	
 	<p>Say something about the products</p>
 	<form action='/Review/add/<?=$data->review_id?>' method="post">
-	<div class="review">
-		<input class='form-control' type="text" name="review" placeholder="Say something" />
-	<button type="submit" name='action' class='btn btn-primary'><i class='bi-send'></i></button>
-	</div></form>
+		<div class="review">
+			<textarea id='form-control' name="review"  rows="2" cols="25" placeholder="Say something"></textarea>
+			<button type="submit" name='action' class='btn btn-primary'><i class='bi-send'></i></button>
+		</div>
+	</form>
 
 	</div>
-
 
 	<a href="/Product/create" class= "backBtn">Add a new Product</a>
 	<br>
@@ -110,11 +110,4 @@
 
 </body>
 
-<footer>
-	<p>this project was developed by:</p>
-	<?=$this->view('footer');?>
-</footer>
-<!-- <footer>
-	<?php $this->view('footer'); ?>
-</footer> -->
 </html>

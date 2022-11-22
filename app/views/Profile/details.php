@@ -1,73 +1,36 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-
-	<style>
-
-		body{
-			background-color:#ffcccb;
-		}
-		h1{
-			font-size: 30px;
-    		font-family: "Times New Roman", Times, serif;
-			
-		}
-		p{
-			font-size: 20px;
-    		font-family: "Times New Roman", Times, serif;	
-		}
-
-/*
-	    button{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: absolute;
-				margin-top: 350px;
-				margin-left: 40%;
-	    	width: 300px;
-	    }
-
-	   	.register_form{
-	   		font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: absolute;
-			margin-top: 400px;
-			margin-left: 40%;
-	    	width: 300px;
-	   	}
-
-	   	a:hover{
-	    	text-decoration: none;
-	    }*/
-	</style>
-
-
+	<title>Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-	<h1><center><big>Welcome to our inventory of your profile</big></center></h1>
+<?php
+	if(isset($_GET['error'])){ ?>
+<div class="alert alert-danger" role="alert">
+  <?= $_GET['error'] ?>
+</div>
+<?php	}
+	if(isset($_GET['message'])){ ?>
+<div class="alert alert-success" role="alert">
+  <?= $_GET['message'] ?>
+</div>
+<?php	}
+?>
 
-	<p> As a new seller, you have no items to sell.</p>
-	<br>
-	<p>Make sure you add on your items!!.</p>
-	<p>Your inventory is empty</p>
+<form action='' method='post'>
+	<label>Profile first Name:<input type="text" name="first_name" /></label><br>
+	<label>Password:<input type="password" name="password" /></label><br>
+	<input type="submit" name="action" value="Log in" />
+</form>
 
-	<img src="/images/empty.PNG" style="max-height: 250px;" style="max-width: 250px;">
-	<!-- <img src="/images/workshop.png" style="max-height: 250px;" style="max-width: 250px;" /> -->
-
-	<br>
-
-
-	<br><br>
-	<a href="/Product/create" class= "backBtn">Add a new Product to your inventory</a>
-	<br>
-	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
-	<br>
-	<a href="/Product/index" class= "backBtn">Logout from your profile</a>
+<a href="/Profile/details" class= "backBtn">BACK</a>
+<br>
+<a href="/Profile/create" class= "backBtn">CREATE YOUR PROFILE</a>
+<!-- <a href="/profile/register" class= "backBtn">BACK</a>
 
 </body>
-<?php $this->view('footer'); ?>
-</html>
+
+</html> -->
