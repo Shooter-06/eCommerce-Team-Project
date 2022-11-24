@@ -133,6 +133,7 @@
 	<br>
 	<a href="/User/index" class= "backBtn">Logout</a>
 	<a href="/Profile/create" class= "backBtn">Create a profile</a>
+	<br><br><br><br><br><br><br>
 
 </body>
 

@@ -5,7 +5,7 @@ class product extends \app\core\Controller{
 	public function index(){
 		$products = new \app\models\Product();
 		$products = $products->getAll();
-		$this->view('Profile/index', ['products'=>$products]);
+		$this->view('Product/index');
 	}	
 
 	public function create($profile_id){
