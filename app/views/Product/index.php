@@ -22,12 +22,9 @@
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-<<<<<<< HEAD
 						<i class="fa-solid fa-trash"></i>
 						<i class="fa-solid fa-pen-to-square"></i>
-=======
 						<i class="glyphicon glyphicon-trash"></i>
->>>>>>> 2a7bbc3f57c690c86a9edec95128cc4bff48af04
 					</div>	
 				</div>
 				
@@ -39,13 +36,10 @@
 						<h2 class="product_title">Kyrie 6 Lowwww</h2>
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
-<<<<<<< HEAD
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
 						<i class="fa-solid fa-trash"></i>
 						<i class="fa-solid fa-pen-to-square"></i>
-=======
 						<i class="fa-sharp fa-solid fa-cart-shopping" href="/Cart/productsCart"></i>
->>>>>>> 2a7bbc3f57c690c86a9edec95128cc4bff48af04
 					</div>	
 				</div>
 			</div> 
