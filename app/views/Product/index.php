@@ -1,85 +1,7 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/CSS/style.css">
+</head>
 <body>
-	<style>
-		.info{
-		    width: 100%;
-		    background-color: rgb(122, 122, 212);
-		    color: white;
-		    justify-content: center;
-		    margin-bottom: 1.5rem;
-
-		}
-
-		#home{
-			background-image: url("/Images/workshop.png");
-			width: 100%;
-			height: 100%;
-			background-size: cover;
-			background-position: top center;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-		}
-
-		.product{
-			cursor: pointer;
-			margin-bottom: 2rem;
-		}
-
-		.product:hover img{
-			opacity: 0.7;
-		}
-
-		.product img{
-			transition: 0.3s all;
-		}
-
-		.shop_contents{
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(220px,auto));
-			gap: 1.5rem;
-		}
-
-		.product_box{
-			position: relative;
-		}
-
-		.product_box:hover{
-			opacity: 0.7;
-			padding: 10px;
-			border: 1px solid var(--text-color);
-			transition: 0.4s;
-		}
-
-		.img-fluid{
-			width: 100%;
-			height: auto;
-			margin-bottom: 0.5rem;
-		}
-
-		.product_title{
-			font-size: 1.1rem;
-			font-weight: 600;
-			text-transform: uppercase;
-			margin-bottom: 0.5rem;
-		}
-
-		h5{
-			font-weight: 600;
-			text-align: center;
-			justify-content: center;
-		}
-
-		i{
-			cursor: pointer;
-		}
-
-	</style>
-
-
-
-
-
 
 	<div class="info">
 		<h5>Our stock Inventory</h5>
@@ -95,6 +17,8 @@
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
+						<i class="fa-solid fa-trash"></i>
+						<i class="fa-solid fa-pen-to-square"></i>
 						<i class="glyphicon glyphicon-trash"></i>
 					</div>	
 				</div>
@@ -107,17 +31,25 @@
 						<h2 class="product_title">Kyrie 6 Lowwww</h2>
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
+						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
+						<i class="fa-solid fa-trash"></i>
+						<i class="fa-solid fa-pen-to-square"></i>
 						<i class="fa-sharp fa-solid fa-cart-shopping" href="/Cart/productsCart"></i>
 					</div>	
 				</div>
-				
-			</div> <div class="product_box text-center"> <div class="card">
-			<img class="img-fluid" src="/Images/bluewhitenike.jpg"> <div
-			class="card-contents"> <h2 class="product_title">Kyrie 6
-			Low</h2> <span class="price">$164.99</span><br> <button
-			class="btnpurchase">Buy Now</button> <i class="fa-sharp
-			fa-solid fa-cart-shopping"></i> </div>	 </div>
-				
+			</div> 
+			<div class="product_box text-center"> 
+				<div class="card">
+					<img class="img-fluid" src="/Images/bluewhitenike.jpg"> 
+					<div class="card-contents"> 
+						<h2 class="product_title">Kyrie 6 Low</h2> 
+						<span class="price">$164.99</span><br> 
+						<button class="btnpurchase">Buy Now</button> 
+						<i class="fa-sharp fa-solid fa-cart-shopping"></i> 
+						<i class="fa-solid fa-trash"></i>
+						<i class="fa-solid fa-pen-to-square"></i>
+					</div>	 
+				</div>
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
@@ -127,6 +59,8 @@
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
+						<i class="fa-solid fa-trash"></i>
+						<i class="fa-solid fa-pen-to-square"></i>
 					</div>	
 				</div>
 				
@@ -139,6 +73,8 @@
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
+						<i class="fa-solid fa-trash"></i>
+						<i class="fa-solid fa-pen-to-square"></i>
 					</div>	
 				</div>
 				
@@ -151,6 +87,8 @@
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
+						<i class="fa-solid fa-trash"></i>
+						<i class="fa-solid fa-pen-to-square"></i>
 					</div>	
 				</div>
 				
@@ -201,5 +139,22 @@
 <footer>
 	<p>this project was developed by:</p>
 	<?php $this->view('footer'); ?>
+
+<footer class="mt-2 py-1">
+	 <div class="row container mx-auto pt-1">
+	 	<div class="footer-one col-lg-3 col-md-6 col-12">
+	 		<img src="/Images/Work.png" style="max-width: 250px;" style="max-height: 250px;">
+	 	</div>
+	 	<div class="footer-one col-lg-3 col-md-6 col-12">
+	 		<h4 class="pb-2">Creators</h4>
+	 		<ul class="text-uppercase list-unstyled">
+	 			<li><a href="https://github.com/Shooter-06" target="-blank">Fiacre</a></li>
+	 			<li><a href="https://github.com/Vincent-C3" target="-blank">Nam</a></li>
+	 			<li><a href="https://github.com/BakaDobe" target="-blank">De Andre</a></li>
+	 		</ul>
+	 	</div>
+      
+    </div>
+
 </footer>
 </html>

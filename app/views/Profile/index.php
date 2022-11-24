@@ -4,47 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-
-	<style>
-
-		body{
-			background-color:#ffcccb;
-		}
-		h1{
-			font-size: 30px;
-    		font-family: "Times New Roman", Times, serif;
-			
-		}
-		p{
-			font-size: 20px;
-    		font-family: "Times New Roman", Times, serif;	
-		}
-
-/*
-	    button{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: absolute;
-				margin-top: 350px;
-				margin-left: 40%;
-	    	width: 300px;
-	    }
-
-	   	.register_form{
-	   		font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: absolute;
-			margin-top: 400px;
-			margin-left: 40%;
-	    	width: 300px;
-	   	}
-
-	   	a:hover{
-	    	text-decoration: none;
-	    }*/
-	</style>
-
-
+	<link rel="stylesheet" type="text/css" href="/CSS/style.css">
 </head>
 <body>
 
