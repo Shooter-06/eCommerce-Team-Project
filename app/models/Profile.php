@@ -21,6 +21,14 @@ class Profile extends \app\core\Model {
 		return $STMT->fetchAll();
 	}
 
+	public function getProfile($profile_id){
+		$SQL ="SELECT * FROM profile WHERE profile_id=:profile_id";
+		$STMT= self::$_connection->prepare($SQL);
+		$STMT->execute(['profile_id'=>$profile_id]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Profile');
+		return $STMT->fetch();
+	}
+
 	public function getProfileByUser($user_id){
 		$SQL= "SELECT * FROM profile WHERE user_id=:user_id";
 		$STMT = self::$_connection->prepare($SQL);

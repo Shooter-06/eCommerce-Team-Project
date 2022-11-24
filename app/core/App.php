@@ -2,8 +2,8 @@
 namespace app\core;
 
 class App{
-	private $controller = 'Main';
-	private $method = 'index';
+	private $controller = 'Product';
+	private $method = 'indexPProducts';
 
 	public function __construct(){
 		//echo $_GET['url'];

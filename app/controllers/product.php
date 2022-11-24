@@ -5,36 +5,41 @@ class product extends \app\core\Controller{
 	public function index(){
 		$products = new \app\models\Product();
 		$products = $products->getAll();
-		$this->view('Product/details', $products);
+		$this->view('Profile/index', ['products'=>$products]);
 	}	
 
-	public function create(){
+	public function create($profile_id){
+		$profile = new \app\models\Profile();
+		$profile=$profile->getProfile($profile_id);
 
+		$product = new \app\models\Product();
+		
 		if(isset($_POST['action'])){
-			//make a new object
-			$product = new \app\models\Product();
-			
-			// $product->product_id = $_POST['product_id'];
-			// $product->profile_id = $_SESSION['profile_id'];
+			$filename = $this->saveFile($_FILES['picture']);
+
 			$product->title = $_POST['title'];
 			$product->description = $_POST['description'];
 			$product->price = $_POST['price'];
+			$product->picture = $filename;
 
 			$product->profile_id=$_SESSION['profile_id'];
-			
-			$filename = $this->saveFile($_FILES['picture']);
-			// if($filename){
-			// 	$product->picture = $filename;
-			// 	$product->insert();
-				
-			// 	header('location:/Profile/index/');
-			// }else{
-			// 	header('location:/product/create/');
-			// }
-			$product->insert();
-			
+		
+			if($filename){
+				if(isset($_SESSION['picture']))
+					unlink("images/$_SESSION[picture]");
+
+				$_SESSION['picture'] = $filename;
+			}
+			if(isset($_SESSION['picture'])){
+				$product->picture=$_SESSION['picture'];
+			}
+			if($product->insert()){
+				header('location:/Profile/index/' . $profile_id);
+			}else{
+				$this->view('Product/create', ['$profile'=>$profile]);
+			}
 		}else{
-			$this->view('product/create');
+			$this->view('Product/create',['product'=>$product]);
 		}
 	}
 

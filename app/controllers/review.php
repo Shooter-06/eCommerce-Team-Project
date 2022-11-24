@@ -2,6 +2,8 @@
 namespace app\controlllers;
 
 #[\app\filters\MainUser]
+#[\app\filters\Login]
+#[\app\filters\Profile]
 class review extends \app\core\Controller{
 	public function index(){
 		$review = new \app\models\Review();

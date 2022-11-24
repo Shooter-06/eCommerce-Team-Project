@@ -194,11 +194,12 @@
 	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
 	<br>
 	<a href="/User/index" class= "backBtn">Logout</a>
+	<a href="/Profile/create" class= "backBtn">Create a profile</a>
 
 </body>
 
 <footer>
 	<p>this project was developed by:</p>
-	
+	<?php $this->view('footer'); ?>
 </footer>
 </html>

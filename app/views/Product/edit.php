@@ -1,22 +1,6 @@
 <?php $this->view('header', 'Workshop'); ?>
 
-<!-- <style type="text/css">
-	.button {
-	  background-color: #4CAF50; /* Green */
-	  border: none;
-	  color: white;
-	  padding: 20px;
-	  text-align: center;
-	  text-decoration: none;
-	  display: inline-block;
-	  font-size: 16px;
-	  margin: 4px 2px;
-	  cursor: pointer;
-	}
-
-</style> -->
-
-<h1>New product Info</h1>
+<h1>Edit product Info</h1>
 <form action='' method='post' enctype='multipart/form-data'>
 	<div class="form-group">
 		<label class="col-sm-2 col-form-label">Picture:<input class='form-control' type="file" name="picture" id="picture" /></label>

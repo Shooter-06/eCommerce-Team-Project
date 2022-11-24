@@ -19,29 +19,6 @@
 			font-size: 20px;
     		font-family: "Times New Roman", Times, serif;	
 		}
-
-/*
-	    button{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: absolute;
-				margin-top: 350px;
-				margin-left: 40%;
-	    	width: 300px;
-	    }
-
-	   	.register_form{
-	   		font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: absolute;
-			margin-top: 400px;
-			margin-left: 40%;
-	    	width: 300px;
-	   	}
-
-	   	a:hover{
-	    	text-decoration: none;
-	    }*/
 	</style>
 
 
@@ -57,7 +34,13 @@
 
 	<img src="/images/empty.PNG" style="max-height: 250px;" style="max-width: 250px;">
 
-	
+
+	<?php 
+	var_dump($data);
+	foreach ($data as $product) {
+
+		echo " $product->title";
+	}?>
 
 	<br>
 
