@@ -37,6 +37,7 @@
 
 
 	<?php 
+	$this->view('Product/indexPProducts',$data['products']); 
 
 	var_dump($data);
 
@@ -46,7 +47,7 @@
 		<td type=title> $product->title</td>
 		<td type=description> $product->description</td>
 		<td type=price> $product->price</td>
-		</tr>"
+		</tr>";
 
 		// echo " $product->title";
 
@@ -61,7 +62,7 @@
 	<br>
 	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
 	<br>
-	<a href="/Product/index" class= "backBtn">Logout from your profile</a>
+	<a href="/Main/index" class= "backBtn">Logout from your profile</a>
 
 		
 

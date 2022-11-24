@@ -16,7 +16,7 @@ class User extends \app\core\Controller{
 				$profile = new \app\models\Profile();
 				$profile=$profile->getProfileByUser($user->user_id);
 
-				header('location:/Product/index');
+				header('location:/Main/index');
 			}else{
 				//incorret password provided
 				header('location:/User/index?error=Incorrect username/password combination!');

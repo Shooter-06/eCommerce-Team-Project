@@ -9,7 +9,7 @@ class profile extends \app\core\Controller{
 	public function index(){
 		$profile = new \app\models\profile();
 		$profile = $profile->get($_SESSION['profile_id']);
-		$this->view('Profile/index', $profile);
+		$this->view('Product/indexPProducts', $profile);
 
 	}
 

@@ -8,6 +8,12 @@ class product extends \app\core\Controller{
 		$this->view('Product/index');
 	}	
 
+	public function indexPProducts(){
+		$products = new \app\models\Product();
+		$products = $products->getAll();
+		$this->view('Product/indexPProducts',['products'=>$products]);
+	}	
+
 	public function create($profile_id){
 		$profile = new \app\models\Profile();
 		$profile=$profile->getProfile($profile_id);
