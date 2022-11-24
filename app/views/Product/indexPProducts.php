@@ -37,7 +37,6 @@
 
 
 	<?php 
-	$this->view('Product/indexPProducts',$data['products']); 
 
 	var_dump($data);
 
