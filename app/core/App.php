@@ -3,7 +3,7 @@ namespace app\core;
 
 class App{
 	private $controller = 'Product';
-	private $method = 'indexPProducts';
+	private $method = 'index';
 
 	public function __construct(){
 		//echo $_GET['url'];
