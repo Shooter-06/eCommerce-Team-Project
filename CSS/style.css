@@ -113,16 +113,15 @@ p{
     align-items: flex-start;
 }
 
-.product{
-    cursor: pointer;
+.card{
     margin-bottom: 2rem;
 }
 
-.product:hover img{
+.card:hover img{
     opacity: 0.7;
 }
 
-.product img{
+.card img{
     transition: 0.3s all;
 }
 
@@ -137,7 +136,6 @@ p{
 }
 
 .product_box:hover{
-    opacity: 0.7;
     padding: 10px;
     border: 1px solid var(--text-color);
     transition: 0.4s;
