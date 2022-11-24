@@ -163,3 +163,14 @@ h5{
 i{
     cursor: pointer;
 }
+
+footer{
+    background-color: #333333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer h4{
+    color: white;
+}
