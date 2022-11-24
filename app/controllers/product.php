@@ -23,14 +23,15 @@ class product extends \app\core\Controller{
 			$product->profile_id=$_SESSION['profile_id'];
 			
 			$filename = $this->saveFile($_FILES['picture']);
-			if($filename){
-				$product->picture = $filename;
-				$product->insert();
+			// if($filename){
+			// 	$product->picture = $filename;
+			// 	$product->insert();
 				
-				header('location:/Profile/index/');
-			}else{
-				header('location:/product/create/');
-			}
+			// 	header('location:/Profile/index/');
+			// }else{
+			// 	header('location:/product/create/');
+			// }
+			$product->insert();
 			
 		}else{
 			$this->view('product/create');

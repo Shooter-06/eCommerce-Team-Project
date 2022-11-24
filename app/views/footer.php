@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .footer {
-   position: fixed;
+   /*position: fixed;*/
    display: flex;
    justify-content: center;
    left: 0;

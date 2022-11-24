@@ -71,5 +71,8 @@
 		
 
 </body>
-<?php $this->view('footer'); ?>
+<footer>
+	<?php $this->view('footer'); ?>
+</footer>
+
 </html>

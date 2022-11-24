@@ -84,22 +84,6 @@
 	<div class="info">
 		<h5>Our stock Inventory</h5>
 	</div>
-	
-	<!-- <div class="product_index">
-
-		<?php
-		foreach($value as $products){
-			$products= $this->getAll();
-		}?>
-
-		<a href="/Profile/index/<?=$profile->profile_id ?>"></a>
-		<?php 
-			if(isset($_SESSION['profile_id']) && $_SESSION['profile_id'] == $data->profile_id){
-
-			$products= $data->getReviews();
-		}
-	?>	 -->
-
 
 	<section class="shop_container">
 		<div class="shop_contents mx-auto container-fluid">
@@ -111,6 +95,7 @@
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
+						<i class="glyphicon glyphicon-trash"></i>
 					</div>	
 				</div>
 				
@@ -119,10 +104,10 @@
 				<div class="card">
 					<img class="img-fluid" src="/Images/airmax.jpg">
 					<div class="card-contents">
-						<h2 class="product_title">Kyrie 6 Low</h2>
+						<h2 class="product_title">Kyrie 6 Lowwww</h2>
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase">Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
+						<i class="fa-sharp fa-solid fa-cart-shopping" href="/Cart/productsCart"></i>
 					</div>	
 				</div>
 				
@@ -209,16 +194,11 @@
 	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
 	<br>
 	<a href="/User/index" class= "backBtn">Logout</a>
-	<!-- <br>
-		<a href="/Inventory/index" class= "backBtn">The Inventory Page</a> -->
 
 </body>
 
 <footer>
 	<p>this project was developed by:</p>
-	<?=$this->view('footer');?>
+	
 </footer>
-<!-- <footer>
-	<?php $this->view('footer'); ?>
-</footer> -->
 </html>
