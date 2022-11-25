@@ -17,17 +17,18 @@
 
 	<img src="/images/empty.PNG" style="max-height: 250px;" style="max-width: 250px;">
 
-	
+	<?php
+	$this->view('Product/indexPProducts');
+	?>
 
 	<br>
 
 
 	<br><br>
 	<a href=<?php echo '"/Product/create/'.$_SESSION['profile_id'].'"';?> class= "backBtn">Add a new Product to your inventory</a>
+	
 	<br>
-	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>
-	<br>
-	<a href="/Product/index" class= "backBtn">Logout from your profile</a>
+	<a href="Product/index" class= "backBtn">Logout from your profile</a>
 
 		
 

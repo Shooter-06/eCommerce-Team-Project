@@ -19,7 +19,8 @@
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
 						<i class="fa-solid fa-trash"></i>
 						<i class="fa-solid fa-pen-to-square"></i>
-						<i class="glyphicon glyphicon-trash"></i>
+						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
+						<!-- <td type= action><a href='/Product/delete/$item->product_id'> delete</a></td> -->
 					</div>	
 				</div>
 				

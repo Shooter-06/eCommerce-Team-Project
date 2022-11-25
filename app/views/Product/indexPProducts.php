@@ -35,11 +35,22 @@
 	<img src="/images/empty.PNG" style="max-height: 250px;" style="max-width: 250px;">
 
 
-	<?php 
-	var_dump($data);
-	foreach ($data as $product) {
 
-		echo " $product->title";
+	<?php 
+
+	var_dump($data);
+
+	foreach ($data as $product) {
+		echo"<tr> 
+		<td type=product_id> $product->product_id</td>
+		<td type=title> $product->title</td>
+		<td type=description> $product->description</td>
+		<td type=price> $product->price</td>
+		</tr>"
+
+		// echo " $product->title";
+
+
 	}?>
 
 	<br>
