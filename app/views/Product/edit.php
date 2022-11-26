@@ -10,9 +10,9 @@
 	<div class="products-inputs">
 				
 
-			<label>The Title of the product:<input type="text" name="title" /></label><br>
-			<label>The Description of the product:<input type="text" name="description" /></label><br>
-			<label>The Price of the product:<input type="text" name="price" /></label><br>
+			<label>The Title of the product:<input type="text" name="title" value="<?= $data['product']->title ?>" /></label><br>
+			<label>The Description of the product:<input type="text" name="description" value="<?= $data['product']->description ?>" /></label><br>
+			<label>The Price of the product:<input type="text" name="price"  value="<?= $data['product']->price ?>"/></label><br>
 
 			<label class="image_product">Product</label><img id='pic_preview' src='/images/<?=$data->picture ?>' style="max-width:100px;max-height:100px" name ="filename" />
 

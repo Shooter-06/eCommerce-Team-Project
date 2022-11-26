@@ -201,28 +201,28 @@
 	<form action='' method='post'>
 
 		<div class="firstname_form">
-			<label for="Fname">First Name: </label>
-    	<input type="text" class="form-control" id="first_name" name='first_name' placeholder="Enter the first name">
+			<label for="Fname">First Name </label>
+    	<input type="text" class="form-control" id="first_name" name='first_name' placeholder="Enter the first name"  value="<?= $data['profile']->first_name ?>">
 		</div>
 
 		<div class="lastname_form">
 			<label for="Lname">Last Name: </label>
-    	<input type="text" class="form-control" id="last_name" name='last_name' placeholder="Enter the last name">
+    	<input type="text" class="form-control" id="last_name" name='last_name' placeholder="Enter the last name" value="<?= $data['profile']->last_name?>">
 		</div>
 
 		<div class="address_form">
 			<label for="address">Address : </label>
-    	<input type="text" class="form-control" id="address" name='address' placeholder="Enter the address">
+    	<input type="text" class="form-control" id="address" name='address' placeholder="Enter the address" value="<?= $data['profile']->address?>">
 		</div>
 
 		<div class="city_form">
 			<label for="city">City: </label>
-    	<input type="text" class="form-control" id="city" name='city' placeholder="Enter your username">
+    	<input type="text" class="form-control" id="city" name='city' placeholder="Enter your username" value="<?= $data['profile']->city?>">
 		</div>
 
 		<div class="pCode_form">
 			<label for="postal_code">Postal_code: </label>
-    	<input type="text" class="form-control" id="postal_code" name='postal_code' placeholder="Enter your postal code">
+    	<input type="text" class="form-control" id="postal_code" name='postal_code' placeholder="Enter your postal code" value="<?= $data['profile']->postal_code?>">
 
     	
 		</div>
@@ -230,12 +230,12 @@
 
 		<div class="password_form">
 			<label for="password">Password: </label>
-    	<input type="text" class="form-control" id="password" name='password' placeholder="Enter the password">
+    	<input type="text" class="form-control" id="password" name='password' placeholder="Enter the password" value="<?= $data['profile']->password?>">
 		</div>
 
 		<div class="passwordConf_form">
 			<label for="passwordConf">Password Confirmation: </label>
-    	<input type="password" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
+    	<input type="password" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation" value="<?= $data['profile']->passwordConf ?>">
 		</div><br>
 
 

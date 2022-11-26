@@ -46,15 +46,16 @@
 		<td type=title> $product->title</td>
 		<td type=description> $product->description</td>
 		<td type=price> $product->price</td>
+
+		<td type=action>
+		<a href='/Profile/edit/$profile->profile_id'>edit</a> | 
+		<a href='/Profile/delete/$profile->profile_id'>delete</a>
+		</td>
 		</tr>";
-
-		// echo " $product->title";
-
 
 	}?>
 
 	<br>
-
 
 	<br><br>
 	<a href=<?php echo '"/Product/create/'.$_SESSION['profile_id'].'"';?> class= "backBtn">Add a new Product to your inventory</a>
