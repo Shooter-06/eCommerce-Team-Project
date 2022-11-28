@@ -9,13 +9,14 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/CSS/style.css">
 
 	<title>Register a new user</title>
 
 	<style>
 
 		body{
-			background-color:#ffcccb;
+			background-color:peachpuff;
 		}
 		h1{
 			font-size: 30px;
@@ -45,8 +46,8 @@
     		font-family: "Times New Roman", Times, serif;
 			position: absolute;
 			text-align: center;
-			top: 30%;
-    		width: 50%;
+			top: 25%;
+    		width: 100%;
     	}
 
     #username{
@@ -60,42 +61,21 @@
     #password{
     	font-family: "Times New Roman", Times, serif;
 		position: center;
-		margin-top: 10px;
+		margin-top: 30px;
 		margin-left: 36%;
     	width: 250px;
     }
 
-    /*.username_form{
-    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 10%;
-    	width: 100%;*/
-    }
+   
 
     #password{
     	font-family: "Times New Roman", Times, serif;
 		position: center;
 		margin-top: 30px;
-		margin-left: 50%;
+		margin-left: 36%;
     	width: 250px;
     }
 
-    /*.form-group3{
-    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 60%;
-    	width: 100%;
-    }*/
-
-    /*#passwordConf{
-    	font-family: "Times New Roman", Times, serif;
-		  position: absolute;
-		  margin-top: 10px;
-		  margin-left: 36%;
-    	width: 250px;
-  	}*/
 
     button{
     	font-family: "Times New Roman", Times, serif;
@@ -147,6 +127,8 @@
 	<form action='' method='post'>
 		<div class="username_form">
 			<label for="username">Username: </label>
+
+
     	<input type="text" class="form-control" id="username" name='username' placeholder="Enter the username">
 		</div>
 		
@@ -166,11 +148,9 @@
 		</div>
 
 	</form>	
-	
-	<footer>
+
 		
-		<?php $this->view('footer'); ?>
-	</footer>
+	
 </body>
 
 </html>

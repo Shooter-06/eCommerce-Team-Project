@@ -1,6 +1,7 @@
 body {
     
     background-color:peachpuff;
+    height: 100%;
 }
 
 h1{
@@ -164,10 +165,13 @@ i{
     cursor: pointer;
 }
 
+.pagination{
+    position: relative;
+    padding-left: 15px;
+}
+
 footer{
     background-color: #333333;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
