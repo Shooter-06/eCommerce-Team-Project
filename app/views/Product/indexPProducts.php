@@ -63,6 +63,24 @@
 	<?php 
 	?>
 
+<!-- change this, it is a mistakee 
+	<h4>Write your review</h4>
+        <div class="row">
+            <?php foreach ($reviews as $review){?>
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <?php echo $review->first_name." ".$review->last_name;?><br/>
+                        <?php for($i=0;$review->rating > $i; $i++){?>
+                        <span class="text-warning fs-2">*</span>
+                        <?php }?>
+                        <p> <?php echo $review->comment;?></p>
+                    </div>
+                </div>
+            </div>
+            <?php }?>
+        </div>
+-->
 	<br>
 
 	<br><br>
