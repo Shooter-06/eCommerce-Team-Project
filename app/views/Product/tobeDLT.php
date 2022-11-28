@@ -38,8 +38,7 @@
 			<div class='shop_contents mx-auto container-fluid'>
 			<div class='product_box text-center'>
 				<div class='card'>
-
-					<img class='img-fluid' src='/images/$product->picture' style='max-width:100px;max-height:100px' id='picture'>
+					<img class='img-fluid' src='/Images/yellownike.jpg'>
 					<div class='card-contents'>
 
 						<td type=product_id> $product->product_id</td> <br>
@@ -47,6 +46,7 @@
 						<td type=description> $product->description</td> <br>
 						<td type=price> $product->price</td> <br>
 
+						<img src='/images/$product->picture' style='max-width:50px;max-height:50px' id='picture'>
 
 						<button class='btnpurchase' href='/Cart/productsCart/$product->product_id'>Buy Now</button>
 						<i class='fa-sharp fa-solid fa-cart-shopping' href='/Cart/productsCart/$product->product_id'></i>
@@ -57,10 +57,30 @@
 					</div>	
 				</div>
 				
-			</div> 
-		</div>";
+			</div> ";
 		}?>
 	<?php 
+
+	foreach ($data['products'] as $product) {
+		echo"<tr> 
+		<td type=product_id> $product->product_id</td> <br>
+		<td type=title> $product->title</td><br>
+		<td type=description> $product->description</td> <br>
+		<td type=price> $product->price</td> <br>
+
+		
+
+		<td type=action>
+			<a href='/Product/edit/$product->product_id'>edit</a> 
+			<br>
+			<a href='/Product/delete/$product->product_id'>delete</a>
+			<br><br>
+		</td>
+
+		</tr>
+
+		";
+	}
 	?>
 
 	<br>

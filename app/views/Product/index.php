@@ -15,7 +15,7 @@
 					<div class="card-contents">
 						<h2 class="product_title">Nike</h2>
 						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
+						<button class="btnpurchase" href='/Cart/productsCart/<?=$product_id->product_id?>'>Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
 						<!--<i class="fa-solid fa-trash"></i>-->
 						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
@@ -25,6 +25,7 @@
 				</div>
 				
 			</div>
+			
 			<div class="product_box text-center">
 				<div class="card">
 					<img class="img-fluid" src="/Images/airmax.jpg">

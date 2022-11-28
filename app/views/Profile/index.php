@@ -10,15 +10,13 @@
 
 	<h1><center><big>Welcome to our inventory of your profile</big></center></h1>
 
-	<p> As a new seller, you have no items to sell.</p>
 	<br>
-	<p>Make sure you add on your items!!.</p>
-	<p>Your inventory is empty</p>
+	<p>Add your items.</p>
 
 	<img src="/images/empty.PNG" style="max-height: 250px;" style="max-width: 250px;">
 
 	<?php
-	$this->view('Product/indexPProducts');
+	$this->view('Product/indexPProducts', $data['products']);
 	?>
 
 	<br>
