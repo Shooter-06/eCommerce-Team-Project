@@ -98,7 +98,7 @@
 		<div class="shop_contents mx-auto container-fluid">
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/yellownike.jpg">
+					<img class="img-fluid" src="/Images/beigecon.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Nike</h2>
 						<span class="price">$164.99</span><br>
@@ -114,7 +114,7 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/airmax.jpg">
+					<img class="img-fluid" src="/Images/shoe1.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Nike Air Max</h2>
 						<span class="price">$164.99</span><br>
@@ -127,7 +127,7 @@
 			</div> 
 			<div class="product_box text-center"> 
 				<div class="card">
-					<img class="img-fluid" src="/Images/bluewhitenike.jpg"> 
+					<img class="img-fluid" src="/Images/shoe2.jpg"> 
 					<div class="card-contents"> 
 						<h2 class="product_title">Nike Air Blue</h2> 
 						<span class="price">$164.99</span><br> 
@@ -140,7 +140,7 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/redwhite.jpg">
+					<img class="img-fluid" src="/Images/shoe3.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Nike Air Red</h2>
 						<span class="price">$164.99</span><br>
@@ -154,7 +154,7 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/greynike.jpg">
+					<img class="img-fluid" src="/Images/shoe4.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Running Nike</h2>
 						<span class="price">$164.99</span><br>
@@ -168,7 +168,7 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/boot.jpg">
+					<img class="img-fluid" src="/Images/shoe5.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Some Boots</h2>
 						<span class="price">$164.99</span><br>
@@ -184,7 +184,7 @@
 		<div class="shop_contents mx-auto container-fluid">
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/yellownike.jpg">
+					<img class="img-fluid" src="/Images/shoe6.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Nike</h2>
 						<span class="price">$164.99</span><br>
@@ -200,7 +200,7 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/airmax.jpg">
+					<img class="img-fluid" src="/Images/shoe7.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Nike Air Max</h2>
 						<span class="price">$164.99</span><br>
@@ -213,7 +213,7 @@
 			</div> 
 			<div class="product_box text-center"> 
 				<div class="card">
-					<img class="img-fluid" src="/Images/bluewhitenike.jpg"> 
+					<img class="img-fluid" src="/Images/shoe8.jpg"> 
 					<div class="card-contents"> 
 						<h2 class="product_title">Nike Air Blue</h2> 
 						<span class="price">$164.99</span><br> 
@@ -226,7 +226,7 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/redwhite.jpg">
+					<img class="img-fluid" src="/Images/shoe9.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Nike Air Red</h2>
 						<span class="price">$164.99</span><br>
@@ -240,7 +240,7 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/greynike.jpg">
+					<img class="img-fluid" src="/Images/shoe10.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Running Nike</h2>
 						<span class="price">$164.99</span><br>
@@ -254,7 +254,7 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/boot.jpg">
+					<img class="img-fluid" src="/Images/shoe11.jpg">
 					<div class="card-contents">
 						<h2 class="product_title">Some Boots</h2>
 						<span class="price">$164.99</span><br>
