@@ -15,75 +15,11 @@
 	<style>
 
 		body{
-			background-color:#ffcccb;
+			background-color:peachpuff;
+			height: 100%;
 		}
-		h1{
-			font-size: 30px;
-    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 20%;
-    	width: 100%;
-		}
-
-		.username_form{
-    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 30%;
-    	width: 100%;
-    	}
-
-	    #username{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				margin-top: 10px;
-				margin-left: 36%;
-	    	width: 400px;
-	    }
-
-	    .password_form{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				top: 45%;
-	    	width: 100%;
-	    }
-
-	    #password{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				margin-top: 10px;
-				margin-left: 36%;
-	    	width: 400px;
-	    }
-
-	    .passwordConf_form{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				top: 60%;
-	    	width: 100%;
-	    }
-
-	    #passwordConf{
-	    	font-family: "Times New Roman", Times, serif;
-			  position: absolute;
-			  margin-top: 10px;
-			  margin-left: 36%;
-	    	width: 400px;
-	  	}
-
-	    button{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				margin-top: 650px;
-				margin-left: 40%;
-	    	width: 300px;
-	    }
-
-	    .backBtn{
+		
+	    /*.backBtn{
 	    	box-shadow: 3px 4px 0px 0px #8a2a21;
 	    	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
 				background-color:#c62d1f;
@@ -106,6 +42,72 @@
 	   		position:relative;
 				top:1px;	
 	   	}
+*/
+	   	.logo {
+	   		width: 250px;
+	   		height: 75px;
+	   		border-radius: 30%;
+	   		margin: 0 auto;
+	   		margin-bottom: 10px;
+	   	}
+
+	   	.logo img{
+	   		width: 100%;
+	   	}
+
+	   	.title{
+	   		width: 100%;
+	   		background-color: rgb(122, 122, 212);
+	   		color: white;
+    		justify-content: center;
+    		margin-bottom: 1.5rem;
+    		margin-top: 35px;
+	   	}
+
+	   	h5{
+	   		font-weight: 600;
+	   		text-align: center;
+    		justify-content: center;
+	   	}
+
+	   	.register{
+	   		margin: 100px auto;
+	   		width: 350px;
+	   		padding: 30px;
+	   		background-color: #ffefe0;
+	   	}
+
+	   	form{
+	   		width: 100%;
+	   		margin-top: 30px;
+	   	}
+
+	   	input{
+	   		font-size: 18px;
+	   		padding: 10px 20px 10px 5px;
+	   		border: none;
+	   		outline: none;
+	   		display: block;
+	   		background: none;
+	   	}
+
+	   	#btnRegister{
+	   		width: 100%;
+	   		padding: 12px 10px;
+	   		border: none;
+	   		font-size: 18px;
+	   		border-radius: 20px;
+	   	}
+
+	   	footer{
+    		background-color: #333333;
+    		width: 100%;
+
+		}
+
+		footer h4{
+    		color: white;
+		}
 
 	</style>
 
@@ -130,37 +132,35 @@
 	<?php	}
 	?>
 
-
-	<h1>Sign Up with the correct inputs :</h1>
-
-	<form action='' method='post'>
-
-		<div class="username_form">
-			<label for="username">Username: </label>
-    	<input type="text" class="form-control" id="username" name='username' placeholder="Enter the username">
+	<div class="register">
+		<div class="logo">
+			<img src="/Images/Work.png">
 		</div>
+		<div class="title"><h5>Sign Up with the correct inputs</h5></div>
+			<form action="" method="post">
+				<input type="text" class="form-control" name="username" id="username" placeholder="Enter Username"><br>
+				<input type="password" class="form-control" name="password" id="password" placeholder="Enter Password"><br>
+				<input type="password" class="form-control" name="confirmPass" id="confirmPass" placeholder="Re-enter Password"><br>
+				<input type="submit" name="action" id="btnRegister" value="Register" class="btn btn-primary">
+			</form>
+	</div>
 
-		<div class="password_form">
-			<label for="password">Password: </label>
-    	<input type="password" class="form-control" id="password" name='password' placeholder="Enter the password">
-		</div>
+	<!-- <a href="/User/index" class= "backBtn">BACK</a> -->
 
-		<div class="passwordConf_form">
-			<label for="passwordConf">Password Confirmation: </label>
-    	<input type="password" class="form-control" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
-		</div><br>
-
-		<br>
-
-		<button type="submit" name='action' value='Register' class="btn btn-primary">Sign up
-		</button>
-		<br>
-	</form>
-
-	<a href="/User/index" class= "backBtn">BACK</a>
-
-	<footer>
-		<?php $this->view('footer', 'Workshop'); ?>
-	</footer>
+	<footer class="mt-2 py-1">
+	  <div class="row container mx-auto pt-1">
+	    <div class="footer-one col-lg-3 col-md-6 col-12">
+	      <img src="/Images/Work.png" style="max-width: 250px;" style="max-height: 250px;">
+	    </div>
+	    <div class="footer-one col-lg-3 col-md-6 col-12">
+	      <h4 class="pb-2">Creators</h4>
+	      <ul class="text-uppercase list-unstyled">
+	        <li><a href="https://github.com/Shooter-06" target="-blank">Fiacre</a></li>
+	        <li><a href="https://github.com/Vincent-C3" target="-blank">Nam</a></li>
+	        <li><a href="https://github.com/BakaDobe" target="-blank">De Andre</a></li>
+	      </ul>
+	    </div> 
+	  </div>
+  	</footer>
 </body>
 </html>
