@@ -13,7 +13,7 @@
 				<div class="card">
 					<img class="img-fluid" src="/Images/yellownike.jpg">
 					<div class="card-contents">
-						<h2 class="product_title">Kyrie 6 Low</h2>
+						<h2 class="product_title">Nike</h2>
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
@@ -29,13 +29,12 @@
 				<div class="card">
 					<img class="img-fluid" src="/Images/airmax.jpg">
 					<div class="card-contents">
-						<h2 class="product_title">Kyrie 6 Lowwww</h2>
+						<h2 class="product_title">Nike Air Max</h2>
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
 						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
 						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="fa-sharp fa-solid fa-cart-shopping" href="/Cart/productsCart"></i>
 					</div>	
 				</div>
 			</div> 
@@ -43,7 +42,7 @@
 				<div class="card">
 					<img class="img-fluid" src="/Images/bluewhitenike.jpg"> 
 					<div class="card-contents"> 
-						<h2 class="product_title">Kyrie 6 Low</h2> 
+						<h2 class="product_title">Nike Air Blue</h2> 
 						<span class="price">$164.99</span><br> 
 						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button> 
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i> 
@@ -56,7 +55,7 @@
 				<div class="card">
 					<img class="img-fluid" src="/Images/redwhite.jpg">
 					<div class="card-contents">
-						<h2 class="product_title">Kyrie 6 Low</h2>
+						<h2 class="product_title">Nike Air Red</h2>
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
@@ -70,7 +69,7 @@
 				<div class="card">
 					<img class="img-fluid" src="/Images/greynike.jpg">
 					<div class="card-contents">
-						<h2 class="product_title">Kyrie 6 Low</h2>
+						<h2 class="product_title">Running Nike</h2>
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
@@ -82,9 +81,9 @@
 			</div>
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/yellownike.jpg">
+					<img class="img-fluid" src="/Images/boot.jpg">
 					<div class="card-contents">
-						<h2 class="product_title">Kyrie 6 Low</h2>
+						<h2 class="product_title">Some Boots</h2>
 						<span class="price">$164.99</span><br>
 						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
 						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
@@ -97,24 +96,18 @@
 		</div>
 	</section>
 
-	<!-- <section id="featured">
-		<div class="row mx-auto container-fluid">
-			<div class="product text-center col-lg-3 col-md-4 col-12">
-				<img class="img-fluid mb-3" src="/Images/kyrie.jpg">
-				<h5 class="proName">Kyrie 6 Low</h5>
-				<h4 class="proPrice">$164.99</h4>
-				<button class="btnpurchase">Buy Now</button>
-			</div>
-		</div>
-		<div class="row mx-auto container-fluid">
-			<div class="product text-center col-lg-3 col-md-4 col-12">
-				<img class="img-fluid mb-3" src="/Images/dunno.jpg">
-				<h5 class="proName">Something Dunks Low</h5>
-				<h4 class="proPrice">$49.99</h4>
-				<button class="btnpurchase">Buy Now</button>
-			</div>
-		</div>
-	</section> -->
+	<nav aria-label="...">
+	  <ul class="pagination mx-auto container-fluid">
+	    <li class="page-item disabled">
+	      <a class="page-link">Previous</a>
+	    </li>
+	    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item" aria-current="page">
+	    <li class="page-item disabled">
+	      <a class="page-link" href="#">Next</a>
+	    </li>
+	  </ul>
+	</nav>
 
 
 	
