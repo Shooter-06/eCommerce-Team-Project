@@ -28,6 +28,8 @@ In this project, I have different features that will be developed to simplify th
  - I can search for products without creating a profile (1 feature).
  - I can comment on a product (1 features).
  - I can rate a product (1 feature). 
+ - I will not be able to delete any product (1 features).
+ - I can not add a product unless I have a profile created (1 features).
  - I can add some products in the cart (1 feature)
  - I can get the to total price and the quantity of items in the cart (2 feature).
  - 
