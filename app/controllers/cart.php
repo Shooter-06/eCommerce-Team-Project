@@ -38,12 +38,9 @@ class cart extends \app\core\Controller{
 			$cart->price = $products->price;
             $cart->insertProductToCart();
 				
-
 			$profile= $_SESSION['profile_id'];
 
-
             header("location:/cart/index");
-
 
 	}
 
