@@ -10,10 +10,14 @@ class cart extends \app\core\Controller{
 	public function index(){
 
 		$cart = new \app\models\Cart();
+<<<<<<< HEAD
         //$carts = $cart->getProfile();
        // $code = '';
         
         //require 'app/views/Product/productsCart.php';
+=======
+        
+>>>>>>> 184d3d35465e73b5c84777191e8bb78fedfbf4d2
 	}
 
 	public function remove(){
@@ -39,10 +43,15 @@ class cart extends \app\core\Controller{
 			//echo $_SESSION['user_id'];
 			$cart->user_id = $_SESSION['user_id'] ;
 			
+<<<<<<< HEAD
 			$cart->product_id = $product_id;
 			$cart->price = $products->price;
             $cart->insertProductToCart();
 				
+=======
+			$profile= $_SESSION['profile_id'];
+			//$product= $_SESSION['product_id'];
+>>>>>>> 184d3d35465e73b5c84777191e8bb78fedfbf4d2
 
 			// if ($cartobjects) {
    //              $cart->qty = $checkCart->qty + $_POST['qty'];
@@ -73,6 +82,10 @@ class cart extends \app\core\Controller{
 
             header("location:/cart/index");
 
+<<<<<<< HEAD
+=======
+            header("location:/cart/index");
+>>>>>>> 184d3d35465e73b5c84777191e8bb78fedfbf4d2
 
 		// 	if(!in_array($_GET['id'], $product_id)){
 		// 		$count = count($_SESSION['cart']);
@@ -92,7 +105,11 @@ class cart extends \app\core\Controller{
 		// 							'price' => $_GET['price']);
 		// 	$_SESSION['cart'][0] =$products;
 		// }
+<<<<<<< HEAD
         
+=======
+        }
+>>>>>>> 184d3d35465e73b5c84777191e8bb78fedfbf4d2
 	}
 
 	public function emptyCart(){

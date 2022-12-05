@@ -17,7 +17,6 @@
 
 <link rel="stylesheet" type="text/css" href="/CSS/style.css">
 
-
 </head>
 
 
@@ -72,7 +71,6 @@
 					</div>	
 				</div>
 			</div> 
-			
 	</section>
 
 	<nav aria-label="...">

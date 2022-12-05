@@ -11,93 +11,78 @@
 	crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="/CSS/style.css">
 
-	<title>Register a new user</title>
+	<title>Login</title>
 
 	<style>
 
 		body{
 			background-color:peachpuff;
+			height: 100%;
 		}
-		h1{
-			font-size: 30px;
-    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 20%;
-    	width: 100%;
-		}
-		p{
-			font-size: 30px;
-    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 20%;
-    	width: 100%;
+		.logo{
+			width: 250px;
+			height: 75px;
+			border-radius: 30%;
+			margin: 0 auto;
+			margin-bottom: 10px;
 		}
 
-		.username_form{
-    		font-family: "Times New Roman", Times, serif;
-			position: absolute;
+		.logo img{
+			width: 100%;
+		}
+
+		.title{
+			width: 100%;
+			background-color: rgb(122, 122, 212);
+			color: white;
+			justify-content: center;
+			margin-bottom: 1.5rem;
+			margin-top: 35px;
+		}
+
+		h5{
+			font-weight: 600;
 			text-align: center;
-			top: 10%;
+			justify-content: center;
+		}
+
+		.login{
+			margin: 100px auto;
+			width: 350px;
+			padding: 30px;
+			background-color: #ffefe0;
+		}
+
+		form{
+			margin-top: 30px;
     		width: 100%;
     	}
-    	.password_form{
-    		font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 25%;
+
+    	input{
+    		font-size: 18px;
+    		padding: 10px 20px 10px 5px;
+			border: none;
+			font-size: 10px;
+			border-radius: 20px;
+    	}
+
+    	#btnLogin{
+    		width: 100%;
+    		padding: 12px 10px;
+    		border: none;
+    		font-size: 18px;
+    		border-radius: 20px;
+    	}
+
+    	footer{
+    		background-color: #333333;
     		width: 100%;
     	}
 
-    #username{
-    	font-family: "Times New Roman", Times, serif;
-		position: center;
-		margin-top: 10px;
-		margin-left: 36%;
-    	width: 250px;
-    }
-
-    #password{
-    	font-family: "Times New Roman", Times, serif;
-		position: center;
-		margin-top: 30px;
-		margin-left: 36%;
-    	width: 250px;
-    }
-
-   
-
-    #password{
-    	font-family: "Times New Roman", Times, serif;
-		position: center;
-		margin-top: 30px;
-		margin-left: 36%;
-    	width: 250px;
-    }
-
-
-    button{
-    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: absolute;
-			margin-top: 350px;
-			margin-left: 40%;
-    	width: 300px;
-    }
-
-   	.register_form{
-   		font-family: "Times New Roman", Times, serif;
-		position: absolute;
-		text-align: absolute;
-		margin-top: 400px;
-		margin-left: 40%;
-    	width: 300px;
-   	}
-
-   	a:hover{
-    	text-decoration: none;
-    }
+    	footer h4{
+    		color: white;
+    	}
+    	
 	</style>
 
 </head>
@@ -121,36 +106,38 @@
 	<?php	}
 	?>
 
-
-	<h><CENTER>Welcome to the Workshop Login Page:</CENTER></h>
-
-	<form action='' method='post'>
-		<div class="username_form">
-			<label for="username">Username: </label>
-
-
-    	<input type="text" class="form-control" id="username" name='username' placeholder="Enter the username">
+	<div class="login">
+		<div class="logo">
+			<img src="/Images/Work.png">
 		</div>
-		
-		<br>
-
-		<div class="password_form">
-			<label for="password">Password: </label>
-    	<input type="password" class="form-control" id="password" name='password' placeholder="Enter the password">
-		</div>
-		<br>
-
-		<button type="submit" name='action' value='Register' class="btn btn-primary">Login</button>
-		<br>
-
-		<div class="register_form">
-			<a href="/User/register">REGISTER HERE !!</a>
-		</div>
-
-	</form>	
-
+		<div class="title"><h5>Welcome to the Login page</h5></div>
+			<form action="" method="post">
+				<input type="text" name="username" class="form-control"
+				id="username" placeholder="Enter Username"><br>
+				<input type="password" name="password" class="form-control" id="password" placeholder="Enter Password"><br>
+				<input type="submit" name="action" id="btnLogin" value="Login" class="btn btn-primary">
+			</form>
+	</div>
+	<div class="register_form">
+		<a href="/User/register">REGISTER HERE !!</a>
+	</div>
+	<footer class="mt-2 py-1">
+	  <div class="row container mx-auto pt-1">
+	    <div class="footer-one col-lg-3 col-md-6 col-12">
+	      <img src="/Images/Work.png" style="max-width: 250px;" style="max-height: 250px;">
+	    </div>
+	    <div class="footer-one col-lg-3 col-md-6 col-12">
+	      <h4 class="pb-2">Creators</h4>
+	      <ul class="text-uppercase list-unstyled">
+	        <li><a href="https://github.com/Shooter-06" target="-blank">Fiacre</a></li>
+	        <li><a href="https://github.com/Vincent-C3" target="-blank">Nam</a></li>
+	        <li><a href="https://github.com/BakaDobe" target="-blank">De Andre</a></li>
+	      </ul>
+	    </div> 
+	  </div>
+  	</footer>
 		
 	
 </body>
 
-</html>
+</html> 
