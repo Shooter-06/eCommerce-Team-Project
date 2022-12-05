@@ -65,4 +65,12 @@ class Cart extends \app\core\Model{
         $STMT->execute(['cart_id' => $cartId]);
 
     }
+
+     public function cartDisplay()
+    {
+        $SQL = "SELECT * FROM CART JOIN PRODUCT WHERE product_id=:product_id ";
+        $STMT->execute(['product_id' => $product_id]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\Cart\addToCart');
+		return $STMT->fetchAll();
+    }
 }
