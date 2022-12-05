@@ -7,6 +7,15 @@
 </head>
 <body>
 
+	<style>
+
+		body{
+			background-color: peachpuff;
+			font-family: Courier New, monospace;
+		}
+
+	</style>
+
 	<?php $this->view('header', 'Workshop'); ?><h1><center><big>Welcome to our inventory</big></center></h1>
 
 

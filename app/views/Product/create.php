@@ -1,3 +1,12 @@
+<style>
+
+		body{
+			background-color: peachpuff;
+			font-family: Courier New, monospace;
+		}
+
+	</style>
+
 <?php $this->view('header', 'Workshop'); ?>
 
 <h1>New product Info</h1>
