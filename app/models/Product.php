@@ -59,6 +59,14 @@ class Product extends \app\core\Model{
 		return self::$_connection->lastInsertId();
 	}
 
+	public function getCartProducts($category_id){
+		$SQL = "SELECT product.*, category.category_name FROM product JOIN category ON category.category_id = item.category_id WHERE item.category_id=:category_id";
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['category_id'=>$category_id]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Product');
+		return $STMT->fetchAll();
+	}
+
 	public function update(){
 		$SQL = "UPDATE product SET profile_id=:profile_id, title=:title, description=:description WHERE product_id=:product_id";
 		$STMT = self::$_connection->prepare($SQL);
@@ -74,4 +82,6 @@ class Product extends \app\core\Model{
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['product_id'=>$this->product_id]);
 	}
+
+
 }

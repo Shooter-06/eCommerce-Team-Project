@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title><?= $data ?></title>
-	<link rel="stylesheet" href="rating.css">
+	<link rel="stylesheet" href="/CSS/rating.css">
 	<link rel="stylesheet" type="text/css" href="/CSS/header.css">
 	<link rel="shortcut icon" type="image/png" href="Images/favicon-32x32.png">
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -11,7 +11,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="C:\xampp\htdocs\app\css\header.css">
+	
 	<link rel="stylesheet" href="app\CSS\site.css">
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -77,13 +77,14 @@
 
 	        <form action="/Main/search" method="get" style='display:inline-block'>					
 				<div class="input-group">
-				    <input type="search" name='searching' class="form-control" placeholder="Enter search term" />
-				  <button type="submit" class="btn btn-primary" value="Search"><i class="bi-search"></i></button>
+				    <input type="search" name='searching'  placeholder="Enter search term" />
+				  <button type="submit" class="btn btn-secondary" value="Search"><i class="bi-search"></i></button>
 				</div>
 			
 			</form>
 	        
-	        <i class="fa-sharp fa-solid fa-cart-shopping" href="/Cart/productsCart"></i>
+	        <i class="fa-sharp fa-solid fa-cart-shopping" href="/cart/inndex/$product->product_id"></i>
+
 	      </li>
 	    </ul>
 	  </div>

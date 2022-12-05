@@ -1,7 +1,40 @@
 <head>
-	<link rel="stylesheet" type="text/css" href="/CSS/style.css">
+	<title><?= $data ?></title>
+	<link rel="stylesheet" href="/CSS/rating.css">
+	<link rel="stylesheet" type="text/css" href="/CSS/header.css">
+	<link rel="shortcut icon" type="image/png" href="Images/favicon-32x32.png">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="app\CSS\site.css">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" type="text/css" href="/CSS/style.css">
+
+
 </head>
+
+
 <body>
+
+	<style>
+		#revText{
+			font-size: 16px;
+			width: 30%;
+		}
+
+		body{
+			background-color: peachpuff;
+			font-family: Courier New, monospace;
+		}
+
+	</style>	
 
 	<div class="info">
 		<h5>Our stock Inventory</h5>
@@ -11,7 +44,7 @@
 		<div class="shop_contents mx-auto container-fluid">
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/yellownike.jpg">
+					<img class="img-fluid" src="/Images/yellownike.jpg" style='max-width:100px;max-height:100px'>
 					<div class="card-contents">
 						<h2 class="product_title">Nike</h2>
 						<span class="price">$164.99</span><br>
@@ -20,7 +53,7 @@
 						<!--<i class="fa-solid fa-trash"></i>-->
 						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
 						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-						<!-- <td type= action><a href='/Product/delete/$item->product_id'> delete</a></td> -->
+						
 					</div>	
 				</div>
 				
@@ -28,7 +61,7 @@
 			
 			<div class="product_box text-center">
 				<div class="card">
-					<img class="img-fluid" src="/Images/airmax.jpg">
+					<img class="img-fluid" src="/Images/airmax.jpg"  style='max-width:100px;max-height:100px'>
 					<div class="card-contents">
 						<h2 class="product_title">Nike Air Max</h2>
 						<span class="price">$164.99</span><br>
@@ -39,234 +72,7 @@
 					</div>	
 				</div>
 			</div> 
-			<div class="product_box text-center"> 
-				<div class="card">
-					<img class="img-fluid" src="/Images/bluewhitenike.jpg"> 
-					<div class="card-contents"> 
-						<h2 class="product_title">Nike Air Blue</h2> 
-						<span class="price">$164.99</span><br> 
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button> 
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i> 
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	 
-				</div>
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/redwhite.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Nike Air Red</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/greynike.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Running Nike</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/boot.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Some Boots</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-		</div>
-		<div class="shop_contents mx-auto container-fluid">
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/beigecon.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Nike</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<!--<i class="fa-solid fa-trash"></i>-->
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-						<!-- <td type= action><a href='/Product/delete/$item->product_id'> delete</a></td> -->
-					</div>	
-				</div>
-				
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe1.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Nike Air Max</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-					</div>	
-				</div>
-			</div> 
-			<div class="product_box text-center"> 
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe2.jpg"> 
-					<div class="card-contents"> 
-						<h2 class="product_title">Nike Air Blue</h2> 
-						<span class="price">$164.99</span><br> 
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button> 
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i> 
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	 
-				</div>
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe3.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Nike Air Red</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe4.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Running Nike</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe5.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Some Boots</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-		</div>
-		<div class="shop_contents mx-auto container-fluid">
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe6.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Nike</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<!--<i class="fa-solid fa-trash"></i>-->
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-						<!-- <td type= action><a href='/Product/delete/$item->product_id'> delete</a></td> -->
-					</div>	
-				</div>
-				
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe7.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Nike Air Max</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-					</div>	
-				</div>
-			</div> 
-			<div class="product_box text-center"> 
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe8.jpg"> 
-					<div class="card-contents"> 
-						<h2 class="product_title">Nike Air Blue</h2> 
-						<span class="price">$164.99</span><br> 
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button> 
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i> 
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	 
-				</div>
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe9.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Nike Air Red</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe10.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Running Nike</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-			<div class="product_box text-center">
-				<div class="card">
-					<img class="img-fluid" src="/Images/shoe11.jpg">
-					<div class="card-contents">
-						<h2 class="product_title">Some Boots</h2>
-						<span class="price">$164.99</span><br>
-						<button class="btnpurchase" href='/Cart/productsCart/$item->product_id'>Buy Now</button>
-						<i class="fa-sharp fa-solid fa-cart-shopping"></i>
-						<i class="fa-solid fa-pen-to-square" href='/Product/edit/$item->product_id'></i>
-						<i class="glyphicon glyphicon-trash" type=action href='/Product/delete/$item->product_id'></i>
-					</div>	
-				</div>
-				
-			</div>
-		</div>
+			
 	</section>
 
 	<nav aria-label="...">
@@ -287,8 +93,8 @@
 	<p>Say something about the products</p>
 	<form action='/Review/add/<?=$data->review_id?>' method="post">
 	<div class="review">
-		<input class='form-control' type="text" name="review" placeholder="Say something" />
-	<button type="submit" name='action' class='btn btn-primary'><i class='bi-send'></i></button>
+		<input class='form-control' id="revText" type="text" name="review" placeholder="Say something" />
+	<button type="submit" name='action' class="btn btn-secondary" href='/Review/userReviews/<?php=$product->product_id?>'><i class='bi-send'></i></button>
 	</div></form>
 
 	</div>

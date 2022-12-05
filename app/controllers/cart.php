@@ -3,18 +3,17 @@ namespace app\controllers;
 
 class cart extends \app\core\Controller{
 
+	public function inndex(){
+		echo"empyt cart";
+	}
+
 	public function index(){
 
 		$cart = new \app\models\Cart();
-        $carts = $cart->getProfile();
-        $code = '';
+        //$carts = $cart->getProfile();
+       // $code = '';
         
-        require 'app/views/Product/productsCart.php';
-
-		// if(empty($_SESSION["cart_item"])){
-		// 	echo "No products are found in the cart";
-		// 	header('location:/Product/index');
-		// }
+        //require 'app/views/Product/productsCart.php';
 	}
 
 	public function remove(){
@@ -30,33 +29,50 @@ class cart extends \app\core\Controller{
 		}
 	}
 
-	public function addToCart(){
-		if(isset($_SESSION["cart"])){
+	public function addToCart($product_id){
+		// if(isset($_SESSION["cart"])){
 
 			$cart = new \app\models\cart();
-
+			$product = new \app\models\Product();
+			$products = $product->get($product_id);
+			//echo var_dump($products);
+			//echo $_SESSION['user_id'];
+			$cart->user_id = $_SESSION['user_id'] ;
 			
-			$profile= $_SESSION['profile_id'];
+			$cart->product_id = $product_id;
+			$cart->price = $products->price;
+            $cart->insertProductToCart();
+				
 
-			$cartobjects= $cart->getAllProfileProduct($product_id, $profile_id);
+			// if ($cartobjects) {
+   //              $cart->qty = $checkCart->qty + $_POST['qty'];
+   //              $cart->updateById($checkCart->cart_id);
+
+   //          } 
+   //          else {
+   //              $cart->profile_id = $profile_id;
+				//c
+             
+            
 
 
-			// $product_id=array_column($_SESSION["cart"], "product_id");
+ //            public function addToCart($product_id){
+	// 		$cart = new \app\models\Cart();
+
+	// 		// $cart->product_id = $_SESSION['product_id'];
+	// 		$cart->product_id = $product_id;
+	// 		$cart->user_id = $_SESSION['user_id'] ;
+	// 		//$cart = $cart->getUserId($_SESSION['user_id']);
+	// 		// $cart->user_id = $_SESSION['user_id'];
+	// 		// $_SESSION['cart_id'] = $cart->cart_id;
+	// 		$cart->insertProductToCart();
+	// 		header('location:/User/home?message=Added to cart');
+	// }
 
 
-			if ($cartobjects) {
-                $cart->qty = $checkCart->qty + $_POST['qty'];
-                $cart->updateById($checkCart->cart_id);
 
-            } 
-            else {
-                $cart->profile_id = $profile_id;
-                $cart->product_id = $productId;
-                $cart->qty = $_POST['qty'];
-                $cart->create();
-            }
+            header("location:/cart/index");
 
-            header("location:/Cart/index");
 
 		// 	if(!in_array($_GET['id'], $product_id)){
 		// 		$count = count($_SESSION['cart']);
@@ -75,24 +91,25 @@ class cart extends \app\core\Controller{
 		// 							'description' => $_GET['description'],
 		// 							'price' => $_GET['price']);
 		// 	$_SESSION['cart'][0] =$products;
-		}
+		// }
+        
 	}
 
 	public function emptyCart(){
 		unset($_SESSION["cart_item"]);
 	}
 
-	public function delete($cartId)
+	public function delete($cart_id)
     {
         $cartModel = new \app\models\Cart();
-        $cartModel->delete($cartId);
+        $cartModel->delete($cart_id);
         header("location:/Cart/index");
     }
 
-    public function update($cartID)
+    public function update($cart_id)
     {
         $cart = new \app\models\Cart();
         $cart->qty = $_POST['qty'];
-        $cart->update($cartID);
+        $cart->update($cart_id);
     }
 }

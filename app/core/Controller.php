@@ -7,7 +7,8 @@ class Controller{
 		include('app/views/' . $name . '.php');
 	}
 
-	public function saveFile($file){
+	public function saveFile($file){//pass the $_FILES['yourfilename']
+		$filename="";
 		if(empty($file['tmp_name']))
 			return false;
 		$check = getimagesize($file['tmp_name']);
@@ -18,5 +19,6 @@ class Controller{
 			move_uploaded_file($file['tmp_name'], 'images/' . $filename);
 		}
 		return $filename;
+
 	}
 }
