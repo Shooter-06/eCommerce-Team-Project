@@ -12,10 +12,10 @@
 
 	<div class="products-inputs">
 
-		<label>The Title of the product: <?=$data['Product']->title ?></label><br>
-		<label>The Title of the product: <?=$data['Product']->description ?></label><br>
-		<label>The Title of the product: <?=$data['Product']->price ?></label><br>
-		<label>The Title of the product: <?=$data['Product']->filename ?></label><br>
+		<label>The Title of the product: <?=$data['product']->title ?></label><br>
+		<label>The Title of the product: <?=$data['product']->description ?></label><br>
+		<label>The Title of the product: <?=$data['product']->price ?></label><br>
+		<label>The Title of the product: <?=$data['product']->filename ?></label><br>
 
 		<input type="submit" name="action" value="Delete" />
 
@@ -24,7 +24,7 @@
 </form>
 
 
-<a href="/Post/index/">Cancel</a>
+<a href="/Profile/index/">Cancel</a>
 
 </body>
 </html>

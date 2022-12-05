@@ -28,6 +28,10 @@
 	<br>
 	<a href="Product/index" class= "backBtn">Logout from your profile</a>
 
+	<a href="/Profile/delete/">Delete your Profile</a>
+	<br><br>
+	<a href="/Profile/edit/">Edit your Profile</a>
+
 		
 
 </body>

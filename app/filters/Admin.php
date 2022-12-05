@@ -11,5 +11,4 @@ class Admin extends \app\core\AccessFilter{
 		return false;
 	}
 }
-
 ?>

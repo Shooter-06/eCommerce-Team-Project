@@ -12,7 +12,7 @@ class Cart extends \app\core\Model{
 	}
 
 	public function insert(){
-		$SQL = "INSERT INTO carts (profile_id, product_id, qty, price )
+		$SQL = "INSERT INTO cart (profile_id, product_id, qty, price )
          VALUES(:profile_id,:product_id,:qty, :price)";
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(['profile_id' => $this->profile_id,'product_id' => $this->product_id,'qty' => $this->qty, 'price' => $this->price]);
@@ -36,14 +36,14 @@ class Cart extends \app\core\Model{
 
 	public function update($cartId)
     {
-        $SQL = "UPDATE carts SET qty=:qty where cart_id=:cart_id ";
+        $SQL = "UPDATE cart SET qty=:qty where cart_id=:cart_id ";
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(['qty' => $this->qty,'cart_id' => $cartId]);
     }
 
     public function delete($cartId)
     {
-        $SQL = "DELETE FROM carts where cart_id=:cart_id ";
+        $SQL = "DELETE FROM cart where cart_id=:cart_id ";
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(['cart_id' => $cartId]);
 

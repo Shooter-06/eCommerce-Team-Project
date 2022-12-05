@@ -3,18 +3,14 @@ namespace app\controllers;
 
 class cart extends \app\core\Controller{
 
+	public function inndex(){
+		echo"empyt cart";
+	}
+
 	public function index(){
 
 		$cart = new \app\models\Cart();
-        $carts = $cart->getProfile();
-        $code = '';
         
-        require 'app/views/Product/productsCart.php';
-
-		// if(empty($_SESSION["cart_item"])){
-		// 	echo "No products are found in the cart";
-		// 	header('location:/Product/index');
-		// }
 	}
 
 	public function remove(){
@@ -37,6 +33,7 @@ class cart extends \app\core\Controller{
 
 			
 			$profile= $_SESSION['profile_id'];
+			//$product= $_SESSION['product_id'];
 
 			$cartobjects= $cart->getAllProfileProduct($product_id, $profile_id);
 
@@ -56,7 +53,7 @@ class cart extends \app\core\Controller{
                 $cart->create();
             }
 
-            header("location:/Cart/index");
+            header("location:/cart/index");
 
 		// 	if(!in_array($_GET['id'], $product_id)){
 		// 		$count = count($_SESSION['cart']);
@@ -75,24 +72,25 @@ class cart extends \app\core\Controller{
 		// 							'description' => $_GET['description'],
 		// 							'price' => $_GET['price']);
 		// 	$_SESSION['cart'][0] =$products;
-		}
+		// }
+        }
 	}
 
 	public function emptyCart(){
 		unset($_SESSION["cart_item"]);
 	}
 
-	public function delete($cartId)
+	public function delete($cart_id)
     {
         $cartModel = new \app\models\Cart();
-        $cartModel->delete($cartId);
+        $cartModel->delete($cart_id);
         header("location:/Cart/index");
     }
 
-    public function update($cartID)
+    public function update($cart_id)
     {
         $cart = new \app\models\Cart();
         $cart->qty = $_POST['qty'];
-        $cart->update($cartID);
+        $cart->update($cart_id);
     }
 }

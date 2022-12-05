@@ -19,30 +19,6 @@
 			height: 100%;
 		}
 		
-	    /*.backBtn{
-	    	box-shadow: 3px 4px 0px 0px #8a2a21;
-	    	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
-				background-color:#c62d1f;
-				border-radius:18px;
-				border:1px solid #d02718;
-				display:inline-block;
-				cursor:pointer;
-				color:#ffffff;
-				font-family:Arial;
-				font-size:17px;
-				padding:7px 25px;
-				text-decoration:none;
-				text-shadow:0px 1px 0px #810e05;
-	   	}
-	   	.backBtn:hover{
-	   		background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-				background-color:#f24437;
-	   	}
-	   	.backBtn:active{
-	   		position:relative;
-				top:1px;	
-	   	}
-*/
 	   	.logo {
 	   		width: 250px;
 	   		height: 75px;
@@ -140,7 +116,7 @@
 			<form action="" method="post">
 				<input type="text" class="form-control" name="username" id="username" placeholder="Enter Username"><br>
 				<input type="password" class="form-control" name="password" id="password" placeholder="Enter Password"><br>
-				<input type="password" class="form-control" name="confirmPass" id="confirmPass" placeholder="Re-enter Password"><br>
+				<input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Re-enter Password"><br>
 				<input type="submit" name="action" id="btnRegister" value="Register" class="btn btn-primary">
 			</form>
 	</div>
