@@ -19,7 +19,7 @@
 			height: 100%;
 		}
 		
-	    /*.backBtn{
+	    .backBtn{
 	    	box-shadow: 3px 4px 0px 0px #8a2a21;
 	    	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
 				background-color:#c62d1f;
@@ -42,7 +42,7 @@
 	   		position:relative;
 				top:1px;	
 	   	}
-*/
+
 	   	.logo {
 	   		width: 250px;
 	   		height: 75px;
@@ -145,7 +145,7 @@
 			</form>
 	</div>
 
-	<!-- <a href="/User/index" class= "backBtn">BACK</a> -->
+	<a href="/User/index" class= "backBtn">BACK</a>
 
 	<footer class="mt-2 py-1">
 	  <div class="row container mx-auto pt-1">
