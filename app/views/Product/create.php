@@ -32,11 +32,17 @@
 
 			<label class="image_product">Product</label><img id='pic_preview' src='/images/<?=$data->picture ?>' style="max-width:100px;max-height:100px" name ="filename" />
 
+			<form action='/Review/add/<?=$data->review_id?>' method="post">
+				<div class="input-group">
+					<input class='form-control' type="text" name="comment" placeholder="Write a review " />
+				<button type="submit" name='action' class='btn btn-primary'><i class='bi-send'></i></button>
+				</div>
+		</form>
+
 	</div>
 		<br><br><br>
-		<!-- <br><br><br>
-		<br><br><br>
-		<br><br><br> -->
+		
+		
 		<div>
 			<?php $this->view('rating'); ?>
 		</div>

@@ -47,10 +47,6 @@
 		}
 
 
-
-
-
-
 		body{
 			background-color: peachpuff;
 			font-family: Courier New, monospace;
@@ -77,8 +73,17 @@
 	        <a class="nav-link" href="/Profile/index">MY PROFILE</a>
 	      </li>
 	      <li class="nav-item">
-	        <i class="fa-solid fa-magnifying-glass"></i>
-	        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+	        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+
+	        <form action="/Main/search" method="get" style='display:inline-block'>					
+				<div class="input-group">
+				    <input type="search" name='searching' class="form-control" placeholder="Enter search term" />
+				  <button type="submit" class="btn btn-primary" value="Search"><i class="bi-search"></i></button>
+				</div>
+			
+			</form>
+	        
+	        <i class="fa-sharp fa-solid fa-cart-shopping" href="/Cart/productsCart"></i>
 	      </li>
 	    </ul>
 	  </div>

@@ -60,10 +60,21 @@
 			</div> 
 		</div>";
 		}?>
-	<?php 
-	?>
 
-<!-- change this, it is a mistakee 
+
+	<?php $profile->$data->getProfile();?>
+
+	<a href="/Review/publicReviews/<?=$data->review_id?>"><img src="/images/<?= $data->picture ?>"></a>
+	<p>Posted by <a href='/Profile/publicReviews/<?=$profile->profile_id ?>'><?= htmlspecialchars($profile) ?></a> on <?= $data->date_time?><?php
+		if(isset($_SESSION['profile_id']) && $_SESSION['profile_id'] == $data->profile_id){
+			echo "<a href='/Review/delete/$data->publication_id'><i class='bi-trash'></i></a>";
+			echo "<a href='/Review/edit/$data->publication_id'><i class='bi-pen'></i></a>";
+		}
+	?></p>
+	<p><?=htmlspecialchars($data->caption) ?></p>
+
+
+
 	<h4>Write your review</h4>
         <div class="row">
             <?php foreach ($reviews as $review){?>
@@ -80,8 +91,8 @@
             </div>
             <?php }?>
         </div>
--->
 	<br>
+
 
 	<br><br>
 	<a href=<?php echo '"/Product/create/'.$_SESSION['profile_id'].'"';?> class= "backBtn">Add a new Product to your inventory</a>
