@@ -1,4 +1,4 @@
-<head>
+	<head>
 	<title><?= $data ?></title>
 	<link rel="stylesheet" href="/CSS/rating.css">
 	<link rel="stylesheet" type="text/css" href="/CSS/header.css">
