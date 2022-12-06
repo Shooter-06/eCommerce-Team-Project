@@ -7,6 +7,14 @@
 	<link rel="stylesheet" type="text/css" href="/CSS/style.css">
 </head>
 <body>
+	<style>
+
+		body{
+			background-color: peachpuff;
+			font-family: Courier New, monospace;
+		}
+
+	</style>
 
 	<h1><center><big>Welcome to our inventory of your profile</big></center></h1>
 

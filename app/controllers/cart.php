@@ -9,8 +9,7 @@ class cart extends \app\core\Controller{
 
 	public function index(){
 
-		$cart = new \app\models\Cart();
-        
+		$cart = new \app\models\Cart(); 
 	}
 
 	public function remove(){
@@ -26,54 +25,23 @@ class cart extends \app\core\Controller{
 		}
 	}
 
-	public function addToCart(){
-		if(isset($_SESSION["cart"])){
+	public function addToCart($product_id){
+		// if(isset($_SESSION["cart"])){
 
 			$cart = new \app\models\cart();
+			$product = new \app\models\Product();
+			$products = $product->get($product_id);
 
+			$cart->user_id = $_SESSION['user_id'] ;
 			
+			$cart->product_id = $product_id;
+			$cart->price = $products->price;
+            $cart->insertProductToCart();
+				
 			$profile= $_SESSION['profile_id'];
-			//$product= $_SESSION['product_id'];
-
-			$cartobjects= $cart->getAllProfileProduct($product_id, $profile_id);
-
-
-			// $product_id=array_column($_SESSION["cart"], "product_id");
-
-
-			if ($cartobjects) {
-                $cart->qty = $checkCart->qty + $_POST['qty'];
-                $cart->updateById($checkCart->cart_id);
-
-            } 
-            else {
-                $cart->profile_id = $profile_id;
-                $cart->product_id = $productId;
-                $cart->qty = $_POST['qty'];
-                $cart->create();
-            }
 
             header("location:/cart/index");
 
-		// 	if(!in_array($_GET['id'], $product_id)){
-		// 		$count = count($_SESSION['cart']);
-		// 		$products = array('product_id' => $_GET['id'],
-		// 							'title' => $_GET['title'],
-		// 							'description' => $_GET['description'],
-		// 							'price' => $_GET['price']);
-		// 		$_SESSION['cart'][$count] =$products;
-		// 	}else{
-		// 		header("location:/Cart/productsCart?this item exist in the cart already");
-		// 		$this->view('Cart/productsCart');
-		// 	}
-		// }else{
-		// 	$products = array('product_id' => $_GET['id'],
-		// 							'title' => $_GET['title'],
-		// 							'description' => $_GET['description'],
-		// 							'price' => $_GET['price']);
-		// 	$_SESSION['cart'][0] =$products;
-		// }
-        }
 	}
 
 	public function emptyCart(){

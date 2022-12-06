@@ -51,7 +51,7 @@
 						<a class='btn btn-primary' href='/cart/addToCart/$product->product_id'> Add to cart </button> 
 						<a class='btn btn-secondary' href='/Product/edit/$product->product_id'>Edit</a> 
 
-						<a class='btn btn-secondary btnpurchase' href='/Product/delete/$product->product_id'>Delete</a> 
+						<a class='btn btn-secondary ' href='/Product/delete/$product->product_id'>Delete</a> 
 
 					</div>	
 				</div>

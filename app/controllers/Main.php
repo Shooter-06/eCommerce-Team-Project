@@ -14,6 +14,14 @@ class Main extends \app\core\Controller{
 		$this->view('Main/index', $productsFind);
 	}
 
+	public function get($product_id){
+		$SQL ="SELECT * FROM product WHERE product_id=:product_id";
+		$STMT= self::$_connection->prepare($SQL);
+		$STMT->execute(['product_id'=>$product_id]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Product');
+		return $STMT->fetch();
+	}
+
 	public function test(){
 		echo "These";
 		$this->view('Cart/productsCart');

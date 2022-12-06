@@ -15,15 +15,25 @@
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<style type="text/css"></style>
-	<link rel="stylesheet" type="text/css" href="/CSS/style.css">
-
-
+<link rel="stylesheet" type="text/css" href="/CSS/style.css">
 
 </head>
 
 
 <body>
+
+	<style>
+		#revText{
+			font-size: 16px;
+			width: 30%;
+		}
+
+		body{
+			background-color: peachpuff;
+			font-family: Courier New, monospace;
+		}
+
+	</style>	
 
 	<div class="info">
 		<h5>Our stock Inventory</h5>
@@ -61,7 +71,6 @@
 					</div>	
 				</div>
 			</div> 
-
 	</section>
 
 	<nav aria-label="...">
@@ -82,8 +91,8 @@
 	<p>Say something about the products</p>
 	<form action='/Review/add/<?=$data->review_id?>' method="post">
 	<div class="review">
-		<input class='form-control' type="text" name="review" placeholder="Say something" />
-	<button type="submit" name='action' class='btn btn-primary'><i class='bi-send'></i></button>
+		<input class='form-control' id="revText" type="text" name="review" placeholder="Say something" />
+	<button type="submit" name='action' class="btn btn-secondary" href='/Review/userReviews/<?php=$product->product_id?>'><i class='bi-send'></i></button>
 	</div></form>
 
 	</div>

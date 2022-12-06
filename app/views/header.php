@@ -77,8 +77,8 @@
 
 	        <form action="/Main/search" method="get" style='display:inline-block'>					
 				<div class="input-group">
-				    <input type="search" name='searching' class="form-control" placeholder="Enter search term" />
-				  <button type="submit" class="btn btn-primary" value="Search"><i class="bi-search"></i></button>
+				    <input type="search" name='searching'  placeholder="Enter search term" />
+				  <button type="submit" class="btn btn-secondary" value="Search"><i class="bi-search"></i></button>
 				</div>
 			
 			</form>
