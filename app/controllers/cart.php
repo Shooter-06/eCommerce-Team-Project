@@ -2,14 +2,12 @@
 namespace app\controllers;
 
 class cart extends \app\core\Controller{
-
 	
 	public function index(){
 		$cart = new \app\models\Cart();
 		$carts = $cart->getCartbyUserID($_SESSION["profile_id"]);
 		$this->view('/Cart/productsCart', $carts);
-	}
-
+	}	
 
 
 	public function addToCart($product_id){
@@ -18,14 +16,16 @@ class cart extends \app\core\Controller{
 			$cart = new \app\models\cart();
 			$product = new \app\models\Product();
 			$products = $product->get($product_id);
+
 			//echo var_dump($products);
 			//echo $_SESSION['user_id'];
 			$cart->profile_id = $_SESSION['profile_id'] ;
-			
+		
 			$cart->product_id = $product_id;
 			$cart->price = $products->price;
             $cart->insertProductToCart();
 				
+
 
 			// if ($cartobjects) {
    //              $cart->qty = $checkCart->qty + $_POST['qty'];
@@ -75,7 +75,6 @@ class cart extends \app\core\Controller{
 		// 							'price' => $_GET['price']);
 		// 	$_SESSION['cart'][0] =$products;
 		// }
-        
 	}
 
 

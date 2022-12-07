@@ -53,6 +53,7 @@
 
 						<a class='btn btn-secondary' href='/Product/delete/$product->product_id'>Delete</a> 
 
+
 					</div>	
 				</div>
 				

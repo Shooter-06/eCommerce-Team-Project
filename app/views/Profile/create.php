@@ -15,138 +15,57 @@
 	<style>
 
 		body{
-			background-color:#ffcccb;
-		}
-		h1{
-			font-size: 30px;
-    		font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 20%;
-    		width: 100%;
+			background-color:peachpuff;
+			height: 100%;
 		}
 
-		.firstname_form{
-    		font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 30%;
-    		width: 100%;
-    	}
+		.logo{
+			width: 250px;
+			height: 75px;
+			border-radius: 30%;
+			margin:0 auto;
+			margin-bottom: 10px;
+		}
 
-	    #first_name{
-	    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
+		.logo img{
+			width: 100%;
+		}
+
+		.title{
+			width: 100%;
+			background-color: rgb(122, 122, 212);
+			color: white;
+			justify-content: center;
+			margin-bottom: 1.5rem;
+			margin-top: 35px;
+		}
+
+		h5{
+			font-weight: 600;
+			text-align: center;
+			justify-content: center;
+		}
+
+		.pregister{
+			margin: 100px auto;
+			width: 350px;
+			padding: 30px;
+			background-color: #ffefe0;
+		}
+
+		form{
+			width: 100%;
 			margin-top: 30px;
-			
-	    	width: 200px;
-	    }
+		}
 
-	    .lastname_form{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				top: 40%;
-	    	width: 100%;
-	    }
-
-	    #last_name{
-	    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			margin-top: 40px;
-	    	width: 200px;
-	    }
-
-	    .address_form{
-	    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 50%;
-	    	width: 100%;
-	    }
-
-	    #address{
-	    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			margin-top: 50px;
-	    	width: 200px;
-	  	}
-
-	  	.city_form{
-	    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 60%;
-	    	width: 100%;
-	    }
-
-	    #city{
-	    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			margin-top: 60px;
-	    	width: 200px;
-	  	}
-
-	  	.pCode_form{
-	    	font-family: "Times New Roman", Times, serif;
-			position: absolute;
-			text-align: center;
-			top: 70%;
-	    	width: 100%;
-	    }
-
-	    #postal_code{
-	    	font-family: "Times New Roman", Times, serif;
-			  position: absolute;
-			  margin-top: 70px;
-	    	width: 200px;
-	  	}
-
-	  	.password_form{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				top: 80%;
-	    	width: 100%;
-	    }
-
-	    #password{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				margin-top: 80px;
-	    	width: 200px;
-	    }
-
-	    .passwordConf_form{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				top: 90%;
-	    	width: 100%;
-	    }
-
-	    #passwordConf{
-	    	font-family: "Times New Roman", Times, serif;
-			  position: absolute;
-			  margin-top: 90px;
-	    	width: 200px;
-	  	}
-
-	    button{
-	    	font-family: "Times New Roman", Times, serif;
-				position: absolute;
-				text-align: center;
-				margin-top: 120px;
-				color: blue;
-	    }
-	    .button:hover{
-	   		background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-				background-color:#f24437;
-	   	}
-	   	.button:active{
-	   		position:relative;
-				top:1px;	
-	   	}
+		input{
+			font-size: 18px;
+	   		padding: 20px 30px 20px 10px;
+	   		border: none;
+	   		outline: none;
+	   		display: block;
+	   		background: none;
+		}
 
 
 	    .backBtn{
@@ -200,30 +119,13 @@
 	   	}
 
 
-	   	.SignBtn{
-	    	box-shadow: 3px 4px 0px 0px #0000FFF;
-	    	background:linear-gradient(to bottom, #0000FF 5%, #f24437 100%);
-				background-color:#0000FF;
-				border-radius:18px;
-				border:1px solid #0000FF;
-				display:inline-block;
-				cursor:pointer;
-				color:#0000FF;
-				font-family:Arial;
-				font-size:17px;
-				padding:7px 25px;
-				text-decoration:none;
-				text-shadow:0px 1px 0px #0000FF;
+	   	#btnPRegister{
+	    	width: 100%;
+	    	padding: 12px 10px;
+	    	border: none;
+	    	font-size: 18px;
+	    	border-radius: 20px;
 	   	}
-	   	.SignBtn:hover{
-	   		background:linear-gradient(to bottom, #0000FF 5%, #0000FF 100%);
-				background-color:#0000FF;
-	   	}
-	   	.SignBtn:active{
-	   		position:relative;
-				top:1px;	
-	   	}
-
 	</style>
 
 </head>
@@ -247,56 +149,22 @@
 	<?php	}
 	?>
 
-
-	<h1>Sign Up with the correct inputs :</h1>
-
-	<form action='' method='post'>
-
-		<div class="firstname_form">
-			<label for="Fname">First Name: </label>
-    	<input type="text" id="first_name" name='first_name' placeholder="Enter the first name">
+	<div class="pregister">
+		<div class="logo">
+			<img src="/Images/Work.png">
 		</div>
-
-		<div class="lastname_form">
-			<label for="Lname">Last Name: </label>
-    	<input type="text" id="last_name" name='last_name' placeholder="Enter the last name">
-		</div>
-
-		<div class="address_form">
-			<label for="address">Address : </label>
-    	<input type="text" id="address" name='address' placeholder="Enter the address">
-		</div>
-
-		<div class="city_form">
-			<label for="city">City: </label>
-    	<input type="text" id="city" name='city' placeholder="Enter your city">
-		</div>
-
-		<div class="pCode_form">
-			<label for="postal_code">Postal_code: </label>
-    	<input type="text" id="postal_code" name='postal_code' placeholder="Enter your postal code">
-
-    	<? if(isset($user_id))?>
-		</div>
-
-
-		<div class="password_form">
-			<label for="password">Password: </label>
-    	<input type="password" id="password" name='password' placeholder="Enter the password">
-		</div>
-
-		<div class="passwordConf_form">
-			<label for="passwordConf">Password Confirmation: </label>
-    	<input type="password" id="passwordConf" name='password_confirmation' placeholder="Enter the password confirmation">
-		</div><br>
-
-
-		<br>
-
-		<button type="submit" name='action' value='Register' class="SignBtn">Sign up
-		</button>
-		<br>
-	</form>
+		<div class="title"><h5>Sign Up with the correct inputs</h5></div>
+		<form action="" method="">
+			<input type="text" name="first_name" id="first_name" placeholder="Enter First Name" class="form-control">
+			<input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" class="form-control">
+			<input type="text" name="address" id="address" placeholder="Enter Address" class="form-control">
+			<input type="text" name="city" id="city" placeholder="Enter City" class="form-control">
+			<input type="text" name="postal_code" id="postal_code" placeholder="Enter Postal Code" class="form-control">
+			<input type="text" name="password" id="password" placeholder="Enter Password" class="form-control">
+			<input type="text" name="password_confirmation" id="passwordConf" placeholder="Enter Password Confirmation" class="form-control">
+			<input type="submit" name="action" id="btnPRegister" value="Register" class="btn btn-primary"	>
+		</form>
+	</div>
 
 	<a href="/Product/index" class= "backBtn">BACK</a>
 	<a href="/Profile/details" class= "LoginBtn">Login</a>

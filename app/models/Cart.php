@@ -11,6 +11,7 @@ class Cart extends \app\core\Model{
 		return $STMT->fetchAll();
 	}
 
+
 	public function insertProductToCart()
     {
         $SQL = "INSERT INTO cart (profile_id, product_id, price)VALUES(:profile_id,:product_id, :price)";
@@ -28,9 +29,6 @@ class Cart extends \app\core\Model{
         $STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Product');
         return $STMT->fetchAll();
     }
-
-
-
 
 
 	// public function getProfile(){

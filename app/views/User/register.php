@@ -121,7 +121,7 @@
 			</form>
 	</div>
 
-	<!-- <a href="/User/index" class= "backBtn">BACK</a> -->
+	<a href="/User/index" class= "backBtn">BACK</a>
 
 	<footer class="mt-2 py-1">
 	  <div class="row container mx-auto pt-1">
