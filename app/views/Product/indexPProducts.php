@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<?php $this->view('header', 'Workshop');?>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,12 +48,11 @@
 						<td type=price> $product->price</td> <br>
 
 
-						<button class='btnpurchase' href='/Cart/productsCart/$product->product_id'>Buy Now</button>
-						<i class='fa-sharp fa-solid fa-cart-shopping' href='/Cart/productsCart/$product->product_id'></i>
+						<a class='btn btn-primary' href='/cart/addToCart/$product->product_id'> Add to cart </button> 
+						<a class='btn btn-secondary' href='/Product/edit/$product->product_id'>Edit</a> 
 
-						<i class='fa-solid fa-pen-to-square' href='/Product/edit/$product->product_id'></i>
-						<i class='glyphicon glyphicon-trash' type=action href='/Product/delete/$product->product_id'></i>
-						<!-- <td type= action><a href='/Product/delete/$product->product_id'> delete</a></td> -->
+						<a class='btn btn-secondary' href='/Product/delete/$product->product_id'>Delete</a> 
+
 					</div>	
 				</div>
 				
@@ -62,39 +61,7 @@
 		}?>
 
 
-	<?php $profile->$data->getProfile();?>
-
-	<a href="/Review/publicReviews/<?=$data->review_id?>"><img src="/images/<?= $data->picture ?>"></a>
-	<p>Posted by <a href='/Profile/publicReviews/<?=$profile->profile_id ?>'><?= htmlspecialchars($profile) ?></a> on <?= $data->date_time?><?php
-		if(isset($_SESSION['profile_id']) && $_SESSION['profile_id'] == $data->profile_id){
-			echo "<a href='/Review/delete/$data->publication_id'><i class='bi-trash'></i></a>";
-			echo "<a href='/Review/edit/$data->publication_id'><i class='bi-pen'></i></a>";
-		}
-	?></p>
-	<p><?=htmlspecialchars($data->caption) ?></p>
-
-
-
-	<h4>Write your review</h4>
-        <div class="row">
-            <?php foreach ($reviews as $review){?>
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <?php echo $review->first_name." ".$review->last_name;?><br/>
-                        <?php for($i=0;$review->rating > $i; $i++){?>
-                        <span class="text-warning fs-2">*</span>
-                        <?php }?>
-                        <p> <?php echo $review->comment;?></p>
-                    </div>
-                </div>
-            </div>
-            <?php }?>
-        </div>
 	<br>
-
-
-	<br><br>
 	<a href=<?php echo '"/Product/create/'.$_SESSION['profile_id'].'"';?> class= "backBtn">Add a new Product to your inventory</a>
 	<br>
 	<a href="/Profile/index" class= "backBtn">Return to the your profile</a>

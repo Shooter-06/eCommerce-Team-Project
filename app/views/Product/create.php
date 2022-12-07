@@ -1,21 +1,5 @@
 <?php $this->view('header', 'Workshop'); ?>
 
-<!-- <style type="text/css">
-	.button {
-	  background-color: #4CAF50; /* Green */
-	  border: none;
-	  color: white;
-	  padding: 20px;
-	  text-align: center;
-	  text-decoration: none;
-	  display: inline-block;
-	  font-size: 16px;
-	  margin: 4px 2px;
-	  cursor: pointer;
-	}
-
-</style> -->
-
 <h1>New product Info</h1>
 <form action='' method='post' enctype='multipart/form-data'>
 	<div class="form-group">
@@ -32,12 +16,6 @@
 
 			<label class="image_product">Product</label><img id='pic_preview' src='/images/<?=$data->picture ?>' style="max-width:100px;max-height:100px" name ="filename" />
 
-			<form action='/Review/add/<?=$data->review_id?>' method="post">
-				<div class="input-group">
-					<input class='form-control' type="text" name="comment" placeholder="Write a review " />
-				<button type="submit" name='action' class='btn btn-primary'><i class='bi-send'></i></button>
-				</div>
-		</form>
 
 	</div>
 		<br><br><br>
@@ -46,15 +24,20 @@
 		<div>
 			<?php $this->view('rating'); ?>
 		</div>
-		
-		<!-- <button> 
-				<input type="submit" name="action" class='btn btn-primary' value="Add" />	
-		</button>  -->
+
 			<br>
 
 
 		<button id="add_to_product" type="submit" name='action' value='Register' class="btn btn-primary">Add the new product </button>
 </form>
+
+			<form action='/Review/add/<?=$data->review_id?>' method="post">
+				<div class="input-group">
+					<input class='form-control' type="text" name="comment" placeholder="Write a review " />
+				<button type="submit" name='action' class='btn btn-primary'><i class='bi-send'></i></button>
+				</div>
+		</form>
+
 
 <a href='/Product/index'>Cancel</a>
 <a href='/Profile/index'>Back to your Profile</a>
