@@ -15,6 +15,7 @@ class User extends \app\core\Controller{
 				$_SESSION['user_id'] = $user->user_id;
 				$profile = new \app\models\Profile();
 				$profile=$profile->getProfileByUser($user->user_id);
+				$_SESSION['profile_id']=$profile->profile_id;
 
 				header('location:/Main/index');
 			}else{
@@ -53,35 +54,6 @@ class User extends \app\core\Controller{
 			$this->view('User/register');
 		}
 	}
-
-	// public function register(){
-	// 	//when we submit the form
-	// 	if(isset($_POST['action'])){
-	// 		//verify that the password and password_confirmation match
-	// 		if($_POST['password'] == $_POST['password_confirmation']){
-
-	// 			$user = new \app\models\User();
-
-	// 			if($user->get($_POST['username'])){
-	// 				//redirect with an error message
-	// 				header('location:/User/register?error=The username "'.$_POST['username'].'" already exists. Choose another.');
-	// 			}else{
-	// 				$user->username = $_POST['username'];
-	// 				$user->password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-	// 				$_SESSION['user_id'] = $user->insert();
-	// 				$_SESSION['username'] = $_POST['username'];
-
-	// 				header('location:/Product/index?message=these are items on our website to be sold!');
-	// 			}
-	// 			else{
-	// 				header('location:/User/register?error=Passwords do not match.');
-	// 			}
-	// 		}
-	// 	}else{
-	// 		$this->view('User/register');
-	// 	}
-	// }
 
 	public function logout(){
 		session_destroy();

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 07:37 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Dec 07, 2022 at 12:40 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `workshop`
 --
-CREATE DATABASE IF NOT EXISTS `workshop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `workshop`;
 
 -- --------------------------------------------------------
 
@@ -29,13 +27,19 @@ USE `workshop`;
 -- Table structure for table `cart`
 --
 
-DROP TABLE IF EXISTS `cart`;
 CREATE TABLE `cart` (
   `cart_id` int(10) NOT NULL,
+  `profile_id` int(11) NOT NULL,
   `product_id` int(10) NOT NULL,
-  `qty` int(10) NOT NULL,
   `price` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`cart_id`, `profile_id`, `product_id`, `price`) VALUES
+(6, 2, 3, 20);
 
 -- --------------------------------------------------------
 
@@ -43,12 +47,11 @@ CREATE TABLE `cart` (
 -- Table structure for table `category`
 --
 
-DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
   `category_id` int(11) NOT NULL,
   `category_name` varchar(20) NOT NULL,
   `product_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -56,13 +59,12 @@ CREATE TABLE `category` (
 -- Table structure for table `inventory`
 --
 
-DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE `inventory` (
   `inventory_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
   `profile_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -70,7 +72,6 @@ CREATE TABLE `inventory` (
 -- Table structure for table `order_item`
 --
 
-DROP TABLE IF EXISTS `order_item`;
 CREATE TABLE `order_item` (
   `order_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
@@ -79,7 +80,7 @@ CREATE TABLE `order_item` (
   `price` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `tracking_no` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -87,12 +88,11 @@ CREATE TABLE `order_item` (
 -- Table structure for table `payment`
 --
 
-DROP TABLE IF EXISTS `payment`;
 CREATE TABLE `payment` (
   `payment_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
   `amount` int(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -100,7 +100,6 @@ CREATE TABLE `payment` (
 -- Table structure for table `product`
 --
 
-DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
   `product_id` int(10) NOT NULL,
   `profile_id` int(10) NOT NULL,
@@ -108,7 +107,7 @@ CREATE TABLE `product` (
   `description` varchar(75) NOT NULL,
   `picture` varchar(50) NOT NULL,
   `price` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product`
@@ -116,7 +115,11 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`product_id`, `profile_id`, `title`, `description`, `picture`, `price`) VALUES
 (1, 1, 'kyrie', 'kyrie', 'kyrie.jpg', 134),
-(2, 1, 'Nike', 'Nike', 'dunno.jpg', 187);
+(2, 1, 'Nike', 'Nike', 'dunno.jpg', 187),
+(3, 2, 'test', 'jkadhash', 'shoe10.jpg', 20),
+(4, 2, 'boot', 'bot', '', 20),
+(5, 2, 'dskjh', 'kjasdh', '', 22),
+(6, 2, 'nike shoe', 'alskdjla', '', 2000);
 
 -- --------------------------------------------------------
 
@@ -124,7 +127,6 @@ INSERT INTO `product` (`product_id`, `profile_id`, `title`, `description`, `pict
 -- Table structure for table `profile`
 --
 
-DROP TABLE IF EXISTS `profile`;
 CREATE TABLE `profile` (
   `profile_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
@@ -133,14 +135,15 @@ CREATE TABLE `profile` (
   `address` varchar(75) NOT NULL,
   `city` text NOT NULL,
   `postal_code` varchar(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `profile`
 --
 
 INSERT INTO `profile` (`profile_id`, `user_id`, `first_name`, `last_name`, `address`, `city`, `postal_code`) VALUES
-(1, 1, 'FR', 'fr', 'fr', 'fr', 'fr');
+(1, 1, 'FR', 'fr', 'fr', 'fr', 'fr'),
+(2, 2, '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -148,14 +151,13 @@ INSERT INTO `profile` (`profile_id`, `user_id`, `first_name`, `last_name`, `addr
 -- Table structure for table `review`
 --
 
-DROP TABLE IF EXISTS `review`;
 CREATE TABLE `review` (
   `review_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
   `profile_id` int(10) NOT NULL,
   `review` varchar(75) NOT NULL,
   `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -163,19 +165,19 @@ CREATE TABLE `review` (
 -- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `user_id` int(10) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password_hash` varchar(64) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password_hash`) VALUES
-(1, 'fr', '$2y$10$VFvzCtgjV6mRJA9SZCmwfe.FM8g/nZGfLpaqgkJV5W8F0SRFC0Khe');
+(1, 'fr', '$2y$10$VFvzCtgjV6mRJA9SZCmwfe.FM8g/nZGfLpaqgkJV5W8F0SRFC0Khe'),
+(2, 'uraib', '$2y$10$0m98g6Cmu1sLfJzljDygh.aQxR4h1iqV.M3OJHThipGZeWonAuTv6');
 
 --
 -- Indexes for dumped tables
@@ -186,7 +188,8 @@ INSERT INTO `user` (`user_id`, `username`, `password_hash`) VALUES
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cart_id`),
-  ADD KEY `product_to_cart` (`product_id`);
+  ADD KEY `product_to_cart` (`product_id`),
+  ADD KEY `user_to_cart` (`profile_id`);
 
 --
 -- Indexes for table `category`
@@ -257,7 +260,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -287,13 +290,13 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `profile_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `review`
@@ -305,7 +308,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -315,7 +318,7 @@ ALTER TABLE `user`
 -- Constraints for table `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `product_to_cart` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`);
+  ADD CONSTRAINT `user_to_cart` FOREIGN KEY (`profile_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Constraints for table `category`

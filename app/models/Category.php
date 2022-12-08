@@ -33,4 +33,22 @@ class Item extends \app\core\Models{
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['category_id'=>$this->category_id]);
 	}	
+
+	public function getAllEmpty(){
+		$SQL = "SELECT * FROM category";
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute();
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Category');
+		return $STMT->fetchAll();
+	}
+
+	public function getName($category_name){
+
+		$SQL = "SELECT * FROM category WHERE category_name=:category_name";
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['category_name'=>$category_name]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Category");
+		return $STMT->fetch();
+	}
+
 }

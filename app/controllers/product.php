@@ -14,9 +14,9 @@ class product extends \app\core\Controller{
 		$this->view('Product/indexPProducts',['products'=>$products]);
 	}	
 
-	public function create($profile_id){
+	public function create(){
 		$profile = new \app\models\Profile();
-		$profile=$profile->getProfile($profile_id);
+		$profile=$profile->getProfile($_SESSION['profile_id']);
 
 		$product = new \app\models\Product();
 		
@@ -29,6 +29,8 @@ class product extends \app\core\Controller{
 			$product->picture = $filename;
 
 			$product->profile_id=$_SESSION['profile_id'];
+		
+		// var_dump($_SESSION);
 		
 			if($filename){
 				if(isset($_SESSION['picture']))
@@ -60,6 +62,43 @@ class product extends \app\core\Controller{
 
 			header("location:/Product/create?Create a new category with your items to sale");
 			$this->view('Category/add');
+		}
+	}
+
+
+	public function edit($product_id){
+		$product = new \app\models\Product();
+		$product = $product->get($product_id);
+
+		if(isset($_POST['action'])){
+
+			$product->title = $_POST['title'];
+			$product->description = $_POST['description'];
+			$product->price = $_POST['price'];
+			$product->picture = $filename;
+
+			$product->profile_id=$_SESSION['profile_id'];
+
+			
+			$product->update();
+
+			header('location:/Product/indexPProducts/');
+		}else{
+			$this->view('Product/edit',['product'=>$product]);
+		}
+	}
+
+	public function delete($product_id){
+		$product = new \app\models\Product();
+		$product = $product->get($product_id);
+
+		if(isset($_POST['action'])){
+
+			$product->delete();
+
+			header('location:/Product/index/');
+		}else{
+			$this->view('Product/delete',['product'=>$product]);
 		}
 	}
 }

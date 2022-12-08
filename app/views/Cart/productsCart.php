@@ -1,59 +1,54 @@
-<div id="shopping-cart">
-<div class="txt-heading">Shopping Cart</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	<title></title>
 
-<a id="btnEmpty" href="index.php?action=empty">Empty Cart</a>
-<?php
-if(isset($_SESSION["cart_item"])){
-    $total_quantity = 0;
-    $total_price = 0;
-?>	
-<table class="tbl-cart" cellpadding="10" cellspacing="1">
-<tbody>
-<tr>
-<th style="text-align:left;">Name</th>
-<th style="text-align:left;">Code</th>
-<th style="text-align:right;" width="5%">Quantity</th>
-<th style="text-align:center;" width="5%">Unit Price</th>
-<th style="text-align:right;" width="10%">Price</th>
-<th style="text-align:right;" width="10%">Description</th>
-<th style="text-align:right;" width="10%">filename</th>
-<th style="text-align:center;" width="5%">Remove</th>
+    <?php include 'app\views\header.php'; ?>
 
-</tr>	
-<?php		
-    foreach ($_SESSION["cart_item"] as $item){
-        $item_price = $item["quantity"]*$item["price"];
-		?>
-				<tr>
-				<td><img src="<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
-				<td><?php echo $item["code"]; ?></td>
-				<td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
-				<!-- <td  style="text-align:right;"><?php echo "$ ".$item["unit price"]; ?></td> -->
-				<td style="text-align:right;"><?php echo $item["price"]; ?></td>
-				<td style="text-align:right;"><?php echo $item["description"]; ?></td>
-				<td style="text-align:right;"><?php echo $item["filename"]; ?></td>
-				<td  style="text-align:right;"><?php echo "$ ". number_format($item_price,2); ?></td>
-				<td style="text-align:center;"><a href="/Product/index?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><img class="glyphicon glyphicon-trash" alt="Remove Item" /></a></td>
-				</tr>
-				<?php
-				$total_quantity += $item["quantity"];
-				$total_price += ($item["price"]*$item["quantity"]);
-		}
-		?>
 
-<tr>
-<td colspan="2" align="right">Total:</td>
-<td align="right"><?php echo $total_quantity; ?></td>
-<td align="right" colspan="2"><strong><?php echo "$ ".number_format($total_price, 2); ?></strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>		
-  <?php
-} else {
-?>
-<div class="no-records">Your Cart is Empty</div>
-<?php 
-}
-?>
-</div>
+	<CENter><H1>Products in cart</H1></CENter>
+</head>
+<body>
+  
+
+
+<center><table id="example" class="table table-striped" style="width:50%"></center>
+        <thead>
+            <tr>
+                <th>Title</th>
+				<th>Image</th>
+                <th>Price</th>
+                <th>Description</th>
+				<th>Delete</th>
+				
+            </tr>
+        </thead>
+        <tbody>
+        <?php  foreach ($data as $item) {
+                
+					echo 
+                    "<tr>
+					<td>$item->title</td>
+					<td><img src=/Images/$item->picture width=100 height=100 ></td>
+					<td>$item->price$</td>
+					<td>$item->description</td>
+					<td><a type=submit class=remove href='/Cart/delete/$item->cart_id'>Remove</a></td>
+
+                    </tr>";
+                }
+				?>
+           
+        </tbody>
+        
+    </table>
+
+ <button name="action" type="submit" class="btn btn-dark">Place Order</button>
+
+      
+    </body>
+</html>
+							

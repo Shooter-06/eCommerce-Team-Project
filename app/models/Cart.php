@@ -11,39 +11,46 @@ class Cart extends \app\core\Model{
 		return $STMT->fetchAll();
 	}
 
-	public function insert(){
-		$SQL = "INSERT INTO carts (profile_id, product_id, qty, price )
-         VALUES(:profile_id,:product_id,:qty, :price)";
+	public function insertProductToCart()
+    {
+        $SQL = "INSERT INTO cart (profile_id, product_id, price)VALUES(:profile_id,:product_id, :price)";
+       $STMT = self::$_connection->prepare($SQL);
+       $STMT->execute(['profile_id' => $this->profile_id,'product_id' => $this->product_id, 
+       	'price' => $this->price]);
+    } 
+
+	public function getCartbyUserID($profile_id)
+    {
+
+        $SQL = "SELECT * FROM  cart inner join product on product.product_id=cart.product_id WHERE cart.profile_id=:profile_id";
         $STMT = self::$_connection->prepare($SQL);
-        $STMT->execute(['profile_id' => $this->profile_id,'product_id' => $this->product_id,'qty' => $this->qty, 'price' => $this->price]);
-	}
+        $STMT->execute(['profile_id' => $profile_id]);
+        $STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Product');
+        return $STMT->fetchAll();
+    }
 
-	public function getAllProfileProduct(){
-		$SQL = "SELECT * FROM cart WHERE product_id=:product_id and profile_id=:profile_id"; 
-		$STMT=self::$_connection->prepare($SQL);
-		$STMT->execute(['profile_id' => $profile_id, 'product_id' => $product_id]);
-		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Profile');
-		return $STMT->fetchAll();
-	}
 
-	public function getProfile(){
-		$SQL = "SELECT * FROM cart WHERE profile_id=:profile_id"; 
-		$STMT=self::$_connection->prepare($SQL);
-		$STMT->execute(['profile_id' => $profile_id]);
-		$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Profile');
-		return $STMT->fetchAll();
-	}
+
+
+
+	// public function getProfile(){
+	// 	$SQL = "SELECT * FROM cart WHERE profile_id=:profile_id"; 
+	// 	$STMT=self::$_connection->prepare($SQL);
+	// 	$STMT->execute(['profile_id' => $profile_id]);
+	// 	$STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Profile');
+	// 	return $STMT->fetchAll();
+	// }
 
 	public function update($cartId)
     {
-        $SQL = "UPDATE carts SET qty=:qty where cart_id=:cart_id ";
+        $SQL = "UPDATE cart SET qty=:qty where cart_id=:cart_id ";
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(['qty' => $this->qty,'cart_id' => $cartId]);
     }
 
     public function delete($cartId)
     {
-        $SQL = "DELETE FROM carts where cart_id=:cart_id ";
+        $SQL = "DELETE FROM cart where cart_id=:cart_id ";
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(['cart_id' => $cartId]);
 
