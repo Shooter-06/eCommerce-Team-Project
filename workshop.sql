@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 07:13 PM
+-- Generation Time: Dec 08, 2022 at 07:25 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -127,7 +127,8 @@ INSERT INTO `product` (`product_id`, `profile_id`, `title`, `description`, `pict
 (3, 2, 'test', 'jkadhash', 'shoe10.jpg', 20),
 (4, 2, 'boot', 'bot', '', 20),
 (5, 2, 'dskjh', 'kjasdh', '', 22),
-(6, 2, 'nike shoe', 'alskdjla', '', 2000);
+(6, 2, 'nike shoe', 'alskdjla', '', 2000),
+(8, 3, 'shoe9.jpg', 'shoe9.jpg', 'shoe9.jpg', 789);
 
 -- --------------------------------------------------------
 
@@ -152,7 +153,8 @@ CREATE TABLE `profile` (
 
 INSERT INTO `profile` (`profile_id`, `user_id`, `first_name`, `last_name`, `address`, `city`, `postal_code`) VALUES
 (1, 1, 'FR', 'fr', 'fr', 'fr', 'fr'),
-(2, 2, '', '', '', '', '');
+(2, 2, '', '', '', '', ''),
+(3, 3, '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -188,7 +190,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_id`, `username`, `password_hash`) VALUES
 (1, 'fr', '$2y$10$VFvzCtgjV6mRJA9SZCmwfe.FM8g/nZGfLpaqgkJV5W8F0SRFC0Khe'),
-(2, 'ur', '$2y$10$0m98g6Cmu1sLfJzljDygh.aQxR4h1iqV.M3OJHThipGZeWonAuTv6');
+(2, 'ur', '$2y$10$0m98g6Cmu1sLfJzljDygh.aQxR4h1iqV.M3OJHThipGZeWonAuTv6'),
+(3, 'ffr', '$2y$10$sXJXgWyAvIoseq6UvuKxZu6AUVr9KH4/LSldagVFS8v.7JMADxr5G');
 
 --
 -- Indexes for dumped tables
@@ -271,7 +274,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -301,13 +304,13 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `profile_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `review`
@@ -319,7 +322,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
