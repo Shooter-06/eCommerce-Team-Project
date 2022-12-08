@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 07:25 PM
+-- Generation Time: Dec 08, 2022 at 07:32 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -36,13 +36,6 @@ CREATE TABLE `cart` (
   `product_id` int(10) NOT NULL,
   `price` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`cart_id`, `profile_id`, `product_id`, `price`) VALUES
-(6, 2, 3, 20);
 
 -- --------------------------------------------------------
 
@@ -125,9 +118,9 @@ INSERT INTO `product` (`product_id`, `profile_id`, `title`, `description`, `pict
 (1, 1, 'kyrie', 'kyrie', 'kyrie.jpg', 134),
 (2, 1, 'Nike', 'Nike', 'dunno.jpg', 187),
 (3, 2, 'test', 'jkadhash', 'shoe10.jpg', 20),
-(4, 2, 'boot', 'bot', '', 20),
-(5, 2, 'dskjh', 'kjasdh', '', 22),
-(6, 2, 'nike shoe', 'alskdjla', '', 2000),
+(4, 2, 'boot', 'bot', 'dunno.jpg', 20),
+(5, 2, 'dskjh', 'kjasdh', 'shoe3.jpg', 22),
+(6, 2, 'nike shoe', 'alskdjla', 'kyrie.jpg', 2000),
 (8, 3, 'shoe9.jpg', 'shoe9.jpg', 'shoe9.jpg', 789);
 
 -- --------------------------------------------------------
@@ -274,7 +267,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cart_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `category`
