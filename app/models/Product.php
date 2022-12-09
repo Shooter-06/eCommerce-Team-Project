@@ -49,12 +49,12 @@ class Product extends \app\core\Model{
 	}
 
 	public function insert(){
-		$SQL = "INSERT INTO product(profile_id, title, description, price) VALUES (:profile_id, :title, :description, :price)";
+		$SQL = "INSERT INTO product(profile_id, title, description,picture, price) VALUES (:profile_id, :title, :description,:picture, :price)";
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['profile_id'=>$this->profile_id,
 						'title'=>$this->title,
 						'description'=>$this->description,
-						'price'=>$this->price]);
+						'picture'=>$this->picture, 'price'=>$this->price]);
 		//return $STMT->execute();
 		return self::$_connection->lastInsertId();
 	}

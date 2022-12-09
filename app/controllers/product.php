@@ -29,7 +29,7 @@ class product extends \app\core\Controller{
 			$product->picture = $filename;
 
 			$product->profile_id=$_SESSION['profile_id'];
-		
+			$filename=$this->saveFile($_FILES['picture']);
 		// var_dump($_SESSION);
 		
 			if($filename){
