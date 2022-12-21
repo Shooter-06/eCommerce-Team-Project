@@ -38,7 +38,7 @@ In this project, I have different features that will be developed to simplify th
 The feautures in our project will be used as the following: 
 
 ## As a seller:
-- I can create, delete, update and view my product (4 features):`All sellers with thier profiles created will have an option of creating, deleting, updating and view each one of thier product. The getProduct function with allow to get one product at the time so that the seller can perfom the CRUD operations.`
+- I can create, delete, update and view my product (4 features):`All sellers with have thier profiles created and they will have an option of creating, deleting, updating and view each one of thier product. The getProduct function with allow to get one product at the time so that the seller can perfom the CRUD operations.`
 - I can check the inventory(the main page with all the products) (1 feature):`The seller will have an option of getting the list off all the products that he has.`
 - I can create, update, delete and view my profile(4 features):`After creating an account a user, if you want to become a seller, you may create your profile. This will allow you to update, delete and view your profile.`
 - I can create, update, delete and view on the reviews/comments on my products(4 features): `As a seller, you will have the permission of CRUD your reviews which on the users will be the details and description of your product.`
@@ -46,11 +46,11 @@ The feautures in our project will be used as the following:
 
 ## As a User:
  - I can login, register, delete and logout from my user account (3 features):`Each user will have the option of registering, editing, delete and logging out in his user account.`
- - I can search for products without creating a profile (1 feature): `This feature will allow me to search for the product name`
- - I can comment on a product (1 features):`This feature will allow me to make a comment on any product I see on the page`
- - I can rate a product (1 feature): `This feature will allow me to rate a profuct from 1-5 depending on my satisfaction.`
- - I can add some products in the cart (1 feature):`I can products in the cart that I want to buy`.
- - I can get the to total price and the quantity of items in the cart (2 feature):`I can get the total price in the products and the amount of the products I have in my cart`
+ - I can search for products without creating a profile (1 feature): `This feature will permit a user to search for the product name`
+ - I can comment on a product (1 features):`This feature will permit a user to make a comment on any product saw on the page`
+ - I can rate a product (1 feature): `This feature will help the user to rate a profuct from 1-5 depending on my satisfaction.`
+ - I can add some products in the cart (1 feature):`A user will have the option of adding products in the cart that they want to buy`.
+ - I can get the to total price and the quantity of items in the cart (2 feature):`This feature will allow to get the total price of the products and the amount of the products in my cart`
  - 
 
 ## Timeline: 
